@@ -3,6 +3,32 @@ import Link from "next/link";
 import { RichText } from "@/components/rich-text";
 import type { ProjectDetail, ProjectScreenshot } from "@/data/projects/types";
 
+function ProjectScreenshotRow({ images }: { images: ProjectScreenshot[] }) {
+  return (
+    <figure className="my-10 sm:my-14">
+      <div className="mx-auto w-2/3">
+        <div className="grid grid-cols-2 gap-3 sm:gap-4">
+          {images.map((image) => (
+            <div
+              key={image.src}
+              className="overflow-hidden rounded-2xl border border-border bg-surface-elevated shadow-[var(--card-shadow)]"
+            >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                width={390}
+                height={844}
+                className="h-auto w-full"
+                sizes="(max-width: 768px) 30vw, 300px"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </figure>
+  );
+}
+
 function ProjectScreenshot({
   image,
   priority = false,
@@ -83,7 +109,11 @@ export function ProjectDetailView({ project }: { project: ProjectDetail }) {
               </p>
             ))}
           </div>
-          {section.image ? <ProjectScreenshot image={section.image} /> : null}
+          {section.images?.length ? (
+            <ProjectScreenshotRow images={section.images} />
+          ) : section.image ? (
+            <ProjectScreenshot image={section.image} />
+          ) : null}
         </div>
       ))}
 

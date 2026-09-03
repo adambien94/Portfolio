@@ -22,15 +22,6 @@ export const about = {
 
 export const projects = [
   {
-    id: "flowboard",
-    name: "Flowboard",
-    description: "kanban z narzędziami AI i real-time sync.",
-    stack: ["React", "TypeScript", "Zustand", "Supabase", "Vercel", "Jest"],
-    href: "/projects/flowboard",
-    accent: "#f9a8d4",
-    previewLabel: "Otwórz board",
-  },
-  {
     id: "lerni",
     name: "Lerni",
     description: "aplikacja wspomagająca naukę przez AI.",
@@ -45,6 +36,15 @@ export const projects = [
     href: "/projects/lerni",
     accent: "#86efac",
     previewLabel: "Zobacz projekt",
+  },
+  {
+    id: "flowboard",
+    name: "Flowboard",
+    description: "kanban z narzędziami AI i real-time sync.",
+    stack: ["React", "TypeScript", "Zustand", "Supabase", "Vercel", "Jest"],
+    href: "/projects/flowboard",
+    accent: "#f9a8d4",
+    previewLabel: "Otwórz board",
   },
   {
     id: "TvShow",
