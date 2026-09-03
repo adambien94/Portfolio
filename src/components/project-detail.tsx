@@ -12,7 +12,7 @@ function ProjectScreenshot({
 }) {
   return (
     <figure className="my-10 sm:my-14">
-      <div className="overflow-hidden rounded-2xl border border-white/[0.08] bg-[#0d0d0c] shadow-[0_24px_80px_-24px_rgba(0,0,0,0.8)]">
+      <div className="overflow-hidden rounded-2xl border border-border bg-surface-elevated shadow-[var(--card-shadow)]">
         <Image
           src={image.src}
           alt={image.alt}
@@ -24,7 +24,7 @@ function ProjectScreenshot({
         />
       </div>
       {image.caption ? (
-        <figcaption className="mt-3 text-center text-[14px] text-[#7a7872]">
+        <figcaption className="mt-3 text-center text-[14px] text-foreground-subtle">
           {image.caption}
         </figcaption>
       ) : null}
@@ -37,7 +37,7 @@ export function ProjectDetailView({ project }: { project: ProjectDetail }) {
     <article className="mx-auto w-full max-w-[900px]">
       <Link
         href="/#projekty"
-        className="mb-10 inline-flex items-center gap-2 text-[14px] text-[#b5b3ad] transition-colors hover:text-white"
+        className="link-muted mb-10 inline-flex items-center gap-2 text-[14px]"
       >
         <span aria-hidden>←</span>
         Wszystkie projekty
@@ -50,10 +50,10 @@ export function ProjectDetailView({ project }: { project: ProjectDetail }) {
             style={{ backgroundColor: project.accent }}
             aria-hidden
           />
-          <p className="text-[14px] font-medium text-white">{project.name}</p>
+          <p className="text-[14px] font-medium text-foreground">{project.name}</p>
         </div>
 
-        <h1 className="text-balance text-[32px] leading-[1.15] font-medium tracking-[-0.03em] text-white sm:text-[40px] sm:leading-[1.12]">
+        <h1 className="text-balance text-[32px] leading-[1.15] font-medium tracking-[-0.03em] text-foreground sm:text-[40px] sm:leading-[1.12]">
           {project.headline}
         </h1>
       </header>
@@ -66,7 +66,7 @@ export function ProjectDetailView({ project }: { project: ProjectDetail }) {
         ))}
 
         {project.highlight ? (
-          <p className="!font-[550] !text-white">{project.highlight}</p>
+          <p className="!font-[550] !text-foreground">{project.highlight}</p>
         ) : null}
 
         {project.screenshotIntro ? <p>{project.screenshotIntro}</p> : null}
@@ -88,7 +88,7 @@ export function ProjectDetailView({ project }: { project: ProjectDetail }) {
       ))}
 
       {project.closing?.length ? (
-        <div className="prose-portfolio mt-10 flex flex-col gap-5 border-t border-white/[0.06] pt-10 sm:mt-14 sm:pt-14">
+        <div className="prose-portfolio mt-10 flex flex-col gap-5 border-t border-border pt-10 sm:mt-14 sm:pt-14">
           {project.closing.map((paragraph) => (
             <p key={paragraph}>
               <RichText text={paragraph} />
@@ -101,7 +101,7 @@ export function ProjectDetailView({ project }: { project: ProjectDetail }) {
         {project.stack.map((tech) => (
           <span
             key={tech}
-            className="rounded-md bg-white/[0.04] px-2.5 py-1 text-[12px] text-[#b5b3ad]"
+            className="rounded-md bg-foreground/[0.04] px-2.5 py-1 text-[12px] text-muted-foreground"
           >
             {tech}
           </span>

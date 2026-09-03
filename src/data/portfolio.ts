@@ -27,7 +27,7 @@ export const projects = [
     description: "kanban z narzędziami AI i real-time sync.",
     stack: ["React", "TypeScript", "Zustand", "Supabase", "Vercel", "Jest"],
     href: "/projects/flowboard",
-    accent: "#7dd3fc",
+    accent: "#f9a8d4",
     previewLabel: "Otwórz board",
   },
   {
@@ -43,7 +43,7 @@ export const projects = [
       "Gemini API",
     ],
     href: "/projects/lerni",
-    accent: "#f9a8d4",
+    accent: "#86efac",
     previewLabel: "Zobacz projekt",
   },
   {
@@ -52,7 +52,7 @@ export const projects = [
     description: "biblioteka seriali.",
     stack: ["Vue", "TypeScript", "Tailwind", "Jest"],
     href: "/projects/TvShow",
-    accent: "#86efac",
+    accent: "#7dd3fc",
     previewLabel: "Podgląd studio",
   },
   {

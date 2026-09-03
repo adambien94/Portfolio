@@ -9,7 +9,7 @@ export function Hero() {
           <HeroGraphic />
         </div>
 
-        <h1 className="animate-fade-up-delay-1 text-balance text-[36px] leading-[1.08] font-[575] tracking-[-0.03em] text-white sm:text-[48px] sm:leading-[1.08]">
+        <h1 className="animate-fade-up-delay-1 text-balance text-[36px] leading-[1.08] font-[575] tracking-[-0.03em] text-foreground sm:text-[48px] sm:leading-[1.08]">
           {profile.headline.split("\n").map((line, i) => (
             <span key={line}>
               {i > 0 && <br />}
@@ -18,7 +18,7 @@ export function Hero() {
           ))}
         </h1>
 
-        <p className="animate-fade-up-delay-2 mt-5 max-w-[540px] text-balance text-[17px] leading-7 text-[#ededed] sm:mt-6 sm:text-[20px] sm:leading-7">
+        <p className="animate-fade-up-delay-2 mt-5 max-w-[540px] text-balance text-[17px] leading-7 text-accent-foreground sm:mt-6 sm:text-[20px] sm:leading-7">
           {profile.subheadline}
         </p>
 
@@ -28,7 +28,7 @@ export function Hero() {
           </a>
           <a
             href="#o-mnie"
-            className="rounded-lg border border-white/10 bg-white/[0.03] px-5 py-2.5 text-[15px] text-[#d2d2d0] transition-colors hover:border-white/20 hover:bg-white/[0.06] hover:text-white"
+            className="ghost-button px-5 py-2.5 text-[15px]"
           >
             O mnie
           </a>
