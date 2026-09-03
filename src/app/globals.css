@@ -53,10 +53,18 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
     background-image:
-      radial-gradient(ellipse 80% 50% at 50% -20%, rgba(255, 190, 37, 0.06), transparent),
-      radial-gradient(ellipse 60% 40% at 80% 10%, rgba(255, 255, 255, 0.02), transparent);
+      radial-gradient(
+        ellipse 80% 50% at 50% -20%,
+        rgba(255, 190, 37, 0.06),
+        transparent
+      ),
+      radial-gradient(
+        ellipse 60% 40% at 80% 10%,
+        rgba(255, 255, 255, 0.02),
+        transparent
+      );
     background-attachment: fixed;
   }
 
