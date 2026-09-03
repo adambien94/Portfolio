@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { projects } from "@/data/portfolio";
 
 export function Projects() {
@@ -16,7 +17,7 @@ export function Projects() {
 
         <div className="grid gap-4 sm:grid-cols-2 sm:gap-5">
           {projects.map((project) => (
-            <a
+            <Link
               key={project.id}
               href={project.href}
               className="group relative flex min-h-[260px] flex-col overflow-hidden rounded-2xl border border-white/[0.08] bg-[#161614] transition-[border-color,transform] duration-300 hover:border-white/16 hover:-translate-y-0.5"
@@ -56,7 +57,7 @@ export function Projects() {
                   </span>
                 ))}
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>
