@@ -3,15 +3,8 @@ import type { ProjectDetail } from "./types";
 export const lerniProject: ProjectDetail = {
   id: "lerni",
   name: "Lerni",
-  stack: [
-    "React",
-    "TypeScript",
-    "Shadcn",
-    "Supabase",
-    "Vercel",
-    "Gemini API",
-  ],
-  accent: "#f9a8d4",
+  stack: ["React", "TypeScript", "Shadcn", "Supabase", "Vercel", "Gemini API"],
+  accent: "#86efac",
   headline:
     "Osobista przestrzeń do nauki, w której źródła z internetu, AI i powtórki spotykają się w jednym spójnym miejscu.",
   intro: [
@@ -20,7 +13,8 @@ export const lerniProject: ProjectDetail = {
   ],
   highlight:
     "Wreszcie uczysz się z własnych materiałów — zamiast zgadywać, co jest ważne, masz podsumowanie, chat i narzędzia do powtórek w jednym widoku.",
-  screenshotIntro: "Zobacz, jak wygląda praca z notatnikiem od logowania po fiszki i quizy:",
+  screenshotIntro:
+    "Zobacz, jak wygląda praca z notatnikiem od logowania po fiszki i quizy:",
   heroImage: {
     src: "/projects/lerni/Lerni-3.png",
     alt: "Widok roboczy notatnika Lerni z panelami źródeł, podsumowania AI i studia nauki",

@@ -1,15 +1,22 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
+import { getProjectById } from "@/data/projects";
 
-export function PageGlow({ color }: { color: string }) {
+const DEFAULT_GLOW = "#ffbe25";
+
+export function PageGlow() {
+  const pathname = usePathname();
+
   useEffect(() => {
-    document.documentElement.style.setProperty("--page-glow", color);
+    const match = pathname.match(/^\/projects\/([^/]+)$/);
+    const color = match
+      ? (getProjectById(match[1])?.accent ?? DEFAULT_GLOW)
+      : DEFAULT_GLOW;
 
-    return () => {
-      document.documentElement.style.removeProperty("--page-glow");
-    };
-  }, [color]);
+    document.documentElement.style.setProperty("--page-glow", color);
+  }, [pathname]);
 
   return null;
 }

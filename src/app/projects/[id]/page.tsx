@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { PageGlow } from "@/components/page-glow";
 import { ProjectDetailView } from "@/components/project-detail";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -43,7 +42,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   return (
     <div className="flex min-h-full flex-1 flex-col">
-      <PageGlow color={project.accent} />
       <SiteHeader />
       <main className="flex-1 px-5 py-10 md:px-8 md:py-16">
         {detail ? (

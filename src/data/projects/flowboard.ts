@@ -4,7 +4,7 @@ export const flowboardProject: ProjectDetail = {
   id: "flowboard",
   name: "Flowboard",
   stack: ["React", "TypeScript", "Zustand", "Supabase", "Vercel", "Jest"],
-  accent: "#7dd3fc",
+  accent: "#f9a8d4",
   headline:
     "Osobisty kanban z własnymi tablicami, kolumnami i AI, które rozbija zadania na konkretne kroki do wykonania.",
   intro: [

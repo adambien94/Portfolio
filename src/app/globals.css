@@ -2,6 +2,12 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+@property --page-glow {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #ffbe25;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -73,6 +79,7 @@
   html {
     @apply font-sans scroll-smooth antialiased;
     color-scheme: light;
+    transition: --page-glow 0.9s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   html.dark {
@@ -84,7 +91,7 @@
     background-image:
       radial-gradient(
         ellipse 80% 50% at 50% -20%,
-        color-mix(in srgb, var(--page-glow) 8%, transparent),
+        color-mix(in srgb, var(--page-glow) 6%, transparent),
         transparent
       ),
       radial-gradient(
@@ -93,20 +100,6 @@
         transparent
       );
     background-attachment: fixed;
-  }
-
-  .dark body {
-    background-image:
-      radial-gradient(
-        ellipse 80% 50% at 50% -20%,
-        color-mix(in srgb, var(--page-glow) 6%, transparent),
-        transparent
-      ),
-      radial-gradient(
-        ellipse 60% 40% at 80% 10%,
-        rgba(255, 255, 255, 0.02),
-        transparent
-      );
   }
 
   ::selection {

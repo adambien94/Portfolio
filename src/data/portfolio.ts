@@ -2,7 +2,7 @@ export const profile = {
   name: "Adam Bien",
   firstName: "Adam",
   role: "Frontend Developer",
-  location: "Warszawa, Polska",
+  location: "Wrocław, Polska",
   email: "adam@example.com",
   github: "https://github.com",
   linkedin: "https://linkedin.com",
