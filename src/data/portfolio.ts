@@ -71,6 +71,29 @@ export const commercialExperience = {
     "Projektowałem interfejsy, implementowałem logikę aplikacji i integrowałem **API**. Zarządzałem stanem (**Pinia**, **Zustand**, **Vuex**), konfigurowałem routing i autentykację, dbałem o wydajność, responsywność, dostępność i kompatybilność między przeglądarkami. Stylowanie w **CSS**, **SCSS**, **Tailwind** i **Bootstrap** — często na podstawie projektów z **Figma**.",
     "Pisałem testy jednostkowe (**Jest**), wdrażałem aplikacje na staging i produkcję (**Docker**), współpracowałem z zespołami produktowymi i backendowymi. Brałem udział w wyborze technologii i konfiguracji toolchainu (**Vite**, **Webpack**, **Git**).",
   ],
+  projects: [
+    {
+      id: "fintech-dashboard",
+      name: "Dashboard analityczny",
+      description:
+        "Panel do monitorowania transakcji i raportów w czasie rzeczywistym.",
+      href: "#",
+    },
+    {
+      id: "b2b-portal",
+      name: "Portal B2B",
+      description:
+        "Self-service ordering i śledzenie zamówień dla sieci dystrybutorów.",
+      href: "#",
+    },
+    {
+      id: "clinic-booking",
+      name: "System rezerwacji",
+      description:
+        "Kalendarz wizyt, płatności online i panel recepcji dla sieci klinik.",
+      href: "#",
+    },
+  ],
   stack: [
     "JavaScript",
     "TypeScript",

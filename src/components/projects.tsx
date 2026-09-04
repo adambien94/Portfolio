@@ -5,7 +5,10 @@ import { getProjectDetail } from "@/data/projects";
 
 export function Projects() {
   return (
-    <section id="projekty" className="scroll-mt-24 px-5 py-16 md:px-8 md:pb-28 md:pt-10">
+    <section
+      id="projekty"
+      className="scroll-mt-24 px-5 py-16 md:px-8 md:pb-18 md:pt-10"
+    >
       <div className="mx-auto w-full max-w-[900px]">
         <div className="mx-auto mb-10 max-w-[700px] sm:mb-14">
           <h2 className="text-[26px] leading-tight font-medium tracking-[-0.02em] text-foreground sm:text-[28px]">
@@ -53,7 +56,9 @@ export function Projects() {
                     aria-hidden
                   />
                   <p className="text-[14px] leading-5 text-muted-foreground">
-                    <span className="font-medium text-foreground">{project.name}</span>
+                    <span className="font-medium text-foreground">
+                      {project.name}
+                    </span>
                     {", "}
                     {project.description}
                   </p>
