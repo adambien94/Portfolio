@@ -1,5 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import { projects } from "@/data/portfolio";
+import { getProjectDetail } from "@/data/projects";
 
 export function Projects() {
   return (
@@ -16,49 +18,60 @@ export function Projects() {
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2 sm:gap-5">
-          {projects.map((project) => (
-            <Link
-              key={project.id}
-              href={project.href}
-              className="group relative flex min-h-[260px] flex-col overflow-hidden rounded-2xl border border-border bg-surface transition-[border-color,transform] duration-300 hover:border-foreground/16 hover:-translate-y-0.5"
-            >
-              <div className="relative flex flex-1 items-center justify-center px-6 pt-10 pb-6">
-                <div
-                  className="pointer-events-none absolute inset-0 opacity-40 transition-opacity duration-300 group-hover:opacity-70"
-                  style={{
-                    background: `radial-gradient(ellipse 70% 55% at 50% 40%, ${project.accent}22, transparent 70%)`,
-                  }}
-                />
-                <span className="relative z-10 rounded-full border border-border bg-background/30 px-4 py-2 text-[14px] text-accent-foreground backdrop-blur-sm transition-colors group-hover:border-foreground/25 group-hover:text-foreground">
-                  {project.previewLabel}
-                </span>
-              </div>
+          {projects.map((project) => {
+            const image = getProjectDetail(project.id)?.heroImage;
 
-              <div className="relative z-10 flex items-start gap-3 border-t border-border px-5 py-4">
-                <span
-                  className="mt-1.5 size-2 shrink-0 rounded-full"
-                  style={{ backgroundColor: project.accent }}
-                  aria-hidden
-                />
-                <p className="text-[14px] leading-5 text-muted-foreground">
-                  <span className="font-medium text-foreground">{project.name}</span>
-                  {", "}
-                  {project.description}
-                </p>
-              </div>
+            return (
+              <Link
+                key={project.id}
+                href={project.href}
+                className="relative flex flex-col overflow-hidden rounded-2xl border border-border bg-surface transition-[border-color,transform] duration-300 hover:border-foreground/16 hover:-translate-y-0.5"
+              >
+                <div className="relative aspect-[16/10] overflow-hidden bg-surface-elevated">
+                  {image ? (
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      className="object-cover object-top"
+                      sizes="(max-width: 640px) 100vw, 450px"
+                    />
+                  ) : (
+                    <div
+                      className="absolute inset-0 opacity-60"
+                      style={{
+                        background: `radial-gradient(ellipse 70% 55% at 50% 40%, ${project.accent}33, transparent 70%)`,
+                      }}
+                    />
+                  )}
+                </div>
 
-              <div className="relative z-10 flex flex-wrap gap-1.5 px-5 pb-4">
-                {project.stack.map((tech) => (
+                <div className="relative z-10 flex items-start gap-3 border-t border-border px-5 py-4">
                   <span
-                    key={tech}
-                    className="rounded-md bg-foreground/[0.04] px-2 py-0.5 text-[11px] text-muted-foreground"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </Link>
-          ))}
+                    className="mt-1.5 size-2 shrink-0 rounded-full"
+                    style={{ backgroundColor: project.accent }}
+                    aria-hidden
+                  />
+                  <p className="text-[14px] leading-5 text-muted-foreground">
+                    <span className="font-medium text-foreground">{project.name}</span>
+                    {", "}
+                    {project.description}
+                  </p>
+                </div>
+
+                <div className="relative z-10 flex flex-wrap gap-1.5 px-5 pb-4">
+                  {project.stack.map((tech) => (
+                    <span
+                      key={tech}
+                      className="rounded-md bg-foreground/[0.04] px-2 py-0.5 text-[11px] text-muted-foreground"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </section>

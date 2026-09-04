@@ -1,10 +1,12 @@
 import { projects } from "@/data/portfolio";
+import { doorsProject } from "./doors";
 import { flowboardProject } from "./flowboard";
 import { lerniProject } from "./lerni";
 import { tvshowProject } from "./tvshow";
 import type { ProjectDetail } from "./types";
 
 const projectDetails: Record<string, ProjectDetail> = {
+  doors: doorsProject,
   flowboard: flowboardProject,
   lerni: lerniProject,
   TvShow: tvshowProject,

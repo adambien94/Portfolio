@@ -35,7 +35,6 @@ export const projects = [
     ],
     href: "/projects/lerni",
     accent: "#86efac",
-    previewLabel: "Zobacz projekt",
   },
   {
     id: "flowboard",
@@ -44,25 +43,22 @@ export const projects = [
     stack: ["React", "TypeScript", "Zustand", "Supabase", "Vercel", "Jest"],
     href: "/projects/flowboard",
     accent: "#f9a8d4",
-    previewLabel: "Otwórz board",
   },
   {
     id: "TvShow",
     name: "Tv shows",
     description: "biblioteka seriali.",
-    stack: ["Vue", "TypeScript", "Tailwind", "Jest"],
+    stack: ["Vue 3", "TypeScript", "Tailwind", "Jest", "RWD", "PWA"],
     href: "/projects/TvShow",
     accent: "#7dd3fc",
-    previewLabel: "Podgląd studio",
   },
   {
     id: "doors",
     name: "Door configurator",
     description: "konfigurator drzwi 3D.",
-    stack: ["Vue", "Canvas", "Three.js"],
+    stack: ["Vue 2", "Canvas", "Three.js"],
     href: "/projects/doors",
     accent: "#fde68a",
-    previewLabel: "Otwórz dashboard",
   },
 ];
 

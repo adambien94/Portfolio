@@ -4,23 +4,45 @@ import { RichText } from "@/components/rich-text";
 import type { ProjectDetail, ProjectScreenshot } from "@/data/projects/types";
 
 function ProjectScreenshotRow({ images }: { images: ProjectScreenshot[] }) {
+  const isFullWidthRow = images.length === 3;
+
   return (
     <figure className="my-10 sm:my-14">
-      <div className="mx-auto w-2/3">
-        <div className="grid grid-cols-2 gap-3 sm:gap-4">
+      <div className={isFullWidthRow ? "w-full" : "mx-auto w-2/3"}>
+        <div
+          className={
+            isFullWidthRow
+              ? "grid grid-cols-3 gap-3 sm:gap-4"
+              : "grid grid-cols-2 gap-3 sm:gap-4"
+          }
+        >
           {images.map((image) => (
             <div
               key={image.src}
-              className="overflow-hidden rounded-2xl border border-border bg-surface-elevated shadow-[var(--card-shadow)]"
+              className={
+                isFullWidthRow
+                  ? "relative aspect-[16/10] overflow-hidden rounded-2xl border border-border bg-surface-elevated shadow-[var(--card-shadow)]"
+                  : "overflow-hidden rounded-2xl border border-border bg-surface-elevated shadow-[var(--card-shadow)]"
+              }
             >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                width={390}
-                height={844}
-                className="h-auto w-full"
-                sizes="(max-width: 768px) 30vw, 300px"
-              />
+              {isFullWidthRow ? (
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 768px) 33vw, 290px"
+                />
+              ) : (
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  width={390}
+                  height={844}
+                  className="h-auto w-full"
+                  sizes="(max-width: 768px) 30vw, 300px"
+                />
+              )}
             </div>
           ))}
         </div>
@@ -76,7 +98,9 @@ export function ProjectDetailView({ project }: { project: ProjectDetail }) {
             style={{ backgroundColor: project.accent }}
             aria-hidden
           />
-          <p className="text-[14px] font-medium text-foreground">{project.name}</p>
+          <p className="text-[14px] font-medium text-foreground">
+            {project.name}
+          </p>
         </div>
 
         <h1 className="text-balance text-[32px] leading-[1.15] font-medium tracking-[-0.03em] text-foreground sm:text-[40px] sm:leading-[1.12]">
