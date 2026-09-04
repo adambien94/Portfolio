@@ -62,7 +62,58 @@ export const projects = [
   },
 ];
 
+export const commercialExperience = {
+  title: "Doświadczenie komercyjne",
+  subtitle:
+    "Ponad pięć lat jako frontend developer — od aplikacji wewnętrznych po produkty end-to-end.",
+  paragraphs: [
+    "Budowałem i utrzymywałem nowoczesne aplikacje webowe — od wewnętrznych narzędzi biznesowych po pełne **SPA** i **PWA**. Pracowałem w ekosystemie **Vue** (2 i 3, **Nuxt.js**, **Quasar**), a także w **React** i **Next.js**, konsekwentnie stawiając na **TypeScript**.",
+    "Projektowałem interfejsy, implementowałem logikę aplikacji i integrowałem **API**. Zarządzałem stanem (**Pinia**, **Zustand**, **Vuex**), konfigurowałem routing i autentykację, dbałem o wydajność, responsywność, dostępność i kompatybilność między przeglądarkami. Stylowanie w **CSS**, **SCSS**, **Tailwind** i **Bootstrap** — często na podstawie projektów z **Figma**.",
+    "Pisałem testy jednostkowe (**Jest**), wdrażałem aplikacje na staging i produkcję (**Docker**), współpracowałem z zespołami produktowymi i backendowymi. Brałem udział w wyborze technologii i konfiguracji toolchainu (**Vite**, **Webpack**, **Git**).",
+  ],
+  stack: [
+    "JavaScript",
+    "TypeScript",
+    "HTML5",
+    "CSS3",
+    "Vue.js",
+    "Nuxt.js",
+    "Quasar",
+    "React",
+    "Next.js",
+    "Pinia",
+    "Vuex",
+    "Zustand",
+    "Redux",
+    "RxJS",
+    "Tailwind",
+    "Bootstrap",
+    "SASS",
+    "shadcn/ui",
+    "Three.js",
+    "Chart.js",
+    "Video.js",
+    "Jest",
+    "REST",
+    "GraphQL",
+    "Swagger",
+    "Twig",
+    "Webpack",
+    "Vite",
+    "Git",
+    "Docker",
+    "Supabase",
+    "Figma",
+    "BEM",
+    "RWD",
+    "SPA",
+    "SSR",
+    "WordPress",
+  ],
+};
+
 export const navLinks = [
   { label: "O mnie", href: "#o-mnie" },
   { label: "Projekty", href: "#projekty" },
+  { label: "Doświadczenie", href: "#doswiadczenie" },
 ];
