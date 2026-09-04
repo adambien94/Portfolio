@@ -4,8 +4,8 @@ import { ThemeToggle } from "@/components/theme-toggle";
 
 export function SiteHeader() {
   return (
-    <header className="pointer-events-none sticky top-0 z-50 w-full">
-      <div className="bg-gradient-to-b from-background via-background/90 to-transparent pb-3">
+    <header className="pointer-events-none  top-0 z-50 w-full">
+      <div className="">
         <div className="pointer-events-auto mx-auto flex w-full max-w-[1640px] items-center justify-between px-5 py-4 md:px-8 md:py-6">
           <Link
             href="/"

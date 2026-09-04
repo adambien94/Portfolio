@@ -58,7 +58,7 @@ export const projects = [
     description: "konfigurator drzwi 3D.",
     stack: ["Vue 2", "Canvas", "Three.js"],
     href: "/projects/doors",
-    accent: "#fde68a",
+    accent: "#FA824C",
   },
 ];
 

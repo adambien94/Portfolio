@@ -26,10 +26,7 @@ export function Hero() {
           <a href="#projekty" className="buy-button px-5 py-2.5 text-[15px]">
             Zobacz projekty
           </a>
-          <a
-            href="#o-mnie"
-            className="ghost-button px-5 py-2.5 text-[15px]"
-          >
+          <a href="#o-mnie" className="ghost-button px-5 py-2.5 text-[15px]">
             O mnie
           </a>
         </div>
