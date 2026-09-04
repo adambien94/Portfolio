@@ -1,4 +1,5 @@
 import { RichText } from "@/components/rich-text";
+import { StackMarquee } from "@/components/stack-marquee";
 import { commercialExperience } from "@/data/portfolio";
 
 export function CommercialExperience() {
@@ -25,16 +26,7 @@ export function CommercialExperience() {
           ))}
         </div>
 
-        <div className="mt-10 flex flex-wrap gap-1.5">
-          {commercialExperience.stack.map((tech) => (
-            <span
-              key={tech}
-              className="rounded-md bg-foreground/[0.04] px-2.5 py-1 text-[12px] text-muted-foreground"
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
+        <StackMarquee items={commercialExperience.stack} />
       </div>
     </section>
   );

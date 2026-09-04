@@ -266,3 +266,23 @@
 .animate-fade-up-delay-2 {
   animation: fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.24s both;
 }
+
+@keyframes stack-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-33.3333%, 0, 0);
+  }
+}
+
+.stack-marquee-track {
+  animation: stack-marquee linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stack-marquee-track {
+    animation: none;
+  }
+}
