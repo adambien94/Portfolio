@@ -20,13 +20,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Adam Bien — Frontend Developer",
   description:
-    "Portfolio frontendu: design engineering, React, Next.js i animacje, które czują się dobrze.",
+    "Frontend portfolio: design engineering, React, Next.js, and animations that feel right.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="pl"
+      lang="en"
       data-scroll-behavior="smooth"
       className={`dark ${inter.variable} ${geistMono.variable} h-full antialiased`}
       suppressHydrationWarning

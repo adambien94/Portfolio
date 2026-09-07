@@ -1,22 +1,22 @@
 export const profile = {
-  name: "Adam Bien",
+  name: "Adam Bień",
   firstName: "Adam",
   role: "Frontend Developer",
-  location: "Wrocław, Polska",
+  location: "Wrocław, Poland",
   email: "adam@example.com",
   github: "https://github.com",
   linkedin: "https://linkedin.com",
-  headline: "Jak budować produkty,\nktóre czują się dobrze?",
+  headline: "How do you build products\nthat feel right?",
   subheadline:
-    "Projektuję i koduję interfejsy, w których detale, ruch i czytelność idą w parze — od pierwszej interakcji.",
+    "I design and code interfaces where detail, motion, and clarity go hand in hand — from the first interaction.",
 };
 
 export const about = {
-  title: `Cześć, jestem ${profile.firstName}`,
+  title: `${profile.name}`,
   paragraphs: [
-    "Jestem frontend developerem z naciskiem na **design engineering**. Łączę czysty kod z wyczuciem produktu — tak, żeby aplikacje nie tylko działały, ale też sprawiały przyjemność w użyciu.",
-    "Przez ostatnie lata budowałem dashboardy, landingi i aplikacje SaaS w **React**, **Next.js** i **TypeScript**. Dbam o animacje, dostępność i performance — bo to właśnie te detale odróżniają „ok” od „wow”.",
-    "Poza kodem lubię typografię, systemy designu i eksperymenty z ruchem. Wierzę, że dobre UI to forma rzemiosła.",
+    "Hi! I'm a **Frontend Developer** who treats building polished interfaces as a blend of passion and craft.",
+    "I've been programming for **8 years**, and for over **five** I've been building commercial software with end users in mind. I've gone from early experiments with code to creating full-scale platforms in **TypeScript**, **Vue**, and **React**.",
+    "What satisfies me most is the moment when code, thoughtful UI, and refined micro-interactions come together into one cohesive product that runs smoothly. I care about the full interface lifecycle — from **Figma** mockups, through **API** integrations and accessibility, to performance optimization in production.",
   ],
 };
 
@@ -24,7 +24,7 @@ export const projects = [
   {
     id: "lerni",
     name: "Lerni",
-    description: "aplikacja wspomagająca naukę przez AI.",
+    description: "an AI-powered learning app.",
     stack: [
       "React",
       "TypeScript",
@@ -39,7 +39,7 @@ export const projects = [
   {
     id: "flowboard",
     name: "Flowboard",
-    description: "kanban z narzędziami AI i real-time sync.",
+    description: "a kanban board with AI tools and real-time sync.",
     stack: ["React", "TypeScript", "Zustand", "Supabase", "Vercel", "Jest"],
     href: "/projects/flowboard",
     accent: "#f9a8d4",
@@ -47,7 +47,7 @@ export const projects = [
   {
     id: "TvShow",
     name: "Tv shows",
-    description: "biblioteka seriali.",
+    description: "a TV series library.",
     stack: ["Vue 3", "TypeScript", "Tailwind", "Jest", "RWD", "PWA"],
     href: "/projects/TvShow",
     accent: "#7dd3fc",
@@ -55,7 +55,7 @@ export const projects = [
   {
     id: "doors",
     name: "Door configurator",
-    description: "konfigurator drzwi 3D.",
+    description: "a 3D door configurator.",
     stack: ["Vue 2", "Canvas", "Three.js"],
     href: "/projects/doors",
     accent: "#FA824C",
@@ -63,35 +63,49 @@ export const projects = [
 ];
 
 export const commercialExperience = {
-  title: "Doświadczenie komercyjne",
+  title: "Commercial experience",
   subtitle:
-    "Ponad pięć lat jako frontend developer — od aplikacji wewnętrznych po produkty end-to-end.",
+    "Over five years as a frontend developer — from internal apps to end-to-end products.",
   paragraphs: [
-    "Budowałem i utrzymywałem nowoczesne aplikacje webowe — od wewnętrznych narzędzi biznesowych po pełne **SPA** i **PWA**. Pracowałem w ekosystemie **Vue** (2 i 3, **Nuxt.js**, **Quasar**), a także w **React** i **Next.js**, konsekwentnie stawiając na **TypeScript**.",
-    "Projektowałem interfejsy, implementowałem logikę aplikacji i integrowałem **API**. Zarządzałem stanem (**Pinia**, **Zustand**, **Vuex**), konfigurowałem routing i autentykację, dbałem o wydajność, responsywność, dostępność i kompatybilność między przeglądarkami. Stylowanie w **CSS**, **SCSS**, **Tailwind** i **Bootstrap** — często na podstawie projektów z **Figma**.",
-    "Pisałem testy jednostkowe (**Jest**), wdrażałem aplikacje na staging i produkcję (**Docker**), współpracowałem z zespołami produktowymi i backendowymi. Brałem udział w wyborze technologii i konfiguracji toolchainu (**Vite**, **Webpack**, **Git**).",
+    "I've built and maintained modern web applications — from internal business tools to full **SPA** and **PWA** products. I've worked in the **Vue** ecosystem (2 and 3, **Nuxt.js**, **Quasar**), as well as **React** and **Next.js**, consistently choosing **TypeScript**.",
+    "I've designed interfaces, implemented application logic, and integrated **APIs**. I've managed state (**Pinia**, **Zustand**, **Vuex**), configured routing and authentication, and paid attention to performance, responsiveness, accessibility, and cross-browser compatibility. Styling in **CSS**, **SCSS**, **Tailwind**, and **Bootstrap** — often based on **Figma** designs.",
+    "I've written unit tests (**Jest**), deployed applications to staging and production (**Docker**), and collaborated with product and backend teams. I've participated in technology choices and toolchain configuration (**Vite**, **Webpack**, **Git**).",
   ],
   projects: [
     {
       id: "mindia",
-      name: "Aplikacja do streamingu wideo",
+      name: "Video streaming app",
       description:
-        "Platforma do nagrywania, anonimizacji i przeglądu sesji terapeutycznych.",
+        "A platform for recording, anonymizing, and reviewing therapy sessions.",
       href: "/projects/mindia",
     },
     {
       id: "recruitment-platform",
-      name: "System zarządzania danymi i analityki",
+      name: "Data management and analytics system",
       description:
-        "Wewnętrzna aplikacja SPA do zarządzania danymi, wyszukiwania i raportowania operacyjnego.",
+        "An internal SPA for data management, search, and operational reporting.",
       href: "/projects/recruitment-platform",
     },
     {
       id: "waste-portal-extension",
-      name: "Rozszerzenie Chrome do portalu BDO",
+      name: "Chrome extension for waste management portal",
       description:
-        "Rozszerzenie przyspieszające obsługę odpadów w oficjalnym systemie BDO.",
+        "Development and extension of a Chrome extension that speeds up waste handling in a government portal.",
       href: "/projects/waste-portal-extension",
+    },
+    {
+      id: "reporting-spa",
+      name: "Reporting SPA",
+      description:
+        "An SPA for filtering, visualizing, and exporting large operational datasets.",
+      href: "/projects/reporting-spa",
+    },
+    {
+      id: "clinic-platform",
+      name: "Web platform for a clinic network",
+      description:
+        "A multilingual SSR platform for a clinic group — content from a headless CMS.",
+      href: "/projects/clinic-platform",
     },
   ],
   stack: [
@@ -136,7 +150,7 @@ export const commercialExperience = {
 };
 
 export const navLinks = [
-  { label: "O mnie", href: "#o-mnie" },
-  { label: "Projekty", href: "#projekty" },
-  { label: "Doświadczenie", href: "#doswiadczenie" },
+  { label: "About", href: "#o-mnie" },
+  { label: "Projects", href: "#projekty" },
+  { label: "Experience", href: "#doswiadczenie" },
 ];

@@ -6,48 +6,48 @@ export const tvshowProject: ProjectDetail = {
   stack: ["Vue", "TypeScript", "Tailwind", "Jest"],
   accent: "#7dd3fc",
   headline:
-    "Biblioteka seriali z dashboardem wg gatunków, wyszukiwarką i widokiem szczegółów — z architekturą local-first i wsparciem offline.",
+    "A TV series library with a genre dashboard, search, and detail view — built on a local-first architecture with offline support.",
   intro: [
-    "Tv shows to aplikacja do przeglądania seriali telewizyjnych, zbudowana w **Vue** i **TypeScript** z **Tailwind CSS**. Dane pochodzą z **TVMaze API**, ale po pierwszym pobraniu trafiają do **IndexedDB** — dzięki temu kolejne wejścia ładują się natychmiast, bez zbędnych requestów i z poszanowaniem limitów API.",
-    "Interfejs jest **mobile-first**: na telefonie listy gatunków przewijasz poziomo, a na desktopie pojawiają się strzałki nawigacji przy hoverze. Wyszukiwarka filtruje wyniki na żywo i pokazuje je w siatce z oceną i okładką.",
+    "Tv shows is an app for browsing TV series, built with **Vue** and **TypeScript** and **Tailwind CSS**. Data comes from the **TVMaze API**, but after the first fetch it lands in **IndexedDB** — so subsequent visits load instantly, without unnecessary requests and while respecting API rate limits.",
+    "The interface is **mobile-first**: on a phone you scroll genre lists horizontally, and on desktop navigation arrows appear on hover. The search filters results live and displays them in a grid with ratings and cover art.",
   ],
   highlight:
-    "Aplikacja działa offline — Service Worker cache'uje assety, a IndexedDB trzyma dane seriali lokalnie. Gdy zniknie połączenie, pojawia się banner informujący o trybie offline.",
+    "The app works offline — the Service Worker caches assets, and IndexedDB keeps series data locally. When the connection drops, a banner appears to inform you about offline mode.",
   screenshotIntro:
-    "Zobacz, jak wygląda aplikacja — od dashboardu z gatunkami po szczegóły serialu i wyszukiwarkę:",
+    "See what the app looks like — from the genre dashboard to series details and search:",
   heroImage: {
     src: "/projects/TvShow/TvShowApp-1.png",
-    alt: "Dashboard Tv shows z poziomymi listami seriali pogrupowanymi wg gatunków: Drama, Mystery, Sci-Fi, Fantasy, Action, Comedy",
+    alt: "Tv shows dashboard with horizontal series lists grouped by genre: Drama, Mystery, Sci-Fi, Fantasy, Action, Comedy",
   },
   sections: [
     {
       paragraphs: [
-        "Strona główna to dashboard podzielony na gatunki — **Drama**, **Mystery**, **Sci-Fi**, **Fantasy**, **Action**, **Comedy** i kolejne. Każda sekcja to pozioma lista kart posortowana wg oceny, z okładką, tytułem i ratingiem. Na desktopie strzałki pojawiają się po najechaniu, na mobile wystarczy przesunąć palcem.",
+        "The homepage is a dashboard split by genre — **Drama**, **Mystery**, **Sci-Fi**, **Fantasy**, **Action**, **Comedy**, and more. Each section is a horizontal list of cards sorted by rating, with cover art, title, and score. On desktop, arrows appear on hover; on mobile, a swipe is enough.",
       ],
     },
     {
       paragraphs: [
-        "Po kliknięciu w serial otwiera się widok szczegółów z opisem, metadanymi (gatunki, status, data premiery), oceną i listą sezonów z liczbą odcinków. Layout dostosowuje się do ekranu — na mobile poster i opis układają się pionowo, na desktopie obok siebie.",
-        "Wyszukiwarka działa w czasie rzeczywistym — wpisujesz frazę, a wyniki pojawiają się w siatce z okładką, tytułem i oceną. Brak okładki? Aplikacja pokazuje placeholder zamiast pustej karty.",
+        "Clicking a series opens a detail view with description, metadata (genres, status, premiere date), rating, and a list of seasons with episode counts. The layout adapts to the screen — on mobile the poster and description stack vertically; on desktop they sit side by side.",
+        "Search works in real time — you type a phrase and results appear in a grid with cover art, title, and rating. No cover? The app shows a placeholder instead of an empty card.",
       ],
       images: [
         {
           src: "/projects/TvShow/TvShowApp-2.png",
-          alt: "Widok szczegółów serialu Dexter w Tv shows z oceną 8.4, opisem i karuzelą 8 sezonów",
+          alt: "Dexter series detail view in Tv shows with 8.4 rating, description, and carousel of 8 seasons",
         },
         {
           src: "/projects/TvShow/TvShowApp-3.png",
-          alt: "Wyniki wyszukiwania frazy break w Tv shows — siatka z okładkami, tytułami i ocenami",
+          alt: "Search results for 'break' in Tv shows — grid with covers, titles, and ratings",
         },
       ],
     },
     {
       paragraphs: [
-        "Dane odświeżają się automatycznie co godzinę, ale tylko gdy jest połączenie z siecią. W trybie offline korzystasz z ostatniej wersji zapisanej lokalnie — bez błędów i bez pustych ekranów.",
+        "Data refreshes automatically every hour, but only when there's a network connection. In offline mode you use the last version saved locally — no errors and no blank screens.",
       ],
     },
   ],
   closing: [
-    "Tv shows łączy **Vue**, **TypeScript** i **Tailwind** po stronie interfejsu z **TVMaze API**, **IndexedDB** i **Service Workerem** jako warstwą danych. Efekt to responsywna biblioteka seriali, która szybko reaguje na interakcje, szanuje limity API i działa nawet bez internetu.",
+    "Tv shows combines **Vue**, **TypeScript**, and **Tailwind** on the interface side with the **TVMaze API**, **IndexedDB**, and a **Service Worker** as the data layer. The result is a responsive series library that responds quickly to interactions, respects API limits, and works even without internet.",
   ],
 };

@@ -29,7 +29,7 @@ export function SiteHeader() {
             </nav>
             <ThemeToggle />
             <a href={`mailto:${profile.email}`} className="buy-button">
-              Kontakt
+              Contact
             </a>
           </div>
         </div>

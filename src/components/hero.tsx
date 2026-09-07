@@ -25,10 +25,10 @@ export function Hero() {
 
     //     <div className="animate-fade-up-delay-2 mt-8 flex flex-wrap items-center justify-center gap-3">
     //       <a href="#projekty" className="buy-button px-5 py-2.5 text-[15px]">
-    //         Zobacz projekty
+    //         View projects
     //       </a>
     //       <a href="#o-mnie" className="ghost-button px-5 py-2.5 text-[15px]">
-    //         O mnie
+    //         About
     //       </a>
     //     </div>
     //   </div>

@@ -6,42 +6,42 @@ export const flowboardProject: ProjectDetail = {
   stack: ["React", "TypeScript", "Zustand", "Supabase", "Vercel", "Jest"],
   accent: "#f9a8d4",
   headline:
-    "Osobisty kanban z własnymi tablicami, kolumnami i AI, które rozbija zadania na konkretne kroki do wykonania.",
+    "A personal kanban with your own boards, columns, and AI that breaks tasks down into concrete action steps.",
   intro: [
-    "Flowboard to aplikacja kanban z rejestracją użytkownika — każdy ma własne tablice, niezależne od innych kont. Po zalogowaniu tworzysz board pod projekt, szkołę albo listę zadań domowych i pracujesz w trybie Kanban lub tabeli.",
-    "Tablica składa się z kolumn, które sam definiujesz — od klasycznego Todo → In progress → Done po własny workflow z etapami Test czy Prod. Zadania dodajesz jednym kliknięciem, ustawiasz priorytet i opis, a potem przeciągasz między kolumnami.",
+    "Flowboard is a kanban app with user registration — everyone gets their own boards, independent of other accounts. After logging in, you create a board for a project, school, or homework list and work in Kanban or table mode.",
+    "A board consists of columns you define yourself — from the classic Todo → In progress → Done to a custom workflow with Test or Prod stages. You add tasks with a single click, set priority and description, then drag them between columns.",
   ],
   highlight:
-    "Nie musisz sam rozpisywać zadania — AI generuje listę kroków na podstawie tytułu i opisu karty, żeby od razu wiedzieć, od czego zacząć.",
+    "You don't have to break tasks down yourself — AI generates a list of steps based on the card title and description, so you know where to start right away.",
   screenshotIntro:
-    "Zobacz, jak wygląda praca z tablicą — od widoku kanban po szczegóły karty z krokami AI:",
+    "See what working with the board looks like — from the kanban view to card details with AI steps:",
   heroImage: {
     src: "/projects/flowboard/Flowboard-1.png",
-    alt: "Widok kanban Flowboard z bocznym panelem tablic, kolumnami Todo, In progress, Test, Done i Prod oraz kartami zadań",
+    alt: "Flowboard kanban view with sidebar of boards, Todo, In progress, Test, Done, and Prod columns, and task cards",
   },
   sections: [
     {
       paragraphs: [
-        "Boczny panel grupuje wszystkie tablice użytkownika — **Example Project**, **Personal Tasks**, **School** i kolejne, które sam tworzysz przyciskiem **New board**. Każda tablica ma własny zestaw kolumn i zadań, więc projekty nie mieszają się między sobą.",
-        "Kolumny dodajesz dynamicznie, a karty pokazują priorytet (HIGH, MEDIUM, LOW), tytuł, krótki opis i czas pracy. Przełącznik **Kanban Mode** / **Table Mode** pozwala zmienić sposób pracy z tym samym zestawem danych.",
+        "The sidebar groups all of the user's boards — **Example Project**, **Personal Tasks**, **School**, and others you create with the **New board** button. Each board has its own set of columns and tasks, so projects don't mix together.",
+        "You add columns dynamically, and cards show priority (HIGH, MEDIUM, LOW), title, short description, and time logged. The **Kanban Mode** / **Table Mode** toggle lets you change how you work with the same dataset.",
       ],
     },
     {
       paragraphs: [
-        "Po kliknięciu w kartę otwiera się panel szczegółów — tytuł, pełny opis, priorytet i log czasu. To tutaj działa integracja z AI: przycisk **Generate AI steps** analizuje zadanie i zwraca numerowaną listę konkretnych kroków do wykonania.",
+        "Clicking a card opens a details panel — title, full description, priority, and time log. This is where the AI integration kicks in: the **Generate AI steps** button analyzes the task and returns a numbered list of concrete action steps.",
       ],
       image: {
         src: "/projects/flowboard/Flowboard-2.png",
-        alt: "Panel szczegółów karty w Flowboard z opisem zadania, przyciskiem Generate AI steps i wygenerowanymi krokami akcji",
+        alt: "Flowboard card details panel with task description, Generate AI steps button, and generated action steps",
       },
     },
     {
       paragraphs: [
-        "Wygenerowane kroki trafiają do sekcji **ACTION STEPS (AI)** — gotowej checklisty, którą możesz od razu realizować po kolei. Przydaje się przy bugach, feature'ach i zadaniach, które na pierwszy rzut oka wydają się zbyt ogólne, żeby od razu usiąść do kodu.",
+        "Generated steps land in the **ACTION STEPS (AI)** section — a ready-made checklist you can work through in order. It comes in handy for bugs, features, and tasks that seem too broad to sit down and code right away.",
       ],
     },
   ],
   closing: [
-    "Flowboard łączy **React**, **TypeScript** i **Zustand** po stronie interfejsu z **Supabase** jako backendem użytkowników i danych tablic. Efekt to kanban, w którym rejestracja, własne boardy, elastyczne kolumny i AI wspierają codzienną pracę — od planowania po rozbicie zadania na wykonalne kroki.",
+    "Flowboard combines **React**, **TypeScript**, and **Zustand** on the interface side with **Supabase** as the backend for users and board data. The result is a kanban where registration, personal boards, flexible columns, and AI support everyday work — from planning to breaking a task into actionable steps.",
   ],
 };

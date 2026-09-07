@@ -82,7 +82,7 @@ function ProjectScreenshot({
 
 export function ProjectDetailView({ project }: { project: ProjectDetail }) {
   const backHref = project.backHref ?? "/#projekty";
-  const backLabel = project.backLabel ?? "Wszystkie projekty";
+  const backLabel = project.backLabel ?? "All projects";
 
   return (
     <article className="mx-auto w-full max-w-[900px]">

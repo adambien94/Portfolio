@@ -1,19 +1,23 @@
 import { commercialExperience, projects } from "@/data/portfolio";
+import { clinicPlatformProject } from "./clinic-platform";
 import { doorsProject } from "./doors";
 import { flowboardProject } from "./flowboard";
 import { lerniProject } from "./lerni";
 import { mindiaProject } from "./mindia";
 import { recruitmentPlatformProject } from "./recruitment-platform";
+import { reportingSpaProject } from "./reporting-spa";
 import { tvshowProject } from "./tvshow";
 import { wastePortalExtensionProject } from "./waste-portal-extension";
 import type { ProjectDetail } from "./types";
 
 const projectDetails: Record<string, ProjectDetail> = {
   doors: doorsProject,
+  "clinic-platform": clinicPlatformProject,
   flowboard: flowboardProject,
   lerni: lerniProject,
   mindia: mindiaProject,
   "recruitment-platform": recruitmentPlatformProject,
+  "reporting-spa": reportingSpaProject,
   TvShow: tvshowProject,
   "waste-portal-extension": wastePortalExtensionProject,
 };

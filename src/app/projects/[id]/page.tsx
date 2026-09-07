@@ -22,7 +22,7 @@ export async function generateMetadata({
   const project = getProjectById(id);
 
   if (!project) {
-    return { title: "Projekt — Adam Bien" };
+    return { title: "Project — Adam Bien" };
   }
 
   return {
@@ -56,14 +56,14 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               className="link-muted mb-10 inline-flex items-center gap-2 text-[14px]"
             >
               <span aria-hidden>←</span>
-              Wszystkie projekty
+              All projects
             </Link>
             <h1 className="text-[32px] font-medium tracking-[-0.03em] text-foreground">
               {title}
             </h1>
             <p className="prose-portfolio mt-5">{description}</p>
             <p className="mt-8 text-[15px] text-foreground-subtle">
-              Pełny opis tego projektu pojawi się wkrótce.
+              The full description of this project is coming soon.
             </p>
           </div>
         )}

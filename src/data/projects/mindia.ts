@@ -54,5 +54,5 @@ export const mindiaProject: ProjectDetail = {
     "The app sits closer to a **clinical media tool** than a standard admin panel: **WebSockets** and **getUserMedia** for real-time capture, on-device **VAD** for speech gating, and a **Video.js** + **HLS** annotation workspace with synced **WebVTT** captions. The frontend is the control plane for a privacy-by-architecture loop — from session to anonymized review.",
   ],
   backHref: "/#doswiadczenie",
-  backLabel: "Doświadczenie komercyjne",
+  backLabel: "Commercial experience",
 };

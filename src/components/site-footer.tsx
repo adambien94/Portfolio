@@ -10,7 +10,7 @@ export function SiteFooter() {
           </span>
           .dev
           <span className="mx-2 text-foreground/20">·</span>
-          zbudowane z Next.js
+          built with Next.js
         </p>
         <p className="text-[13px] text-foreground-subtle">
           © {new Date().getFullYear()} {profile.name}

@@ -52,5 +52,5 @@ export const recruitmentPlatformProject: ProjectDetail = {
     "At this scale, consistency beats customization: a **declarative form factory**, a **shared server-driven table**, **SignalR** for live updates, and **config-driven** reports and filters let the frontend grow with the business without multiplying one-off screen implementations.",
   ],
   backHref: "/#doswiadczenie",
-  backLabel: "Doświadczenie komercyjne",
+  backLabel: "Commercial experience",
 };
