@@ -8,15 +8,15 @@ export const profile = {
   linkedin: "https://linkedin.com",
   headline: "How do you build products\nthat feel right?",
   subheadline:
-    "I design and code interfaces where detail, motion, and clarity go hand in hand — from the first interaction.",
+    "I design and code interfaces where detail, motion, and clarity matter from the first interaction.",
 };
 
 export const about = {
   title: `${profile.name}`,
   paragraphs: [
-    "Hi! I'm a **Frontend Developer** who treats building polished interfaces as a blend of passion and craft.",
-    "I've been programming for **8 years**, and for over **five** I've been building commercial software with end users in mind. I've gone from early experiments with code to creating full-scale platforms in **TypeScript**, **Vue**, and **React**.",
-    "What satisfies me most is the moment when code, thoughtful UI, and refined micro-interactions come together into one cohesive product that runs smoothly. I care about the full interface lifecycle — from **Figma** mockups, through **API** integrations and accessibility, to performance optimization in production.",
+    "Hi! I'm a **Frontend Developer**. I like building interfaces that feel polished and intentional.",
+    "I've been programming for **8 years**, and for over **five** I've been building commercial software with real users. I went from early experiments with code to full-scale platforms in **TypeScript**, **Vue**, and **React**.",
+    "What I enjoy most is when code, UI, and micro-interactions click together into something that just works. I care about the whole process: **Figma** mockups, **API** integrations, accessibility, and performance once the app is live.",
   ],
 };
 
@@ -65,10 +65,10 @@ export const projects = [
 export const commercialExperience = {
   title: "Commercial experience",
   subtitle:
-    "Over five years as a frontend developer — from internal apps to end-to-end products.",
+    "Over five years as a frontend developer, from internal tools to full products.",
   paragraphs: [
-    "I've built and maintained modern web applications — from internal business tools to full **SPA** and **PWA** products. I've worked in the **Vue** ecosystem (2 and 3, **Nuxt.js**, **Quasar**), as well as **React** and **Next.js**, consistently choosing **TypeScript**.",
-    "I've designed interfaces, implemented application logic, and integrated **APIs**. I've managed state (**Pinia**, **Zustand**, **Vuex**), configured routing and authentication, and paid attention to performance, responsiveness, accessibility, and cross-browser compatibility. Styling in **CSS**, **SCSS**, **Tailwind**, and **Bootstrap** — often based on **Figma** designs.",
+    "I've built and maintained modern web apps, from internal business tools to full **SPA** and **PWA** products. Most of my work has been in **Vue** (2 and 3, **Nuxt.js**, **Quasar**), with **React** and **Next.js** on recent projects. **TypeScript** is my default.",
+    "I've designed interfaces, wired up application logic, and integrated **APIs**. State management with **Pinia**, **Zustand**, and **Vuex**; routing and auth; performance, responsiveness, accessibility, and cross-browser quirks. Styling in **CSS**, **SCSS**, **Tailwind**, and **Bootstrap**, usually from **Figma** designs.",
     "I've written unit tests (**Jest**), deployed applications to staging and production (**Docker**), and collaborated with product and backend teams. I've participated in technology choices and toolchain configuration (**Vite**, **Webpack**, **Git**).",
   ],
   projects: [
@@ -104,7 +104,7 @@ export const commercialExperience = {
       id: "clinic-platform",
       name: "Web platform for a clinic network",
       description:
-        "A multilingual SSR platform for a clinic group — content from a headless CMS.",
+        "A multilingual SSR platform for a clinic group, with content from a headless CMS.",
       href: "/projects/clinic-platform",
     },
   ],

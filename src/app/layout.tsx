@@ -18,9 +18,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Adam Bien — Frontend Developer",
+  title: "Adam Bien - Frontend Developer",
   description:
-    "Frontend portfolio: design engineering, React, Next.js, and animations that feel right.",
+    "Frontend portfolio. React, Next.js, Vue, and the kind of UI details I like to get right.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

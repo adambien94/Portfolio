@@ -12,11 +12,11 @@ export function Projects() {
       <div className="mx-auto w-full max-w-[900px]">
         <div className="mx-auto mb-10 max-w-[700px] sm:mb-14">
           <h2 className="text-[26px] leading-tight font-medium tracking-[-0.02em] text-foreground sm:text-[28px]">
-            Projects
+            Side projects
           </h2>
           <p className="mt-3 max-w-[540px] text-[17px] leading-7 text-foreground-secondary sm:text-[18px]">
-            Selected work I've done — from UI libraries to full-fledged
-            products. Placeholder descriptions, ready to swap for your own.
+            Selected work I've done. From AI-powered apps and real-time tools to
+            a media PWA and a 3D configurator.
           </p>
         </div>
 

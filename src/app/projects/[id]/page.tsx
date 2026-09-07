@@ -22,11 +22,11 @@ export async function generateMetadata({
   const project = getProjectById(id);
 
   if (!project) {
-    return { title: "Project — Adam Bien" };
+    return { title: "Project - Adam Bien" };
   }
 
   return {
-    title: `${project.name} — Adam Bien`,
+    title: `${project.name} - Adam Bien`,
     description: detail?.headline ?? project.description,
   };
 }

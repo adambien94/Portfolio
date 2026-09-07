@@ -6,15 +6,15 @@ export const lerniProject: ProjectDetail = {
   stack: ["React", "TypeScript", "Shadcn", "Supabase", "Vercel", "Gemini API"],
   accent: "#86efac",
   headline:
-    "A personal learning space where online sources, AI, and review sessions come together in one cohesive place.",
+    "A personal learning space where online sources, AI, and review sessions live in one place.",
   intro: [
-    "Lerni is an AI-powered learning app I built, inspired by NotebookLM. Users add articles, blogs, and other materials from the web, then work with them in a notebook — without jumping between tabs or drowning in bookmarks.",
-    "The engine powered by the Gemini API summarizes knowledge from selected sources, answers specific questions in the context of those materials, and generates flashcards and quizzes to reinforce concepts.",
+    "Lerni is an AI-powered learning app I built, inspired by NotebookLM. You add articles, blogs, and other materials from the web, then work with them in a notebook without jumping between tabs or drowning in bookmarks.",
+    "The Gemini API summarizes knowledge from your sources, answers questions in that context, and generates flashcards and quizzes to help you remember what you read.",
   ],
   highlight:
-    "Finally, you learn from your own materials — instead of guessing what's important, you get summaries, chat, and review tools in a single view.",
+    "You learn from your own materials. Summaries, chat, and review tools sit in one view instead of scattered tabs.",
   screenshotIntro:
-    "See what working with the notebook looks like — from login to flashcards and quizzes:",
+    "What the notebook looks like in practice, from login to flashcards and quizzes:",
   heroImage: {
     src: "/projects/lerni/Lerni-3.png",
     alt: "Lerni notebook workspace with source panels, AI summary, and study studio",
@@ -22,7 +22,7 @@ export const lerniProject: ProjectDetail = {
   sections: [
     {
       paragraphs: [
-        "The interface is dark and calm — deliberately free of distractions. Login and the start screen immediately communicate that this is a tool for focused learning, not another bulletin board.",
+        "The interface is dark and calm on purpose. Login and the start screen make it clear this is a tool for focused learning, not another bulletin board.",
       ],
       image: {
         src: "/projects/lerni/Lerni-1.png",
@@ -31,7 +31,7 @@ export const lerniProject: ProjectDetail = {
     },
     {
       paragraphs: [
-        "Notebooks group topics — React, design patterns, interview prep. Each has its own sources, summary history, and generated study materials.",
+        "Notebooks group topics: React, design patterns, interview prep. Each has its own sources, summary history, and generated study materials.",
       ],
       image: {
         src: "/projects/lerni/Lerni-2.png",
@@ -40,12 +40,12 @@ export const lerniProject: ProjectDetail = {
     },
     {
       paragraphs: [
-        "In the workspace view, three columns map to three stages of learning: **sources** on the left, **summary and AI chat** in the center, **studio** on the right — with flashcards and quizzes generated from what you've already read.",
+        "The workspace has three columns for three stages of learning: **sources** on the left, **summary and AI chat** in the center, **studio** on the right with flashcards and quizzes generated from what you've read.",
       ],
     },
     {
       paragraphs: [
-        "Quizzes test understanding based on the summary — with hints, navigation between questions, and clear feedback. Flashcards work like classic cards: flip, reset, move to the next one.",
+        "Quizzes test understanding based on the summary, with hints, navigation between questions, and clear feedback. Flashcards work like classic cards: flip, reset, move to the next one.",
       ],
       image: {
         src: "/projects/lerni/Lerni-4.png",
@@ -54,7 +54,7 @@ export const lerniProject: ProjectDetail = {
     },
     {
       paragraphs: [
-        "Flashcards are generated from selected sources and can be reviewed right away in the Studio panel — no export to another app required.",
+        "Flashcards are generated from selected sources and can be reviewed right away in the Studio panel. No export to another app required.",
       ],
       image: {
         src: "/projects/lerni/Lerni-5.png",
@@ -63,6 +63,6 @@ export const lerniProject: ProjectDetail = {
     },
   ],
   closing: [
-    "Lerni combines **React**, **TypeScript**, **Shadcn**, and **Supabase** on the application side with the **Gemini API** as the intelligence layer. The result is a product where you go from gathering materials to exam review without switching context.",
+    "Built with **React**, **TypeScript**, **Shadcn**, and **Supabase**, with the **Gemini API** handling the AI layer. The idea was simple: go from gathering materials to exam review without switching context.",
   ],
 };
