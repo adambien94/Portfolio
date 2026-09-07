@@ -2,7 +2,7 @@ import type { ProjectDetail } from "./types";
 
 export const recruitmentPlatformProject: ProjectDetail = {
   id: "recruitment-platform",
-  name: "Data management and analytics SPA",
+  name: "Data management SPA",
   accent: "#fcd34d",
   stack: [
     "SignalR",
@@ -13,7 +13,7 @@ export const recruitmentPlatformProject: ProjectDetail = {
     "PDF / Excel exports",
   ],
   headline:
-    "A large internal SPA for managing operational data, running advanced searches, and generating analytics across the full worker placement lifecycle.",
+    "An internal SPA for recruitment data, search, and operational reporting.",
   intro: [
     "An internal **data management and analytics** application for an international recruitment agency. Consultants use it daily to register, search, edit, and report on candidates, orders, contracts, transport, and correspondence. Every stage of placing workers abroad goes through the same system.",
     "The app has **~70 routed views** across six main areas: **Candidates**, **Orders & clients**, **Advanced search**, **Reports**, **Administration**, and a **Dashboard**, backed by **90+ form screens** and **70+ data tables**.",

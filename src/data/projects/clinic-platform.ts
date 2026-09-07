@@ -2,7 +2,7 @@ import type { ProjectDetail } from "./types";
 
 export const clinicPlatformProject: ProjectDetail = {
   id: "clinic-platform",
-  name: "Multi-clinic SSR web platform",
+  name: "Clinic web platform",
   accent: "#fda4af",
   stack: [
     "Directus GraphQL",
@@ -15,7 +15,7 @@ export const clinicPlatformProject: ProjectDetail = {
     "REST",
   ],
   headline:
-    "A production SSR web platform for a multi-location dental clinic group. One codebase, three clinic brands, four languages, all content from a headless CMS.",
+    "A multilingual SSR platform for a dental clinic group with headless CMS content.",
   intro: [
     "I was the sole owner of the client application for this production platform. One SSR app serves **three clinic brands** and **four languages**. Page content comes from **Directus** via typed **GraphQL** at request time. Editors publish through the CMS and the site renders without redeploying copy changes.",
     "The app follows an **Atomic Design** hierarchy and resolves clinic context from the route (`/[clinic]/…`) through a lightweight composable, no global state store. Data is fetched per page and cached through async data helpers; global bootstrap content is prefetched once and shared across routes. Per-clinic branding applies through **CSS custom properties** on the root element, so one codebase renders three distinct visual identities.",

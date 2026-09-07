@@ -81,14 +81,14 @@ export const commercialExperience = {
     },
     {
       id: "recruitment-platform",
-      name: "Data management and analytics system",
+      name: "Data management SPA",
       description:
         "An internal SPA for data management, search, and operational reporting.",
       href: "/projects/recruitment-platform",
     },
     {
       id: "waste-portal-extension",
-      name: "Chrome extension for waste management portal",
+      name: "Waste portal extension",
       description:
         "Development and extension of a Chrome extension that speeds up waste handling in a government portal.",
       href: "/projects/waste-portal-extension",
@@ -102,7 +102,7 @@ export const commercialExperience = {
     },
     {
       id: "clinic-platform",
-      name: "Web platform for a clinic network",
+      name: "Clinic web platform",
       description:
         "A multilingual SSR platform for a clinic group, with content from a headless CMS.",
       href: "/projects/clinic-platform",

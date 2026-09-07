@@ -2,7 +2,7 @@ import type { ProjectDetail } from "./types";
 
 export const mindiaProject: ProjectDetail = {
   id: "mindia",
-  name: "Clinical video streaming app",
+  name: "Video streaming app",
   accent: "#a5b4fc",
   stack: [
     "WebSockets",
@@ -17,7 +17,7 @@ export const mindiaProject: ProjectDetail = {
     "Swagger",
   ],
   headline:
-    "A privacy-first clinical platform where psychologists record therapy sessions, review anonymized footage, and annotate behavior in one workflow.",
+    "A clinical platform for recording, anonymizing, and reviewing therapy sessions.",
   intro: [
     "A web application for psychologists to capture therapy sessions, review anonymized media, edit transcriptions, and tag clinical behavior. The frontend runs a full media pipeline, not just a data-entry screen: live capture, anonymization, synchronized review.",
     "Session flow follows assignment status. An **Active** session opens the recording interface. Later statuses unlock the review workbench with streaming playback, editable transcripts, and behavioral annotations stored as structured data.",

@@ -2,7 +2,7 @@ import type { ProjectDetail } from "./types";
 
 export const reportingSpaProject: ProjectDetail = {
   id: "reporting-spa",
-  name: "Reporting and visualization SPA",
+  name: "Reporting SPA",
   accent: "#38bdf8",
   stack: [
     "Chart.js",
@@ -15,7 +15,7 @@ export const reportingSpaProject: ProjectDetail = {
     "CSV streaming",
   ],
   headline:
-    "A multi-tenant reporting SPA for filtering, visualizing, and exporting large operational datasets through a typed REST API.",
+    "A reporting SPA for filtering, charting, and exporting large datasets.",
   intro: [
     "A reporting application scoped by company ID in the URL. Multiple report pages share the same table, filter, and chart building blocks, wired to typed API methods through reusable composables instead of duplicated page logic.",
     "Auth, API configuration, and error handling live in composable modules. The TypeScript client is **auto-generated from the backend OpenAPI spec** on every dev start and build, so DTOs, enums, and endpoints stay typed end to end.",

@@ -2,7 +2,7 @@ import type { ProjectDetail } from "./types";
 
 export const wastePortalExtensionProject: ProjectDetail = {
   id: "waste-portal-extension",
-  name: "Waste management portal Chrome extension",
+  name: "Waste portal extension",
   accent: "#6ee7b7",
   stack: [
     "Chrome MV3",
@@ -17,7 +17,7 @@ export const wastePortalExtensionProject: ProjectDetail = {
     "Driver.js",
   ],
   headline:
-    "Developing and extending a production Chrome extension that augments a government waste management portal with bulk actions, custom forms, and workflow shortcuts.",
+    "A Chrome extension with bulk actions and shortcuts for a government waste portal.",
   intro: [
     "I joined an already live **Chrome extension** on the Chrome Web Store and kept building the front end: bulk actions, custom forms, table enhancements, and workflow shortcuts injected into a government portal built with ASP.NET and jQuery. The codebase I worked on has **100+ components** mounted across **50+ page-specific content script bundles**.",
     "The front end follows a three-layer injection model. **Content scripts** observe the host DOM and mount components into injected containers. **Application islands** render each feature as a self-contained instance sharing global state. An **injected page script** runs in the page's JavaScript context to read host state and communicate back over **`window.postMessage`**.",
