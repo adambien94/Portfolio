@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { getProjectById } from "@/data/projects";
+import { getProjectDetail } from "@/data/projects";
 
 const DEFAULT_GLOW = "#ffbe25";
 
@@ -12,7 +12,7 @@ export function PageGlow() {
   useEffect(() => {
     const match = pathname.match(/^\/projects\/([^/]+)$/);
     const color = match
-      ? (getProjectById(match[1])?.accent ?? DEFAULT_GLOW)
+      ? (getProjectDetail(match[1])?.accent ?? DEFAULT_GLOW)
       : DEFAULT_GLOW;
 
     document.documentElement.style.setProperty("--page-glow", color);

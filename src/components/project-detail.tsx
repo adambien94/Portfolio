@@ -81,14 +81,17 @@ function ProjectScreenshot({
 }
 
 export function ProjectDetailView({ project }: { project: ProjectDetail }) {
+  const backHref = project.backHref ?? "/#projekty";
+  const backLabel = project.backLabel ?? "Wszystkie projekty";
+
   return (
     <article className="mx-auto w-full max-w-[900px]">
       <Link
-        href="/#projekty"
+        href={backHref}
         className="link-muted mb-10 inline-flex items-center gap-2 text-[14px]"
       >
         <span aria-hidden>←</span>
-        Wszystkie projekty
+        {backLabel}
       </Link>
 
       <header className="mb-10 sm:mb-14">
@@ -122,7 +125,9 @@ export function ProjectDetailView({ project }: { project: ProjectDetail }) {
         {project.screenshotIntro ? <p>{project.screenshotIntro}</p> : null}
       </div>
 
-      <ProjectScreenshot image={project.heroImage} priority />
+      {project.heroImage ? (
+        <ProjectScreenshot image={project.heroImage} priority />
+      ) : null}
 
       {project.sections.map((section, index) => (
         <div key={`${section.paragraphs[0]}-${index}`}>
@@ -151,16 +156,18 @@ export function ProjectDetailView({ project }: { project: ProjectDetail }) {
         </div>
       ) : null}
 
-      <div className="mt-10 flex flex-wrap gap-1.5 sm:mt-14">
-        {project.stack.map((tech) => (
-          <span
-            key={tech}
-            className="rounded-md bg-foreground/[0.04] px-2.5 py-1 text-[12px] text-muted-foreground"
-          >
-            {tech}
-          </span>
-        ))}
-      </div>
+      {project.stack?.length ? (
+        <div className="mt-10 flex flex-wrap gap-1.5 sm:mt-14">
+          {project.stack.map((tech) => (
+            <span
+              key={tech}
+              className="rounded-md bg-foreground/[0.04] px-2.5 py-1 text-[12px] text-muted-foreground"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+      ) : null}
     </article>
   );
 }

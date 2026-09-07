@@ -1,21 +1,35 @@
-import { projects } from "@/data/portfolio";
+import { commercialExperience, projects } from "@/data/portfolio";
 import { doorsProject } from "./doors";
 import { flowboardProject } from "./flowboard";
 import { lerniProject } from "./lerni";
+import { mindiaProject } from "./mindia";
+import { recruitmentPlatformProject } from "./recruitment-platform";
 import { tvshowProject } from "./tvshow";
+import { wastePortalExtensionProject } from "./waste-portal-extension";
 import type { ProjectDetail } from "./types";
 
 const projectDetails: Record<string, ProjectDetail> = {
   doors: doorsProject,
   flowboard: flowboardProject,
   lerni: lerniProject,
+  mindia: mindiaProject,
+  "recruitment-platform": recruitmentPlatformProject,
   TvShow: tvshowProject,
+  "waste-portal-extension": wastePortalExtensionProject,
 };
 
 export type ProjectListItem = (typeof projects)[number];
 
-export function getProjectById(id: string): ProjectListItem | undefined {
-  return projects.find((project) => project.id === id);
+export type CommercialProjectListItem =
+  (typeof commercialExperience.projects)[number];
+
+export function getProjectById(
+  id: string,
+): ProjectListItem | CommercialProjectListItem | undefined {
+  return (
+    projects.find((project) => project.id === id) ??
+    commercialExperience.projects.find((project) => project.id === id)
+  );
 }
 
 export function getProjectDetail(id: string): ProjectDetail | undefined {
@@ -23,7 +37,10 @@ export function getProjectDetail(id: string): ProjectDetail | undefined {
 }
 
 export function getAllProjectIds(): string[] {
-  return projects.map((project) => project.id);
+  return [
+    ...projects.map((project) => project.id),
+    ...commercialExperience.projects.map((project) => project.id),
+  ];
 }
 
 export function getProjectsWithDetails(): ProjectDetail[] {

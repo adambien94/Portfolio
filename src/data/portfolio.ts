@@ -73,25 +73,25 @@ export const commercialExperience = {
   ],
   projects: [
     {
-      id: "fintech-dashboard",
-      name: "Dashboard analityczny",
+      id: "mindia",
+      name: "Aplikacja do streamingu wideo",
       description:
-        "Panel do monitorowania transakcji i raportów w czasie rzeczywistym.",
-      href: "#",
+        "Platforma do nagrywania, anonimizacji i przeglądu sesji terapeutycznych.",
+      href: "/projects/mindia",
     },
     {
-      id: "b2b-portal",
-      name: "Portal B2B",
+      id: "recruitment-platform",
+      name: "System zarządzania danymi i analityki",
       description:
-        "Self-service ordering i śledzenie zamówień dla sieci dystrybutorów.",
-      href: "#",
+        "Wewnętrzna aplikacja SPA do zarządzania danymi, wyszukiwania i raportowania operacyjnego.",
+      href: "/projects/recruitment-platform",
     },
     {
-      id: "clinic-booking",
-      name: "System rezerwacji",
+      id: "waste-portal-extension",
+      name: "Rozszerzenie Chrome do portalu BDO",
       description:
-        "Kalendarz wizyt, płatności online i panel recepcji dla sieci klinik.",
-      href: "#",
+        "Rozszerzenie przyspieszające obsługę odpadów w oficjalnym systemie BDO.",
+      href: "/projects/waste-portal-extension",
     },
   ],
   stack: [

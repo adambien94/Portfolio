@@ -36,9 +36,12 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   const project = getProjectById(id);
   const detail = getProjectDetail(id);
 
-  if (!project) {
+  if (!project && !detail) {
     notFound();
   }
+
+  const title = detail?.name ?? project!.name;
+  const description = detail?.headline ?? project!.description;
 
   return (
     <div className="flex min-h-full flex-1 flex-col">
@@ -56,9 +59,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               Wszystkie projekty
             </Link>
             <h1 className="text-[32px] font-medium tracking-[-0.03em] text-foreground">
-              {project.name}
+              {title}
             </h1>
-            <p className="prose-portfolio mt-5">{project.description}</p>
+            <p className="prose-portfolio mt-5">{description}</p>
             <p className="mt-8 text-[15px] text-foreground-subtle">
               Pełny opis tego projektu pojawi się wkrótce.
             </p>

@@ -13,13 +13,15 @@ export type ProjectDetailSection = {
 export type ProjectDetail = {
   id: string;
   name: string;
-  stack: string[];
+  stack?: string[];
   accent: string;
   headline: string;
   intro: string[];
   highlight?: string;
   screenshotIntro?: string;
-  heroImage: ProjectScreenshot;
+  heroImage?: ProjectScreenshot;
   sections: ProjectDetailSection[];
   closing?: string[];
+  backHref?: string;
+  backLabel?: string;
 };
