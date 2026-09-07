@@ -29,14 +29,18 @@ export function CommercialExperience() {
 
         <StackMarquee items={commercialExperience.stack} />
 
-        <ul className="mt-10 flex flex-col gap-3 sm:mt-12">
+        <div className="mt-10 sm:mt-12">
+          <span className="text-[17px] font-medium">Projekty</span>
+        </div>
+
+        <ul className="mt-6 flex flex-col gap-3 sm:mt-8">
           {commercialExperience.projects.map((project) => (
             <li key={project.id}>
               <Link
                 href={project.href}
                 className="group -mx-2 block rounded-md px-2 py-2 transition-colors hover:bg-foreground/[0.04] sm:-mx-3 sm:px-3"
               >
-                <span className="block text-[17px] font-medium leading-snug text-foreground">
+                <span className="block text-[17px] font-base leading-snug text-foreground">
                   {project.name}
                 </span>
                 <span className="mt-0.5 block text-[17px] leading-relaxed text-muted-foreground">
