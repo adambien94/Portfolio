@@ -3,7 +3,7 @@ export const profile = {
   firstName: "Adam",
   role: "Frontend Developer",
   location: "Wrocław, Poland",
-  email: "adam@example.com",
+  email: "adam.bien94@gmail.com",
   github: "https://github.com",
   linkedin: "https://linkedin.com",
   headline: "How do you build products\nthat feel right?",

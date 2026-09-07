@@ -32,7 +32,7 @@ export function About() {
           ))}
         </div>
 
-        <div className="mt-10 flex flex-wrap gap-3">
+        <div className="mt-10 flex flex-wrap gap-3 justify-center sm:justify-start">
           <a
             href={profile.github}
             target="_blank"
