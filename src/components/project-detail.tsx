@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { PortfolioImage } from "@/components/portfolio-image";
 import Link from "next/link";
 import { RichText } from "@/components/rich-text";
 import type { ProjectDetail, ProjectScreenshot } from "@/data/projects/types";
@@ -26,7 +26,7 @@ function ProjectScreenshotRow({ images }: { images: ProjectScreenshot[] }) {
               }
             >
               {isFullWidthRow ? (
-                <Image
+                <PortfolioImage
                   src={image.src}
                   alt={image.alt}
                   fill
@@ -34,7 +34,7 @@ function ProjectScreenshotRow({ images }: { images: ProjectScreenshot[] }) {
                   sizes="(max-width: 768px) 33vw, 290px"
                 />
               ) : (
-                <Image
+                <PortfolioImage
                   src={image.src}
                   alt={image.alt}
                   width={390}
@@ -61,7 +61,7 @@ function ProjectScreenshot({
   return (
     <figure className="my-10 sm:my-14">
       <div className="overflow-hidden rounded-2xl border border-border bg-surface-elevated shadow-[var(--card-shadow)]">
-        <Image
+        <PortfolioImage
           src={image.src}
           alt={image.alt}
           width={1920}

@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "generate:blur": "node scripts/generate-blur-data.mjs",
+    "build": "npm run generate:blur && next build",
     "start": "next start",
     "lint": "eslint"
   },

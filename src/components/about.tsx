@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { PortfolioImage } from "@/components/portfolio-image";
 import { RichText } from "@/components/rich-text";
 import { about, profile } from "@/data/portfolio";
 
@@ -7,7 +7,7 @@ export function About() {
     <section id="o-mnie" className="scroll-mt-24 px-5 py-16 md:px-8 md:py-24">
       <div className="mx-auto w-full max-w-[700px]">
         <div className="mb-8 flex items-center gap-4 sm:mb-10 sm:gap-5">
-          <Image
+          <PortfolioImage
             src="/avatar.webp"
             alt={profile.name}
             width={100}

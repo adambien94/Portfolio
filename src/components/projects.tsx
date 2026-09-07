@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { PortfolioImage } from "@/components/portfolio-image";
 import Link from "next/link";
 import { projects } from "@/data/portfolio";
 import { getProjectDetail } from "@/data/projects";
@@ -32,7 +32,7 @@ export function Projects() {
               >
                 <div className="relative aspect-[16/10] overflow-hidden bg-surface-elevated">
                   {image ? (
-                    <Image
+                    <PortfolioImage
                       src={image.src}
                       alt={image.alt}
                       fill
