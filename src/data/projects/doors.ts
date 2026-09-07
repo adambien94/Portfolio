@@ -4,7 +4,7 @@ export const doorsProject: ProjectDetail = {
   id: "doors",
   name: "Door configurator",
   stack: ["Vue 2", "Canvas", "Three.js"],
-  accent: "#fde68a",
+  accent: "#FA824C",
   headline:
     "A three-step glass door configurator: type and dimensions, frame division, finish color, with 2D and 3D preview.",
   intro: [

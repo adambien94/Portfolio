@@ -2,10 +2,10 @@ export const profile = {
   name: "Adam Bień",
   firstName: "Adam",
   role: "Frontend Developer",
-  location: "Wrocław, Poland",
+  location: "Wroclove, Poland",
   email: "adam.bien94@gmail.com",
-  github: "https://github.com",
-  linkedin: "https://linkedin.com",
+  github: "https://github.com/adambien94",
+  linkedin: "https://www.linkedin.com/in/adam-bie%C5%84-342bb7182/",
   headline: "How do you build products\nthat feel right?",
   subheadline:
     "I design and code interfaces where detail, motion, and clarity matter from the first interaction.",
@@ -88,21 +88,21 @@ export const commercialExperience = {
     },
     {
       id: "waste-portal-extension",
-      name: "Waste portal extension",
+      name: "Government website Chrome extension",
       description:
-        "Development and extension of a Chrome extension that speeds up waste handling in a government portal.",
+        "Development of a Chrome extension that speeds up reports handling in a government portal.",
       href: "/projects/waste-portal-extension",
     },
     {
       id: "reporting-spa",
-      name: "Reporting SPA",
+      name: "Data reports dashboard",
       description:
         "An SPA for filtering, visualizing, and exporting large operational datasets.",
       href: "/projects/reporting-spa",
     },
     {
       id: "clinic-platform",
-      name: "Clinic web platform",
+      name: "Medical clinics web platform",
       description:
         "A multilingual SSR platform for a clinic group, with content from a headless CMS.",
       href: "/projects/clinic-platform",
