@@ -95,7 +95,7 @@ export function StackMarquee({ items }: StackMarqueeProps) {
   return (
     <div
       ref={containerRef}
-      className="relative mt-10 select-none overflow-hidden py-1"
+      className="relative mt-10 ml-[calc(50%-50vw)] w-screen select-none overflow-hidden py-1 md:ml-0 md:w-full"
       style={{
         maskImage:
           "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
