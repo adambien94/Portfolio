@@ -29,7 +29,7 @@ function splitIntoRows(items: readonly string[], rowCount: number) {
 
 function MarqueeBadge({ label }: { label: string }) {
   return (
-    <div className="rounded-full border border-border bg-surface px-3.5 py-2 font-mono text-[13px] leading-none font-medium whitespace-nowrap text-foreground-secondary">
+    <div className="rounded-full border border-border bg-surface px-3.5 py-2 font-mono text-xs leading-none font-medium whitespace-nowrap text-foreground-secondary">
       {label}
     </div>
   );

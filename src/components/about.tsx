@@ -15,10 +15,10 @@ export function About() {
             className="size-18 shrink-0 rounded-full object-cover"
           />
           <div className="flex flex-col gap-1">
-            <h2 className="text-[26px] leading-tight font-medium tracking-[-0.02em] text-foreground sm:text-[28px]">
+            <h2 className="text-2xl leading-tight font-medium tracking-[-0.02em] text-foreground sm:text-3xl">
               {about.title}
             </h2>
-            <p className="text-[14px] text-muted-foreground">
+            <p className="text-sm text-muted-foreground">
               {profile.role} · {profile.location}
             </p>
           </div>
@@ -37,7 +37,7 @@ export function About() {
             href={profile.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="ghost-button px-4 py-2 text-[14px]"
+            className="ghost-button px-4 py-2 text-sm"
           >
             GitHub
           </a>
@@ -45,13 +45,13 @@ export function About() {
             href={profile.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="ghost-button px-4 py-2 text-[14px]"
+            className="ghost-button px-4 py-2 text-sm"
           >
             LinkedIn
           </a>
           <a
             href={`mailto:${profile.email}`}
-            className="ghost-button px-4 py-2 text-[14px]"
+            className="ghost-button px-4 py-2 text-sm"
           >
             {profile.email}
           </a>

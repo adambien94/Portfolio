@@ -9,7 +9,7 @@ export function SiteHeader() {
         <div className="pointer-events-auto mx-auto flex w-full max-w-[1640px] items-center justify-between px-5 py-4 md:px-8 md:py-6">
           <Link
             href="/"
-            className="text-[15px] font-medium tracking-tight text-foreground/90 transition-colors hover:text-foreground"
+            className="text-base font-medium tracking-tight text-foreground/90 transition-colors hover:text-foreground"
           >
             {profile.domain}
             <span className="text-muted-foreground">.me</span>
@@ -21,7 +21,7 @@ export function SiteHeader() {
                 <Link
                   key={link.href}
                   href={`/${link.href}`}
-                  className="link-muted text-[14px]"
+                  className="link-muted text-sm"
                 >
                   {link.label}
                 </Link>

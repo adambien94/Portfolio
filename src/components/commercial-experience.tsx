@@ -11,10 +11,10 @@ export function CommercialExperience() {
     >
       <div className="mx-auto w-full max-w-[700px]">
         <div className="mb-8 sm:mb-10">
-          <h2 className="text-[26px] leading-tight font-medium tracking-[-0.02em] text-foreground sm:text-[28px]">
+          <h2 className="text-2xl leading-tight font-medium tracking-[-0.02em] text-foreground sm:text-3xl">
             {commercialExperience.title}
           </h2>
-          <p className="mt-3 text-[17px] leading-7 text-foreground-secondary sm:text-[18px]">
+          <p className="mt-3 text-base leading-7 text-foreground-secondary sm:text-lg">
             {commercialExperience.subtitle}
           </p>
         </div>
@@ -30,7 +30,7 @@ export function CommercialExperience() {
         <StackMarquee items={commercialExperience.stack} />
 
         <div className="mt-10 sm:mt-12">
-          <span className="text-[17px] font-medium">Recent projects</span>
+          <span className="text-base font-medium">Recent projects</span>
         </div>
 
         <ul className="mt-6 flex flex-col gap-3 sm:mt-8">
@@ -40,10 +40,10 @@ export function CommercialExperience() {
                 href={project.href}
                 className="group -mx-2 block rounded-md px-2 py-2 transition-colors hover:bg-foreground/[0.04] sm:-mx-3 sm:px-3"
               >
-                <span className="block text-[17px] font-base leading-snug text-foreground">
+                <span className="block text-base font-base leading-snug text-foreground">
                   {project.name}
                 </span>
-                <span className="mt-0.5 block text-[17px] leading-relaxed text-muted-foreground">
+                <span className="mt-0.5 block text-base leading-relaxed text-muted-foreground">
                   {project.description}
                 </span>
               </Link>

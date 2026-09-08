@@ -53,16 +53,16 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           <div className="mx-auto w-full max-w-[700px]">
             <Link
               href="/#projekty"
-              className="link-muted mb-10 inline-flex items-center gap-2 text-[14px]"
+              className="link-muted mb-10 inline-flex items-center gap-2 text-sm"
             >
               <span aria-hidden>←</span>
               All projects
             </Link>
-            <h1 className="text-[32px] font-medium tracking-[-0.03em] text-foreground">
+            <h1 className="text-3xl font-medium tracking-[-0.03em] text-foreground">
               {title}
             </h1>
             <p className="prose-portfolio mt-5">{description}</p>
-            <p className="mt-8 text-[15px] text-foreground-subtle">
+            <p className="mt-8 text-base text-foreground-subtle">
               The full description of this project is coming soon.
             </p>
           </div>

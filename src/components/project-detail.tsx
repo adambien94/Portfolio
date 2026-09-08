@@ -72,7 +72,7 @@ function ProjectScreenshot({
         />
       </div>
       {image.caption ? (
-        <figcaption className="mt-3 text-center text-[14px] text-foreground-subtle">
+        <figcaption className="mt-3 text-center text-sm text-foreground-subtle">
           {image.caption}
         </figcaption>
       ) : null}
@@ -88,7 +88,7 @@ export function ProjectDetailView({ project }: { project: ProjectDetail }) {
     <article className="mx-auto w-full max-w-[900px]">
       <Link
         href={backHref}
-        className="link-muted mb-10 inline-flex items-center gap-2 text-[14px]"
+        className="link-muted mb-10 inline-flex items-center gap-2 text-sm"
       >
         <span aria-hidden>←</span>
         {backLabel}
@@ -101,12 +101,12 @@ export function ProjectDetailView({ project }: { project: ProjectDetail }) {
             style={{ backgroundColor: project.accent }}
             aria-hidden
           />
-          <p className="text-[14px] font-medium text-foreground">
+          <p className="text-sm font-medium text-foreground">
             {project.name}
           </p>
         </div>
 
-        <h1 className="text-balance text-[32px] leading-[1.15] font-medium tracking-[-0.03em] text-foreground sm:text-[40px] sm:leading-[1.12]">
+        <h1 className="text-balance text-3xl leading-[1.15] font-medium tracking-[-0.03em] text-foreground sm:text-4xl sm:leading-[1.12]">
           {project.headline}
         </h1>
       </header>
@@ -161,7 +161,7 @@ export function ProjectDetailView({ project }: { project: ProjectDetail }) {
           {project.stack.map((tech) => (
             <span
               key={tech}
-              className="rounded-md bg-foreground/[0.04] px-2.5 py-1 text-[12px] text-muted-foreground"
+              className="rounded-md bg-foreground/[0.04] px-2.5 py-1 text-xs text-muted-foreground"
             >
               {tech}
             </span>

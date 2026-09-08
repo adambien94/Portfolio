@@ -11,10 +11,10 @@ export function Projects() {
     >
       <div className="mx-auto w-full max-w-[900px]">
         <div className="mx-auto mb-10 max-w-[700px] sm:mb-14">
-          <h2 className="text-[26px] leading-tight font-medium tracking-[-0.02em] text-foreground sm:text-[28px]">
+          <h2 className="text-2xl leading-tight font-medium tracking-[-0.02em] text-foreground sm:text-3xl">
             Side projects
           </h2>
-          <p className="mt-3 max-w-[540px] text-[17px] leading-7 text-foreground-secondary sm:text-[18px]">
+          <p className="mt-3 max-w-[540px] text-base leading-7 text-foreground-secondary sm:text-lg">
             Selected work I've done. From AI-powered apps and real-time tools to
             a media PWA and a 3D configurator.
           </p>
@@ -70,7 +70,7 @@ export function Projects() {
                     style={{ backgroundColor: project.accent }}
                     aria-hidden
                   />
-                  <p className="text-[14px] leading-5 text-muted-foreground">
+                  <p className="text-sm leading-5 text-muted-foreground">
                     <span className="font-medium text-foreground">
                       {project.name}
                     </span>
@@ -83,7 +83,7 @@ export function Projects() {
                   {project.stack.map((tech) => (
                     <span
                       key={tech}
-                      className="rounded-md bg-foreground/[0.04] px-2 py-0.5 text-[11px] text-muted-foreground"
+                      className="rounded-md bg-foreground/[0.04] px-2 py-0.5 text-xs text-muted-foreground"
                     >
                       {tech}
                     </span>
