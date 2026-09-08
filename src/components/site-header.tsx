@@ -12,7 +12,7 @@ export function SiteHeader() {
             className="text-base font-medium tracking-tight text-foreground/90 transition-colors hover:text-foreground"
           >
             {profile.domain}
-            <span className="text-muted-foreground">.me</span>
+            <span className="text-muted-foreground">.eu</span>
           </Link>
 
           <div className="flex items-center gap-3 md:gap-5">
