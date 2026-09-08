@@ -28,6 +28,7 @@ export const weseleoProject: ProjectDetail = {
   heroImage: {
     src: "/projects/weseleo/weseleo-1.png",
     alt: "Wedding invitations landing page with hero, phone mockup showing guest gallery, and a four-step onboarding flow",
+    caption: "Landing page with hero, phone mockup, and a four-step onboarding flow.",
   },
   sections: [
     {
@@ -45,10 +46,12 @@ export const weseleoProject: ProjectDetail = {
         {
           src: "/projects/weseleo/weseleo-6.png",
           alt: "Registration form showing subdomain validation error when the chosen address is already taken",
+          caption: "Signup blocked when the chosen subdomain is already taken.",
         },
         {
           src: "/projects/weseleo/weseleo-5.png",
           alt: "Registration form with available invitation address adam-monika.invite.pl and green availability confirmation",
+          caption: "Live availability check confirms the invitation address before account creation.",
         },
       ],
     },
@@ -60,6 +63,7 @@ export const weseleoProject: ProjectDetail = {
       image: {
         src: "/projects/weseleo/weseleo-2.png",
         alt: "Invitation editor with Sections tab, schedule editor, and live mobile preview of a romantic wedding template",
+        caption: "Invitation editor with section toggles and a live mobile preview.",
       },
     },
   ],

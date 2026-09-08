@@ -18,6 +18,7 @@ export const flowboardProject: ProjectDetail = {
   heroImage: {
     src: "/projects/flowboard/Flowboard-1.png",
     alt: "Flowboard kanban view with sidebar of boards, Todo, In progress, Test, Done, and Prod columns, and task cards",
+    caption: "Kanban view with personal boards, custom columns, and task cards.",
   },
   sections: [
     {
@@ -33,6 +34,7 @@ export const flowboardProject: ProjectDetail = {
       image: {
         src: "/projects/flowboard/Flowboard-2.png",
         alt: "Flowboard card details panel with task description, Generate AI steps button, and generated action steps",
+        caption: "Card details with AI-generated action steps from the task description.",
       },
     },
     {

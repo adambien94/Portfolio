@@ -8,8 +8,20 @@
  */
 
 import Image from "next/image";
+import {
+  ChevronLeft,
+  ChevronRight,
+  X,
+  ZoomIn as ZoomInIcon,
+  ZoomOut as ZoomOutIcon,
+} from "lucide-react";
 import * as React from "react";
 import * as RamkaLightbox from "@ramka/react/lightbox";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 import "./lightbox.css";
 
@@ -17,45 +29,30 @@ function cx(...parts: Array<string | false | null | undefined>) {
   return parts.filter(Boolean).join(" ");
 }
 
-function IconX() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} aria-hidden>
-      <path d="M18 6 6 18M6 6l12 12" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
+const controlIconClass = "size-5";
 
-function IconChevronLeft() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} aria-hidden>
-      <path d="m15 18-6-6 6-6" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
+const LightboxTooltipPortalContext = React.createContext<
+  React.RefObject<HTMLDivElement | null> | null
+>(null);
 
-function IconChevronRight() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} aria-hidden>
-      <path d="m9 18 6-6-6-6" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
+function LightboxControlTooltip({
+  label,
+  side = "bottom",
+  children,
+}: {
+  label: string;
+  side?: React.ComponentProps<typeof TooltipContent>["side"];
+  children: React.ReactElement;
+}) {
+  const container = React.useContext(LightboxTooltipPortalContext);
 
-function IconZoomIn() {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} aria-hidden>
-      <circle cx="11" cy="11" r="7" />
-      <path d="m21 21-4.35-4.35M11 8v6M8 11h6" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-function IconZoomOut() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} aria-hidden>
-      <circle cx="11" cy="11" r="7" />
-      <path d="m21 21-4.35-4.35M8 11h6" strokeLinecap="round" />
-    </svg>
+    <Tooltip>
+      <TooltipTrigger render={children} />
+      <TooltipContent side={side} container={container}>
+        {label}
+      </TooltipContent>
+    </Tooltip>
   );
 }
 
@@ -86,14 +83,23 @@ function Backdrop({ className, ...props }: React.ComponentProps<typeof RamkaLigh
   return <RamkaLightbox.Backdrop className={cx("elb-backdrop", className)} {...props} />;
 }
 
-function Content({ className, ...props }: React.ComponentProps<typeof RamkaLightbox.Content>) {
-  return <RamkaLightbox.Content className={cx("elb-content", className)} {...props} />;
-}
+const Content = React.forwardRef<
+  HTMLDivElement,
+  React.ComponentPropsWithoutRef<typeof RamkaLightbox.Content>
+>(function Content({ className, ...props }, ref) {
+  return (
+    <RamkaLightbox.Content
+      ref={ref}
+      className={cx("elb-content", className)}
+      {...props}
+    />
+  );
+});
 
 function Close({ className, children, ...props }: React.ComponentProps<typeof RamkaLightbox.Close>) {
   return (
     <RamkaLightbox.Close className={cx("elb-control", className)} aria-label="Close" {...props}>
-      {children ?? <IconX />}
+      {children ?? <X className={controlIconClass} aria-hidden />}
     </RamkaLightbox.Close>
   );
 }
@@ -121,7 +127,7 @@ function Zoom({ className, ...props }: React.ComponentProps<typeof RamkaLightbox
 function ZoomIn({ className, children, ...props }: React.ComponentProps<typeof RamkaLightbox.ZoomIn>) {
   return (
     <RamkaLightbox.ZoomIn className={cx("elb-control", className)} aria-label="Zoom in" {...props}>
-      {children ?? <IconZoomIn />}
+      {children ?? <ZoomInIcon className={controlIconClass} aria-hidden />}
     </RamkaLightbox.ZoomIn>
   );
 }
@@ -129,7 +135,7 @@ function ZoomIn({ className, children, ...props }: React.ComponentProps<typeof R
 function ZoomOut({ className, children, ...props }: React.ComponentProps<typeof RamkaLightbox.ZoomOut>) {
   return (
     <RamkaLightbox.ZoomOut className={cx("elb-control", className)} aria-label="Zoom out" {...props}>
-      {children ?? <IconZoomOut />}
+      {children ?? <ZoomOutIcon className={controlIconClass} aria-hidden />}
     </RamkaLightbox.ZoomOut>
   );
 }
@@ -149,7 +155,7 @@ function Previous({ className, children, ...props }: React.ComponentProps<typeof
       aria-label="Previous image"
       {...props}
     >
-      {children ?? <IconChevronLeft />}
+      {children ?? <ChevronLeft className={controlIconClass} aria-hidden />}
     </RamkaLightbox.Previous>
   );
 }
@@ -161,7 +167,7 @@ function Next({ className, children, ...props }: React.ComponentProps<typeof Ram
       aria-label="Next image"
       {...props}
     >
-      {children ?? <IconChevronRight />}
+      {children ?? <ChevronRight className={controlIconClass} aria-hidden />}
     </RamkaLightbox.Next>
   );
 }
@@ -179,11 +185,13 @@ function figureCaption(item: LightboxItem): React.ReactNode {
 
 function Gallery({ items, ariaLabel }: { items: LightboxItem[]; ariaLabel: string }) {
   const multiple = items.length > 1;
+  const contentRef = React.useRef<HTMLDivElement>(null);
 
   return (
     <Portal>
       <Backdrop />
-      <Content aria-label={ariaLabel}>
+      <LightboxTooltipPortalContext.Provider value={contentRef}>
+        <Content ref={contentRef} aria-label={ariaLabel}>
         <Slides
           aria-label="Article photographs"
           aria-roledescription="carousel"
@@ -204,7 +212,8 @@ function Gallery({ items, ariaLabel }: { items: LightboxItem[]; ariaLabel: strin
                       alt={item.alt}
                       width={item.width}
                       height={item.height}
-                      sizes="100vw"
+                      sizes={`${item.width}px`}
+                      quality={100}
                       priority
                       draggable={false}
                     />
@@ -218,23 +227,34 @@ function Gallery({ items, ariaLabel }: { items: LightboxItem[]; ariaLabel: strin
         <div className={cx("elb-top", "elb-chrome-gesture-hide", "elb-chrome-zoom-hide")}>
           {multiple ? <Counter>{({ current, total }) => `${current} / ${total}`}</Counter> : <span />}
           <div className="elb-top-controls">
-            <ZoomOut />
-            <ZoomIn />
-            <Close />
+            <LightboxControlTooltip label="Zoom out">
+              <ZoomOut />
+            </LightboxControlTooltip>
+            <LightboxControlTooltip label="Zoom in">
+              <ZoomIn />
+            </LightboxControlTooltip>
+            <LightboxControlTooltip label="Close">
+              <Close />
+            </LightboxControlTooltip>
           </div>
         </div>
 
         {multiple ? (
           <>
-            <Previous className="elb-chrome-gesture-hide" />
-            <Next className="elb-chrome-gesture-hide" />
+            <LightboxControlTooltip label="Previous image" side="right">
+              <Previous className="elb-chrome-gesture-hide" />
+            </LightboxControlTooltip>
+            <LightboxControlTooltip label="Next image" side="left">
+              <Next className="elb-chrome-gesture-hide" />
+            </LightboxControlTooltip>
           </>
         ) : null}
 
         <div className={cx("elb-bottom", "elb-chrome-gesture-hide", "elb-chrome-zoom-hide")}>
           <Caption />
         </div>
-      </Content>
+        </Content>
+      </LightboxTooltipPortalContext.Provider>
     </Portal>
   );
 }

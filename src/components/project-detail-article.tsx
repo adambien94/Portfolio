@@ -7,6 +7,9 @@ import type { LightboxItem } from "@/components/editorial-lightbox/lightbox";
 import type { ProjectDetail, ProjectScreenshot } from "@/data/projects/types";
 import Link from "next/link";
 
+const screenshotTriggerFrameClass =
+  "overflow-hidden rounded-2xl border border-border bg-surface-elevated shadow-[var(--card-shadow)]";
+
 function ProjectScreenshotTrigger({
   image,
   index,
@@ -14,7 +17,8 @@ function ProjectScreenshotTrigger({
   fill,
   width,
   height,
-  className,
+  imageClassName,
+  frameClassName,
   sizes,
 }: {
   image: ProjectScreenshot;
@@ -23,11 +27,15 @@ function ProjectScreenshotTrigger({
   fill?: boolean;
   width?: number;
   height?: number;
-  className?: string;
+  imageClassName?: string;
+  frameClassName?: string;
   sizes?: string;
 }) {
   return (
-    <Lightbox.Trigger index={index} className="block w-full scroll-my-10">
+    <Lightbox.Trigger
+      index={index}
+      className={`block w-full scroll-my-10 ${screenshotTriggerFrameClass}${frameClassName ? ` ${frameClassName}` : ""}`}
+    >
       {({ imageRef }) =>
         fill ? (
           <PortfolioImage
@@ -36,7 +44,7 @@ function ProjectScreenshotTrigger({
             alt={image.alt}
             fill
             priority={priority}
-            className={className}
+            className={imageClassName}
             sizes={sizes}
           />
         ) : (
@@ -47,7 +55,7 @@ function ProjectScreenshotTrigger({
             width={width!}
             height={height!}
             priority={priority}
-            className={className}
+            className={imageClassName}
             sizes={sizes}
           />
         )
@@ -76,33 +84,29 @@ function ProjectScreenshotRow({
           }
         >
           {images.map((image) => (
-            <div
-              key={image.src}
-              className={
-                isFullWidthRow
-                  ? "relative aspect-[16/10] overflow-hidden rounded-2xl border border-border bg-surface-elevated shadow-[var(--card-shadow)]"
-                  : "overflow-hidden rounded-2xl border border-border bg-surface-elevated shadow-[var(--card-shadow)]"
-              }
-            >
-              {isFullWidthRow ? (
-                <ProjectScreenshotTrigger
-                  image={image}
-                  index={indexBySrc.get(image.src)!}
-                  fill
-                  className="object-cover object-top"
-                  sizes="(max-width: 768px) 50vw, 290px"
-                />
-              ) : (
-                <ProjectScreenshotTrigger
-                  image={image}
-                  index={indexBySrc.get(image.src)!}
-                  width={390}
-                  height={844}
-                  className="h-auto w-full"
-                  sizes="(max-width: 640px) 50vw, 300px"
-                />
-              )}
-            </div>
+            <figure key={image.src}>
+              <ProjectScreenshotTrigger
+                image={image}
+                index={indexBySrc.get(image.src)!}
+                fill={isFullWidthRow}
+                frameClassName={isFullWidthRow ? "relative aspect-[16/10]" : undefined}
+                imageClassName={
+                  isFullWidthRow ? "object-cover object-top" : "h-auto w-full"
+                }
+                width={isFullWidthRow ? undefined : 390}
+                height={isFullWidthRow ? undefined : 844}
+                sizes={
+                  isFullWidthRow
+                    ? "(max-width: 768px) 50vw, 290px"
+                    : "(max-width: 640px) 50vw, 300px"
+                }
+              />
+              {image.caption ? (
+                <figcaption className="mt-2 text-center text-xs text-foreground-subtle sm:text-sm">
+                  {image.caption}
+                </figcaption>
+              ) : null}
+            </figure>
           ))}
         </div>
       </div>
@@ -121,17 +125,15 @@ function ProjectScreenshot({
 }) {
   return (
     <figure className="my-10 sm:my-14">
-      <div className="overflow-hidden rounded-2xl border border-border bg-surface-elevated shadow-[var(--card-shadow)]">
-        <ProjectScreenshotTrigger
-          image={image}
-          index={index}
-          priority={priority}
-          width={1920}
-          height={1080}
-          className="h-auto w-full"
-          sizes="(max-width: 768px) 100vw, 900px"
-        />
-      </div>
+      <ProjectScreenshotTrigger
+        image={image}
+        index={index}
+        priority={priority}
+        width={1920}
+        height={1080}
+        imageClassName="h-auto w-full"
+        sizes="(max-width: 768px) 100vw, 900px"
+      />
       {image.caption ? (
         <figcaption className="mt-3 text-center text-sm text-foreground-subtle">
           {image.caption}

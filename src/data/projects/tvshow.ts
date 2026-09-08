@@ -18,6 +18,7 @@ export const tvshowProject: ProjectDetail = {
   heroImage: {
     src: "/projects/TvShow/TvShowApp-1.png",
     alt: "Tv shows dashboard with horizontal series lists grouped by genre: Drama, Mystery, Sci-Fi, Fantasy, Action, Comedy",
+    caption: "Genre dashboard with horizontal series lists sorted by rating.",
   },
   sections: [
     {
@@ -34,10 +35,12 @@ export const tvshowProject: ProjectDetail = {
         {
           src: "/projects/TvShow/TvShowApp-2.png",
           alt: "Dexter series detail view in Tv shows with 8.4 rating, description, and carousel of 8 seasons",
+          caption: "Series detail view with rating, description, and season carousel.",
         },
         {
           src: "/projects/TvShow/TvShowApp-3.png",
           alt: "Search results for 'break' in Tv shows - grid with covers, titles, and ratings",
+          caption: "Live search results with covers, titles, and ratings.",
         },
       ],
     },

@@ -12,7 +12,7 @@ function toLightboxItem(image: ProjectScreenshot): LightboxItem {
     id: image.src,
     src: getVersionedImageSrc(image.src),
     alt: image.alt,
-    caption: image.caption,
+    caption: image.caption ?? image.alt,
     width: dimensions.width,
     height: dimensions.height,
   };

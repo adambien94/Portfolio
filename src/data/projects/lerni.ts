@@ -18,6 +18,7 @@ export const lerniProject: ProjectDetail = {
   heroImage: {
     src: "/projects/lerni/Lerni-3.png",
     alt: "Lerni notebook workspace with source panels, AI summary, and study studio",
+    caption: "Notebook workspace with source panels, AI summary, and study studio.",
   },
   sections: [
     {
@@ -27,6 +28,7 @@ export const lerniProject: ProjectDetail = {
       image: {
         src: "/projects/lerni/Lerni-1.png",
         alt: "Lerni login screen split between form and product description",
+        caption: "Login screen with product description alongside the form.",
       },
     },
     {
@@ -36,6 +38,7 @@ export const lerniProject: ProjectDetail = {
       image: {
         src: "/projects/lerni/Lerni-2.png",
         alt: "Lerni notebook list with topic cards and create-new option",
+        caption: "Notebook list with topic cards and a create-new option.",
       },
     },
     {
@@ -50,6 +53,7 @@ export const lerniProject: ProjectDetail = {
       image: {
         src: "/projects/lerni/Lerni-4.png",
         alt: "Lerni quiz with a Singleton pattern question and source panel",
+        caption: "Quiz mode with a Singleton pattern question and source panel.",
       },
     },
     {
@@ -59,6 +63,7 @@ export const lerniProject: ProjectDetail = {
       image: {
         src: "/projects/lerni/Lerni-5.png",
         alt: "Lerni flashcards with the Singleton pattern definition",
+        caption: "Flashcards generated from selected sources in the Studio panel.",
       },
     },
   ],

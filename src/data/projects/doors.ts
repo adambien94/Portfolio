@@ -18,6 +18,7 @@ export const doorsProject: ProjectDetail = {
   heroImage: {
     src: "/projects/doors/Doors-4.png",
     alt: "Door configurator in 3D view - realistic double door render in a room with frame color selection and camera controls",
+    caption: "3D preview of a configured double door in a room setting.",
   },
   sections: [
     {
@@ -29,14 +30,17 @@ export const doorsProject: ProjectDetail = {
         {
           src: "/projects/doors/Doors-1.png",
           alt: "First step of the door configurator - type selection (Single, Double, Triple) and dimensions with 2D preview showing width 145 and height 270",
+          caption: "Step one: door type and dimensions with a 2D diagram.",
         },
         {
           src: "/projects/doors/Doors-2.png",
           alt: "Second configurator step - door division with adjustable mullions, posts, and frame thickness on a double door 290×270 diagram",
+          caption: "Step two: frame division with adjustable mullions and posts.",
         },
         {
           src: "/projects/doors/Doors-3.png",
           alt: "Third configurator step in 2D view - frame color selection from palette and color wheel, double door with glazing grid",
+          caption: "Step three: frame color selection with glazing grid preview.",
         },
       ],
     },

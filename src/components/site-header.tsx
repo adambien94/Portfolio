@@ -4,7 +4,7 @@ import { ThemeToggle } from "@/components/theme-toggle";
 
 export function SiteHeader() {
   return (
-    <header className="pointer-events-none  top-0 z-50 w-full">
+    <header className="pointer-events-none  top-0 z-1 w-full">
       <div className="">
         <div className="pointer-events-auto mx-auto flex w-full max-w-[1640px] items-center justify-between px-5 py-4 md:px-8 md:py-6">
           <Link
