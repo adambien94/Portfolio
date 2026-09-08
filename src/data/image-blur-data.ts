@@ -43,3 +43,82 @@ export const imageVersions: Record<string, string> = {
   "/projects/weseleo/weseleo-5.png": "d4e6d91e",
   "/projects/weseleo/weseleo-6.png": "f81a76f1"
 };
+
+export const imageDimensions: Record<string, { width: number; height: number }> = {
+  "/avatar.webp": {
+    "width": 800,
+    "height": 800
+  },
+  "/projects/TvShow/TvShowApp-1.png": {
+    "width": 3456,
+    "height": 2168
+  },
+  "/projects/TvShow/TvShowApp-2.png": {
+    "width": 786,
+    "height": 1990
+  },
+  "/projects/TvShow/TvShowApp-3.png": {
+    "width": 788,
+    "height": 1988
+  },
+  "/projects/doors/Doors-1.png": {
+    "width": 100,
+    "height": 20
+  },
+  "/projects/doors/Doors-2.png": {
+    "width": 100,
+    "height": 20
+  },
+  "/projects/doors/Doors-3.png": {
+    "width": 100,
+    "height": 20
+  },
+  "/projects/doors/Doors-4.png": {
+    "width": 2022,
+    "height": 1386
+  },
+  "/projects/flowboard/Flowboard-1.png": {
+    "width": 3454,
+    "height": 2158
+  },
+  "/projects/flowboard/Flowboard-2.png": {
+    "width": 2086,
+    "height": 1928
+  },
+  "/projects/lerni/Lerni-1.png": {
+    "width": 3456,
+    "height": 2150
+  },
+  "/projects/lerni/Lerni-2.png": {
+    "width": 3456,
+    "height": 2160
+  },
+  "/projects/lerni/Lerni-3.png": {
+    "width": 3456,
+    "height": 2170
+  },
+  "/projects/lerni/Lerni-4.png": {
+    "width": 3456,
+    "height": 2174
+  },
+  "/projects/lerni/Lerni-5.png": {
+    "width": 3456,
+    "height": 2170
+  },
+  "/projects/weseleo/weseleo-1.png": {
+    "width": 2346,
+    "height": 1962
+  },
+  "/projects/weseleo/weseleo-2.png": {
+    "width": 3456,
+    "height": 2164
+  },
+  "/projects/weseleo/weseleo-5.png": {
+    "width": 1038,
+    "height": 1698
+  },
+  "/projects/weseleo/weseleo-6.png": {
+    "width": 1038,
+    "height": 1698
+  }
+};
