@@ -4,7 +4,7 @@ export const tvshowProject: ProjectDetail = {
   id: "TvShow",
   name: "Tv shows",
   stack: ["Vue", "TypeScript", "Tailwind", "Jest"],
-  accent: "#7dd3fc",
+  accent: "#c4b5fd",
   headline:
     "A TV series library with a genre dashboard, search, and detail view, built on a local-first architecture with offline support.",
   intro: [
@@ -35,7 +35,8 @@ export const tvshowProject: ProjectDetail = {
         {
           src: "/projects/TvShow/TvShowApp-2.png",
           alt: "Dexter series detail view in Tv shows with 8.4 rating, description, and carousel of 8 seasons",
-          caption: "Series detail view with rating, description, and season carousel.",
+          caption:
+            "Series detail view with rating, description, and season carousel.",
         },
         {
           src: "/projects/TvShow/TvShowApp-3.png",

@@ -4,7 +4,7 @@ export const flowboardProject: ProjectDetail = {
   id: "flowboard",
   name: "Flowboard",
   stack: ["React", "TypeScript", "Zustand", "Supabase", "Vercel", "Jest"],
-  accent: "#c4b5fd",
+  accent: "#FCB07E",
   headline:
     "A personal kanban with your own boards, columns, and AI that breaks tasks into concrete steps.",
   intro: [
@@ -18,7 +18,8 @@ export const flowboardProject: ProjectDetail = {
   heroImage: {
     src: "/projects/flowboard/Flowboard-1.png",
     alt: "Flowboard kanban view with sidebar of boards, Todo, In progress, Test, Done, and Prod columns, and task cards",
-    caption: "Kanban view with personal boards, custom columns, and task cards.",
+    caption:
+      "Kanban view with personal boards, custom columns, and task cards.",
   },
   sections: [
     {
@@ -34,7 +35,8 @@ export const flowboardProject: ProjectDetail = {
       image: {
         src: "/projects/flowboard/Flowboard-2.png",
         alt: "Flowboard card details panel with task description, Generate AI steps button, and generated action steps",
-        caption: "Card details with AI-generated action steps from the task description.",
+        caption:
+          "Card details with AI-generated action steps from the task description.",
       },
     },
     {

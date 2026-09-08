@@ -62,7 +62,7 @@ export const projects = [
     description: "a kanban board with AI feature and real-time sync.",
     stack: ["React", "TypeScript", "Zustand", "Supabase", "Vercel", "Jest"],
     href: "/projects/flowboard",
-    accent: "#c4b5fd",
+    accent: "#FCB07E",
   },
   {
     id: "TvShow",
@@ -70,7 +70,7 @@ export const projects = [
     description: "a TV series library.",
     stack: ["Vue 3", "TypeScript", "Tailwind", "Jest", "RWD", "PWA"],
     href: "/projects/TvShow",
-    accent: "#7dd3fc",
+    accent: "#c4b5fd",
   },
   // {
   //   id: "doors",
