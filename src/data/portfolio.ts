@@ -25,7 +25,8 @@ export const projects = [
   {
     id: "weseleo",
     name: "Invite",
-    description: "an in-progress platform for online wedding invitations.",
+    description: "SaaS platform for online wedding invitations.",
+    inProgress: true,
     stack: [
       "Next.js",
       "React",
@@ -48,6 +49,7 @@ export const projects = [
       "TypeScript",
       "Shadcn",
       "Supabase",
+      "Tailwind",
       "Vercel",
       "Gemini API",
     ],
@@ -70,14 +72,14 @@ export const projects = [
     href: "/projects/TvShow",
     accent: "#7dd3fc",
   },
-  {
-    id: "doors",
-    name: "Door configurator",
-    description: "a 3D door configurator.",
-    stack: ["Vue 2", "Canvas", "Three.js"],
-    href: "/projects/doors",
-    accent: "#FA824C",
-  },
+  // {
+  //   id: "doors",
+  //   name: "Door configurator",
+  //   description: "a 3D door configurator.",
+  //   stack: ["Vue 2", "Canvas", "Three.js"],
+  //   href: "/projects/doors",
+  //   accent: "#FA824C",
+  // },
 ];
 
 export const commercialExperience = {

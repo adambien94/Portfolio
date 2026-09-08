@@ -15,7 +15,7 @@ export const weseleoProject: ProjectDetail = {
   ],
   accent: "#d8a7ca",
   headline:
-    "An in-progress SaaS for online wedding invitations — from a personal subdomain to a published page guests can open.",
+    "SaaS for online wedding invitations - from a personal subdomain to a published page guests can open.",
   intro: [
     "This side project is for creating and hosting wedding invitation websites. A couple registers, picks a personal address like **adam-monika.invite.pl**, edits content in a dashboard, chooses a template, and publishes a page their guests can open on any device.",
     "The app is multi-tenant: one **Next.js** deployment serves the marketing site, dashboard, and every public invitation. **Middleware** reads the hostname and routes each subdomain to the right page without a separate deploy per couple.",
@@ -39,7 +39,7 @@ export const weseleoProject: ProjectDetail = {
     {
       paragraphs: [
         "Registration reserves a subdomain right away. The user picks a slug like **adam-monika**, sees a live availability check, and gets a preview of the final URL before creating an account.",
-        "If the address is already taken, validation blocks signup with a clear message — the slug stays protected in **Supabase** from the first successful reservation.",
+        "If the address is already taken, validation blocks signup with a clear message - the slug stays protected in **Supabase** from the first successful reservation.",
       ],
       images: [
         {
