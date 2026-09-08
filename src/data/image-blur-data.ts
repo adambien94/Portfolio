@@ -15,5 +15,9 @@ export const imageBlurData: Record<string, string> = {
   "/projects/lerni/Lerni-2.png": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAAAwAQCdASoQAAoABUB8JaQAA3AA/vA8ue2/IN24fLvnp/DMNva+QAAA",
   "/projects/lerni/Lerni-3.png": "data:image/webp;base64,UklGRigAAABXRUJQVlA4IBwAAAAwAQCdASoQAAoABUB8JaQAA3AA/u/iLHXBuQAA",
   "/projects/lerni/Lerni-4.png": "data:image/webp;base64,UklGRigAAABXRUJQVlA4IBwAAAAwAQCdASoQAAoABUB8JaQAA3AA/u/iK+qu5AAA",
-  "/projects/lerni/Lerni-5.png": "data:image/webp;base64,UklGRigAAABXRUJQVlA4IBwAAAAwAQCdASoQAAoABUB8JaQAA3AA/u/lja2LAAAA"
+  "/projects/lerni/Lerni-5.png": "data:image/webp;base64,UklGRigAAABXRUJQVlA4IBwAAAAwAQCdASoQAAoABUB8JaQAA3AA/u/lja2LAAAA",
+  "/projects/weseleo/weseleo-1.png": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAACwAQCdASoQAAoABUB8JZwAAeh0pucAAM2OsgoRwVLPvH1PqNR+NgTN5bNi2WMOVIAAAA==",
+  "/projects/weseleo/weseleo-2.png": "data:image/webp;base64,UklGRigAAABXRUJQVlA4IBwAAAAwAQCdASoQAAoABUB8JaQAA3AA/vAzPfvOAAAA",
+  "/projects/weseleo/weseleo-5.png": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABQAwCdASoQABoAPzmQvlWvKqajMAgB4CcJaVTAAIqjtn4mAAD+9IDWP35T2J/nyBtevqlwQFxzUZnCrl3LgjmJ1c+9i2D5PoAAAA==",
+  "/projects/weseleo/weseleo-6.png": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAAAwAwCdASoQABoAPzmQvlWvKqajMAgB4CcJaQAAelksd43gAP7uayORPRXwIH4sg9/iuRSy0hmvwRD5L7QAAA=="
 };

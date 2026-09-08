@@ -1,5 +1,6 @@
 export const profile = {
   name: "Adam Bień",
+  domain: "adambien",
   firstName: "Adam",
   role: "Frontend Developer",
   location: "Wroclove, Poland",
@@ -22,6 +23,23 @@ export const about = {
 
 export const projects = [
   {
+    id: "weseleo",
+    name: "Invite",
+    description: "an in-progress platform for online wedding invitations.",
+    stack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Supabase",
+      "Tailwind",
+      "Shadcn",
+      "React Hook Form",
+      "Zod",
+    ],
+    href: "/projects/weseleo",
+    accent: "#d8a7ca",
+  },
+  {
     id: "lerni",
     name: "Lerni",
     description: "an AI-powered learning app.",
@@ -39,10 +57,10 @@ export const projects = [
   {
     id: "flowboard",
     name: "Flowboard",
-    description: "a kanban board with AI tools and real-time sync.",
+    description: "a kanban board with AI feature and real-time sync.",
     stack: ["React", "TypeScript", "Zustand", "Supabase", "Vercel", "Jest"],
     href: "/projects/flowboard",
-    accent: "#f9a8d4",
+    accent: "#c4b5fd",
   },
   {
     id: "TvShow",

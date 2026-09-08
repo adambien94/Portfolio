@@ -11,8 +11,8 @@ export function SiteHeader() {
             href="/"
             className="text-[15px] font-medium tracking-tight text-foreground/90 transition-colors hover:text-foreground"
           >
-            {profile.name.split(" ")[0].toLowerCase()}
-            <span className="text-muted-foreground">.dev</span>
+            {profile.domain}
+            <span className="text-muted-foreground">.me</span>
           </Link>
 
           <div className="flex items-center gap-3 md:gap-5">
