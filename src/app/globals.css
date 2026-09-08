@@ -205,7 +205,7 @@
   }
 
   .prose-portfolio p {
-    @apply text-lg leading-relaxed;
+    @apply text-base leading-relaxed sm:text-lg;
     color: var(--foreground-secondary);
   }
 

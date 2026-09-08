@@ -30,7 +30,9 @@ export function CommercialExperience() {
         <StackMarquee items={commercialExperience.stack} />
 
         <div className="mt-10 sm:mt-12">
-          <span className="text-base font-medium">Recent projects</span>
+          <span className="text-base font-medium sm:text-lg">
+            Recent projects
+          </span>
         </div>
 
         <ul className="mt-6 flex flex-col gap-3 sm:mt-8">
