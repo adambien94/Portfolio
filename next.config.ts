@@ -1,7 +1,16 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    localPatterns: [
+      {
+        pathname: "/projects/**",
+      },
+      {
+        pathname: "/avatar.webp",
+      },
+    ],
+  },
 };
 
 export default nextConfig;

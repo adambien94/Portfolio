@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node scripts/generate-blur-data.mjs --watch",
     "generate:blur": "node scripts/generate-blur-data.mjs",
     "build": "npm run generate:blur && next build",
     "start": "next start",

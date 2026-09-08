@@ -16,8 +16,30 @@ export const imageBlurData: Record<string, string> = {
   "/projects/lerni/Lerni-3.png": "data:image/webp;base64,UklGRigAAABXRUJQVlA4IBwAAAAwAQCdASoQAAoABUB8JaQAA3AA/u/iLHXBuQAA",
   "/projects/lerni/Lerni-4.png": "data:image/webp;base64,UklGRigAAABXRUJQVlA4IBwAAAAwAQCdASoQAAoABUB8JaQAA3AA/u/iK+qu5AAA",
   "/projects/lerni/Lerni-5.png": "data:image/webp;base64,UklGRigAAABXRUJQVlA4IBwAAAAwAQCdASoQAAoABUB8JaQAA3AA/u/lja2LAAAA",
-  "/projects/weseleo/weseleo-1.png": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAACwAQCdASoQAAoABUB8JZwAAeh0pucAAM2OsgoRwVLPvH1PqNR+NgTN5bNi2WMOVIAAAA==",
+  "/projects/weseleo/weseleo-1.png": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAADQAQCdASoQAA0ABUB8JZwAAerLkACggAD3NQrxJuQrt2hZN3kNMO+QP/+IrQVusZFwNA04QAA=",
   "/projects/weseleo/weseleo-2.png": "data:image/webp;base64,UklGRigAAABXRUJQVlA4IBwAAAAwAQCdASoQAAoABUB8JaQAA3AA/vAzPfvOAAAA",
   "/projects/weseleo/weseleo-5.png": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABQAwCdASoQABoAPzmQvlWvKqajMAgB4CcJaVTAAIqjtn4mAAD+9IDWP35T2J/nyBtevqlwQFxzUZnCrl3LgjmJ1c+9i2D5PoAAAA==",
   "/projects/weseleo/weseleo-6.png": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAAAwAwCdASoQABoAPzmQvlWvKqajMAgB4CcJaQAAelksd43gAP7uayORPRXwIH4sg9/iuRSy0hmvwRD5L7QAAA=="
+};
+
+export const imageVersions: Record<string, string> = {
+  "/avatar.webp": "2a07e719",
+  "/projects/TvShow/TvShowApp-1.png": "9cae32a4",
+  "/projects/TvShow/TvShowApp-2.png": "c294d8ec",
+  "/projects/TvShow/TvShowApp-3.png": "d349e06d",
+  "/projects/doors/Doors-1.png": "1d0a7323",
+  "/projects/doors/Doors-2.png": "bc6bc223",
+  "/projects/doors/Doors-3.png": "f7080195",
+  "/projects/doors/Doors-4.png": "28d296b4",
+  "/projects/flowboard/Flowboard-1.png": "4742b443",
+  "/projects/flowboard/Flowboard-2.png": "ea435f63",
+  "/projects/lerni/Lerni-1.png": "8f866f9a",
+  "/projects/lerni/Lerni-2.png": "3ea263fd",
+  "/projects/lerni/Lerni-3.png": "b38ccc41",
+  "/projects/lerni/Lerni-4.png": "2f9a26a6",
+  "/projects/lerni/Lerni-5.png": "d4fd2492",
+  "/projects/weseleo/weseleo-1.png": "7778c3b9",
+  "/projects/weseleo/weseleo-2.png": "cdbc751e",
+  "/projects/weseleo/weseleo-5.png": "d4e6d91e",
+  "/projects/weseleo/weseleo-6.png": "f81a76f1"
 };

@@ -17,12 +17,12 @@ export const weseleoProject: ProjectDetail = {
   headline:
     "SaaS for online wedding invitations - from a personal subdomain to a published page guests can open.",
   intro: [
-    "This side project is for creating and hosting wedding invitation websites. A couple registers, picks a personal address like **adam-monika.invite.pl**, edits content in a dashboard, chooses a template, and publishes a page their guests can open on any device.",
+    "This side project is for creating and hosting wedding invitation websites. A couple registers, picks a personal address like **john-monica.appdomain.pl**, edits content in a dashboard, chooses a template, and publishes a page their guests can open on any device.",
     "The app is multi-tenant: one **Next.js** deployment serves the marketing site, dashboard, and every public invitation. **Middleware** reads the hostname and routes each subdomain to the right page without a separate deploy per couple.",
     "The project is **still in progress**. The landing page, registration with slug reservation, and the invitation editor are working today.",
   ],
   highlight:
-    "Next up: a guest list and **RSVP** — so couples can collect attendance confirmations from invitees in one place.",
+    "Next up: a guest list, **RSVP**, and a shared **photo gallery** so couples can collect attendance confirmations and let guests browse uploaded photos in one place.",
   screenshotIntro:
     "What the product looks like so far, from the landing page to registration and the editor:",
   heroImage: {
@@ -65,6 +65,6 @@ export const weseleoProject: ProjectDetail = {
   ],
   closing: [
     "Built with **Next.js**, **React**, **TypeScript**, and **Supabase** (Auth, PostgreSQL, RLS). Forms use **React Hook Form** and **Zod**; UI is **Tailwind** and **Shadcn**.",
-    "Still on the roadmap: a **guest list** for managing invitees and a full **RSVP** flow so guests can confirm attendance and couples can track responses from the dashboard.",
+    "Still on the roadmap: a **guest list** for managing invitees, a full **RSVP** flow so guests can confirm attendance, and a **photo gallery** where guests can upload and browse shared wedding photos from the dashboard.",
   ],
 };
