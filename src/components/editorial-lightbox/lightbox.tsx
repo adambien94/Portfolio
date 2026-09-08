@@ -3,11 +3,8 @@
 /**
  * Editorial lightbox — design-system package entry (copy with lightbox.css).
  *
- * The viewer newsrooms use for article figures: a near-black surface in both
- * color schemes (photography reads best on dark), a typography-forward
- * caption + credit block under the media, a counter top-left, and ghost
- * controls. Keyboard-first; no zoom — this is a reading context, not an
- * inspection one (swipe / arrows to browse, pull down to dismiss).
+ * Article figure viewer: near-black surface, typography-forward caption block,
+ * counter top-left, ghost controls, and pinch/double-click zoom.
  */
 
 import Image from "next/image";
@@ -40,6 +37,24 @@ function IconChevronRight() {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} aria-hidden>
       <path d="m9 18 6-6-6-6" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function IconZoomIn() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} aria-hidden>
+      <circle cx="11" cy="11" r="7" />
+      <path d="m21 21-4.35-4.35M11 8v6M8 11h6" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function IconZoomOut() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} aria-hidden>
+      <circle cx="11" cy="11" r="7" />
+      <path d="m21 21-4.35-4.35M8 11h6" strokeLinecap="round" />
     </svg>
   );
 }
@@ -97,6 +112,26 @@ function Item({ className, ...props }: React.ComponentProps<typeof RamkaLightbox
 
 function Media({ className, ...props }: React.ComponentProps<typeof RamkaLightbox.Media>) {
   return <RamkaLightbox.Media className={cx("elb-media", className)} {...props} />;
+}
+
+function Zoom({ className, ...props }: React.ComponentProps<typeof RamkaLightbox.Zoom>) {
+  return <RamkaLightbox.Zoom className={cx("elb-zoom", className)} {...props} />;
+}
+
+function ZoomIn({ className, children, ...props }: React.ComponentProps<typeof RamkaLightbox.ZoomIn>) {
+  return (
+    <RamkaLightbox.ZoomIn className={cx("elb-control", className)} aria-label="Zoom in" {...props}>
+      {children ?? <IconZoomIn />}
+    </RamkaLightbox.ZoomIn>
+  );
+}
+
+function ZoomOut({ className, children, ...props }: React.ComponentProps<typeof RamkaLightbox.ZoomOut>) {
+  return (
+    <RamkaLightbox.ZoomOut className={cx("elb-control", className)} aria-label="Zoom out" {...props}>
+      {children ?? <IconZoomOut />}
+    </RamkaLightbox.ZoomOut>
+  );
 }
 
 function Counter({ className, ...props }: React.ComponentProps<typeof RamkaLightbox.Counter>) {
@@ -162,25 +197,31 @@ function Gallery({ items, ariaLabel }: { items: LightboxItem[]; ariaLabel: strin
                 aria-roledescription="slide"
                 aria-label={`${i + 1} of ${items.length}`}
               >
-                <Media width={item.width} height={item.height}>
-                  <Image
-                    src={item.src}
-                    alt={item.alt}
-                    width={item.width}
-                    height={item.height}
-                    sizes="100vw"
-                    priority
-                    draggable={false}
-                  />
-                </Media>
+                <Zoom>
+                  <Media width={item.width} height={item.height}>
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      width={item.width}
+                      height={item.height}
+                      sizes="100vw"
+                      priority
+                      draggable={false}
+                    />
+                  </Media>
+                </Zoom>
               </Item>
             </Slide>
           ))}
         </Slides>
 
-        <div className={cx("elb-top", "elb-chrome-gesture-hide")}>
+        <div className={cx("elb-top", "elb-chrome-gesture-hide", "elb-chrome-zoom-hide")}>
           {multiple ? <Counter>{({ current, total }) => `${current} / ${total}`}</Counter> : <span />}
-          <Close />
+          <div className="elb-top-controls">
+            <ZoomOut />
+            <ZoomIn />
+            <Close />
+          </div>
         </div>
 
         {multiple ? (
@@ -190,7 +231,7 @@ function Gallery({ items, ariaLabel }: { items: LightboxItem[]; ariaLabel: strin
           </>
         ) : null}
 
-        <div className={cx("elb-bottom", "elb-chrome-gesture-hide")}>
+        <div className={cx("elb-bottom", "elb-chrome-gesture-hide", "elb-chrome-zoom-hide")}>
           <Caption />
         </div>
       </Content>
@@ -209,6 +250,9 @@ export const Lightbox = {
   Slide,
   Item,
   Media,
+  Zoom,
+  ZoomIn,
+  ZoomOut,
   Counter,
   Caption,
   Previous,

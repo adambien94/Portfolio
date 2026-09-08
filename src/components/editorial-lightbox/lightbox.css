@@ -119,14 +119,19 @@
   padding: var(--elb-inset-top) var(--elb-inset-inline) var(--elb-inset-bottom);
 }
 
-/* This viewer has no zoom, so Item stands in for the `Lightbox.Zoom` wrapper
-   structurally: Media's fit-box resolves `cqw`/`cqh` against the nearest size
-   container, and the flex centering letterboxes it inside the slide insets. */
 .elb-item {
-  container-type: size;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.elb-zoom {
+  width: 100%;
+  height: 100%;
+  container-type: size;
+  cursor: zoom-in;
 }
 
 .elb-media img {
@@ -160,6 +165,28 @@
     visibility 0s linear 200ms;
 }
 
+.elb-content[data-zoomed] .elb-slides {
+  z-index: 1;
+}
+
+.elb-content[data-zoomed] .elb-bottom.elb-chrome-zoom-hide {
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 200ms,
+    visibility 0s linear 200ms;
+}
+
+@media (max-width: 767px) {
+  .elb-content[data-zoomed] .elb-top.elb-chrome-zoom-hide {
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 200ms,
+      visibility 0s linear 200ms;
+  }
+}
+
 /* ── Top band: counter + close ──────────────────────────────────────────── */
 
 .elb-top {
@@ -171,6 +198,12 @@
   align-items: center;
   justify-content: space-between;
   padding: calc(0.875rem + env(safe-area-inset-top, 0px)) 1rem 0;
+}
+
+.elb-top-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
 }
 
 /* The counter reads "1 / 7": two digit runs around a neutral separator, with no
