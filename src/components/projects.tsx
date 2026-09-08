@@ -1,4 +1,5 @@
 import { PortfolioImage } from "@/components/portfolio-image";
+import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { projects } from "@/data/portfolio";
 import { getProjectDetail } from "@/data/projects";
@@ -31,21 +32,6 @@ export function Projects() {
                 className="relative flex flex-col overflow-hidden rounded-2xl border border-border bg-surface transition-[border-color,transform] duration-300 hover:border-foreground/16 hover:-translate-y-0.5"
               >
                 <div className="relative aspect-[16/10] overflow-hidden bg-surface-elevated">
-                  {project.inProgress ? (
-                    <span className="in-progress-badge absolute left-3 top-3 z-10">
-                      <span className="relative flex size-1.5 shrink-0">
-                        <span
-                          className="absolute inline-flex size-full animate-ping rounded-full bg-[#111110] opacity-40"
-                          aria-hidden
-                        />
-                        <span
-                          className="relative inline-flex size-1.5 rounded-full bg-[#111110]"
-                          aria-hidden
-                        />
-                      </span>
-                      In progress
-                    </span>
-                  ) : null}
                   {image ? (
                     <PortfolioImage
                       src={image.src}
@@ -62,6 +48,14 @@ export function Projects() {
                       }}
                     />
                   )}
+                  {project.inProgress ? (
+                    <Badge
+                      variant="outline"
+                      className="absolute left-3 top-3 z-10 border-border/80 bg-muted/95 text-foreground-secondary backdrop-blur-sm"
+                    >
+                      • In progress
+                    </Badge>
+                  ) : null}
                 </div>
 
                 <div className="relative z-10 flex items-start gap-3 border-t border-border px-5 py-4">
