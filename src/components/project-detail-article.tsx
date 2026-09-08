@@ -27,7 +27,7 @@ function ProjectScreenshotTrigger({
   sizes?: string;
 }) {
   return (
-    <Lightbox.Trigger index={index} className="block w-full">
+    <Lightbox.Trigger index={index} className="block w-full scroll-my-10">
       {({ imageRef }) =>
         fill ? (
           <PortfolioImage
@@ -156,7 +156,12 @@ export function ProjectDetailArticle({
   const backLabel = project.backLabel ?? "All projects";
 
   return (
-    <Lightbox.Root>
+    <Lightbox.Root
+      scrollTriggerIntoView={[
+        { type: "onOpenComplete", behavior: "instant" },
+        { type: "onChange", behavior: "instant" },
+      ]}
+    >
       <article className="mx-auto w-full max-w-[900px]">
         <Link
           href={backHref}
@@ -173,7 +178,9 @@ export function ProjectDetailArticle({
               style={{ backgroundColor: project.accent }}
               aria-hidden
             />
-            <p className="text-sm font-medium text-foreground">{project.name}</p>
+            <p className="text-sm font-medium text-foreground">
+              {project.name}
+            </p>
           </div>
 
           <h1 className="text-balance text-3xl leading-[1.15] font-medium tracking-[-0.03em] text-foreground sm:text-4xl sm:leading-[1.12]">
@@ -213,7 +220,10 @@ export function ProjectDetailArticle({
               ))}
             </div>
             {section.images?.length ? (
-              <ProjectScreenshotRow images={section.images} indexBySrc={indexBySrc} />
+              <ProjectScreenshotRow
+                images={section.images}
+                indexBySrc={indexBySrc}
+              />
             ) : section.image ? (
               <ProjectScreenshot
                 image={section.image}
