@@ -212,8 +212,7 @@ function Gallery({ items, ariaLabel }: { items: LightboxItem[]; ariaLabel: strin
                       alt={item.alt}
                       width={item.width}
                       height={item.height}
-                      sizes={`${item.width}px`}
-                      quality={100}
+                      unoptimized
                       priority
                       draggable={false}
                     />
