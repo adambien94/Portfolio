@@ -130,7 +130,7 @@ export const otherCommercialProjects: OtherCommercialProject[] = [
     name: "Atos workforce management app",
     description:
       "Internal tool for employee data, work statistics, and leave management.",
-    stack: ["Vue 2", "TypeScript", "Jest"],
+    stack: ["Vue 2", "TypeScript", "Jest", "Cypress"],
   },
 ];
 
