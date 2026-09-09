@@ -237,8 +237,8 @@
   .liquid-glass-nav__indicator {
     pointer-events: none;
     position: absolute;
-    top: 6px;
-    bottom: 6px;
+    top: 8px;
+    bottom: 8px;
     left: 0;
     border-radius: 9999px;
     background-color: var(--liquid-glass-pill-bg);
