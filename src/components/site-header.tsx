@@ -28,9 +28,9 @@ export function SiteHeader() {
               ))}
             </nav>
             <ThemeToggle />
-            <a href={`mailto:${profile.email}`} className="buy-button">
+            {/* <a href={`mailto:${profile.email}`} className="buy-button">
               Contact
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
