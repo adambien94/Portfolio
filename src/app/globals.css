@@ -88,7 +88,7 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    background-image:
+    /* background-image:
       radial-gradient(
         ellipse 80% 50% at 50% -20%,
         color-mix(in srgb, var(--page-glow) 6%, transparent),
@@ -99,7 +99,7 @@
         color-mix(in srgb, var(--foreground) 2%, transparent),
         transparent
       );
-    background-attachment: fixed;
+    background-attachment: fixed; */
   }
 
   ::selection {

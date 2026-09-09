@@ -121,7 +121,7 @@ export const otherCommercialProjects: OtherCommercialProject[] = [
   },
   {
     id: "nokia-server-config",
-    name: "Nokia server configuration SPA",
+    name: "Server configuration system for Nokia",
     description: "Developing complex app for configuring and managing servers.",
     stack: ["Vue 2", "Nuxt.js", "TypeScript"],
   },
