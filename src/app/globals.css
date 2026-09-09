@@ -59,11 +59,11 @@
   --liquid-glass-inset-bottom: rgba(255, 255, 255, 0.28);
   --liquid-glass-shadow:
     0 12px 48px rgba(0, 0, 0, 0.12), 0 2px 10px rgba(0, 0, 0, 0.08);
-  --liquid-glass-sheen-radial: rgba(17, 17, 16, 0.1);
+  --liquid-glass-sheen-radial: rgba(17, 17, 16, 0.07);
   --liquid-glass-sheen-linear-start: rgba(17, 17, 16, 0.02);
   --liquid-glass-sheen-linear-mid: rgba(17, 17, 16, 0.02);
   --liquid-glass-brightness: 0.98;
-  --liquid-glass-pill-bg: rgba(255, 255, 255, 0.38);
+  --liquid-glass-pill-bg: rgba(255, 255, 255, 0.48);
   --liquid-glass-pill-inset-top: rgba(17, 17, 16, 0.22);
   --liquid-glass-pill-inset-bottom: rgba(255, 255, 255, 0.18);
   --liquid-glass-pill-border: rgba(17, 17, 16, 0.1);
