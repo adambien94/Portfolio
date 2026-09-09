@@ -213,7 +213,17 @@ export function ProjectDetailArticle({
         ) : null}
 
         {project.sections.map((section, index) => (
-          <div key={`${section.paragraphs[0]}-${index}`}>
+          <section
+            key={section.title ?? `${section.paragraphs[0]}-${index}`}
+            className={
+              index > 0 || !project.heroImage ? "mt-10 sm:mt-14" : undefined
+            }
+          >
+            {section.title ? (
+              <h2 className="mb-5 text-xl leading-tight font-medium tracking-[-0.02em] text-foreground sm:mb-6 sm:text-2xl">
+                {section.title}
+              </h2>
+            ) : null}
             <div className="prose-portfolio flex flex-col gap-5">
               {section.paragraphs.map((paragraph) => (
                 <p key={paragraph}>
@@ -232,7 +242,7 @@ export function ProjectDetailArticle({
                 index={indexBySrc.get(section.image.src)!}
               />
             ) : null}
-          </div>
+          </section>
         ))}
 
         {project.closing?.length ? (

@@ -22,11 +22,13 @@ export const tvshowProject: ProjectDetail = {
   },
   sections: [
     {
+      title: "Genre Dashboard",
       paragraphs: [
         "The homepage is a dashboard split by genre: **Drama**, **Mystery**, **Sci-Fi**, **Fantasy**, **Action**, **Comedy**, and more. Each section is a horizontal list of cards sorted by rating, with cover art, title, and score. On desktop, arrows appear on hover; on mobile, a swipe is enough.",
       ],
     },
     {
+      title: "Series Detail & Search",
       paragraphs: [
         "Clicking a series opens a detail view with description, metadata (genres, status, premiere date), rating, and a list of seasons with episode counts. The layout adapts to the screen: on mobile the poster and description stack vertically; on desktop they sit side by side.",
         "Search works in real time. You type a phrase and results appear in a grid with cover art, title, and rating. No cover? The app shows a placeholder instead of an empty card.",
@@ -46,6 +48,7 @@ export const tvshowProject: ProjectDetail = {
       ],
     },
     {
+      title: "Offline & Cached Data",
       paragraphs: [
         "Data refreshes automatically every hour, but only when there's a network connection. In offline mode you use the last version saved locally. No errors, no blank screens.",
       ],

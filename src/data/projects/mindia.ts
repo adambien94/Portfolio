@@ -5,53 +5,59 @@ export const mindiaProject: ProjectDetail = {
   name: "Video streaming app",
   accent: "#a5b4fc",
   stack: [
-    "WebSockets",
-    "getUserMedia",
-    "Canvas API",
-    "VAD (ONNX Runtime)",
+    "TypeScript",
+    "React",
     "Video.js",
     "HLS",
     "WebVTT",
+    "WebRTC / getUserMedia",
+    "ONNX Runtime",
+    "WebSocket",
     "JWT",
-    "REST",
-    "Swagger",
+    "OpenAPI / Swagger",
   ],
   headline:
     "A clinical platform for recording, anonymizing, and reviewing therapy sessions.",
   intro: [
-    "A web application for psychologists to capture therapy sessions, review anonymized media, edit transcriptions, and tag clinical behavior. The frontend runs a full media pipeline, not just a data-entry screen: live capture, anonymization, synchronized review.",
-    "Session flow follows assignment status. An **Active** session opens the recording interface. Later statuses unlock the review workbench with streaming playback, editable transcripts, and behavioral annotations stored as structured data.",
+    "A web app for psychologists to capture sessions, review anonymized media, tag symptoms, and correct AI-translated dialogue. The frontend is a full media pipeline (custom editor, speech gating, unified auth), not a data-entry screen.",
+    "An **Active** session opens recording; later statuses unlock the review workbench with **HLS** playback, editable captions, and behavioral annotations as structured data.",
   ],
   highlight:
-    "Recording starts only when both video and audio streams are live, so a half-connected session never leaves clinicians with incomplete capture.",
+    "Recording starts only when both audio and video streams are ready, as a fail-safe against incomplete clinical capture.",
   sections: [
     {
+      title: "Custom Video Editor & Clinical Annotation",
       paragraphs: [
-        "Therapy video and audio reach anonymization workers in real time over **two independent WebSocket channels**, one for picture, one for sound. Each stream authenticates with a **JWT** on connect, then sends data through a structured protocol: a start signal, frame or audio chunks, and a stop signal when the session ends.",
-        "Video is grabbed from a **getUserMedia** feed via **Canvas** at ~15 FPS as JPEG and transmitted as base64. Recording begins only when **both** channels report ready. If either service fails to connect, the session never enters a half-recorded state.",
+        "A **custom video editor** on **Video.js**, **HLS**, and dynamic **WebVTT** lets specialists split sessions into **fragments or frames** with millisecond precision. Each segment carries **tags and descriptions** for **mental health symptoms and behaviors**, with point and range annotations on a **dual timeline**, persisted as structured records tied to exact timestamps.",
       ],
     },
     {
+      title: "AI Translation & Transcript Editing",
       paragraphs: [
-        "Continuous microphone streaming would waste bandwidth and hurt transcription quality downstream. **Voice activity detection** runs in the browser via **ONNX Runtime** (`@ricky0123/vad-web`). Only speech segments are converted to PCM, queued, and sent serially, each tagged with a precise start timestamp.",
-        "That keeps audio aligned with the video timeline, reduces load on anonymization and speech-to-text services, and avoids dumping silence into the pipeline.",
+        "**AI models** auto-translate session dialogue into synchronized captions. Clinicians correct mistranslations and timing in the same editor without losing sync; corrected text saves back as structured **WebVTT** data.",
       ],
     },
     {
+      title: "Client-side Voice Activity Detection",
       paragraphs: [
-        "After processing, clinicians need playback synced with an editable transcript and behavioral tags. The review workbench uses **Video.js** with an **HLS** playlist and a remote **WebVTT** caption track. The active cue highlights as the video plays, so reading and watching stay in sync.",
-        "A **dual timeline** supports both point annotations and time-range tags, with seek, frame-step, and play-until-range-end controls. Edits to the transcript and tag boundaries persist as structured records with millisecond precision.",
+        "**Voice activity detection** via **ONNX Runtime** (`@ricky0123/vad-web`) gates microphone input in the browser. Only speech segments ship as timestamped PCM, which cuts silence, bandwidth, and load on downstream **speech-to-text** services.",
       ],
     },
     {
+      title: "Live Capture & Media Pipelining",
       paragraphs: [
-        "REST calls, live streams, and protected media URLs all need the same identity, but each channel accepts credentials differently. A **Swagger**-generated typed client handles API requests with a bearer token. **WebSocket** connections authenticate with a token as the first message. **HLS** playlists and **VTT** files load via token query parameters, because **Video.js** cannot set custom headers.",
-        "The frontend unifies these patterns behind a single session model, so clinicians move from recording to review without re-authenticating or hitting broken media URLs mid-playback.",
+        "Video (~15 FPS JPEG via **Canvas**) and audio stream on **separate WebSockets** from **getUserMedia**. Recording begins only when **both** channels report ready, preventing half-recorded sessions.",
+      ],
+    },
+    {
+      title: "Security & Data Anonymization",
+      paragraphs: [
+        "**Privacy-by-design**: bearer **JWT** on **REST** and **WebSocket**, token query params on **HLS**/**VTT** (since **Video.js** cannot set headers). A **Swagger**-generated typed client unifies auth from capture through review.",
       ],
     },
   ],
   closing: [
-    "Closer to a **clinical media tool** than a standard admin panel: **WebSockets** and **getUserMedia** for real-time capture, on-device **VAD** for speech gating, and a **Video.js** + **HLS** annotation workspace with synced **WebVTT** captions. The frontend is the control plane for a privacy-by-architecture loop from session to anonymized review.",
+    "**TypeScript** and **React** clinical media tool: **WebRTC** capture, on-device **VAD**, **Video.js** annotation workspace, **JWT**-secured streaming across every transport channel.",
   ],
   backHref: "/#doswiadczenie",
   backLabel: "Commercial experience",

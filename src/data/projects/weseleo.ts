@@ -32,12 +32,14 @@ export const weseleoProject: ProjectDetail = {
   },
   sections: [
     {
+      title: "Landing Page & Product Story",
       paragraphs: [
         "The landing page presents the full idea: create an account, customize the page, pick a personal address, and share a QR code. A phone mockup shows how guests might browse a shared gallery and react to updates.",
         "Below the hero, the page walks through the setup flow and highlights features like a guest photo gallery, day schedule, and personalized links.",
       ],
     },
     {
+      title: "Subdomain Registration",
       paragraphs: [
         "Registration reserves a subdomain right away. The user picks a slug like **adam-monika**, sees a live availability check, and gets a preview of the final URL before creating an account.",
         "If the address is already taken, validation blocks signup with a clear message - the slug stays protected in **Supabase** from the first successful reservation.",
@@ -56,6 +58,7 @@ export const weseleoProject: ProjectDetail = {
       ],
     },
     {
+      title: "Invitation Editor",
       paragraphs: [
         "The dashboard editor has workspace tabs for **Overview**, **Theme**, **Sections**, and **Publication**. In **Sections**, each block of the invitation can be toggled and edited separately: couple, date, header, locations, schedule, FAQ, and RSVP.",
         "Changes update a live preview on the right, with desktop and mobile modes. The **Romantic** template in the screenshot shows ceremony and reception details, a day plan, and autosaved draft content.",

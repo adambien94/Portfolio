@@ -5,6 +5,7 @@ export type ProjectScreenshot = {
 };
 
 export type ProjectDetailSection = {
+  title?: string;
   paragraphs: string[];
   image?: ProjectScreenshot;
   images?: ProjectScreenshot[];

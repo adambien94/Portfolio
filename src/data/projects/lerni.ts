@@ -22,6 +22,7 @@ export const lerniProject: ProjectDetail = {
   },
   sections: [
     {
+      title: "Focused Learning Interface",
       paragraphs: [
         "The interface is dark and calm on purpose. Login and the start screen make it clear this is a tool for focused learning, not another bulletin board.",
       ],
@@ -32,6 +33,7 @@ export const lerniProject: ProjectDetail = {
       },
     },
     {
+      title: "Topic Notebooks",
       paragraphs: [
         "Notebooks group topics: React, design patterns, interview prep. Each has its own sources, summary history, and generated study materials.",
       ],
@@ -42,11 +44,13 @@ export const lerniProject: ProjectDetail = {
       },
     },
     {
+      title: "Three-Column Workspace",
       paragraphs: [
         "The workspace has three columns for three stages of learning: **sources** on the left, **summary and AI chat** in the center, **studio** on the right with flashcards and quizzes generated from what you've read.",
       ],
     },
     {
+      title: "Quiz Mode",
       paragraphs: [
         "Quizzes test understanding based on the summary, with hints, navigation between questions, and clear feedback. Flashcards work like classic cards: flip, reset, move to the next one.",
       ],
@@ -57,6 +61,7 @@ export const lerniProject: ProjectDetail = {
       },
     },
     {
+      title: "Flashcard Review",
       paragraphs: [
         "Flashcards are generated from selected sources and can be reviewed right away in the Studio panel. No export to another app required.",
       ],

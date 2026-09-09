@@ -23,12 +23,14 @@ export const flowboardProject: ProjectDetail = {
   },
   sections: [
     {
+      title: "Kanban Boards & Custom Columns",
       paragraphs: [
         "The sidebar lists all of your boards: **Example Project**, **Personal Tasks**, **School**, and others you create with **New board**. Each board has its own columns and tasks, so projects don't mix.",
         "You add columns on the fly. Cards show priority (HIGH, MEDIUM, LOW), title, short description, and time logged. The **Kanban Mode** / **Table Mode** toggle lets you switch how you work with the same data.",
       ],
     },
     {
+      title: "AI-Powered Task Breakdown",
       paragraphs: [
         "Clicking a card opens a details panel with title, full description, priority, and time log. This is where AI comes in: **Generate AI steps** analyzes the task and returns a numbered list of concrete action steps.",
       ],
@@ -40,6 +42,7 @@ export const flowboardProject: ProjectDetail = {
       },
     },
     {
+      title: "Action Steps Checklist",
       paragraphs: [
         "Generated steps land in **ACTION STEPS (AI)**, a ready-made checklist you can work through in order. Useful for bugs, features, and tasks that feel too broad to start coding right away.",
       ],

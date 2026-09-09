@@ -22,6 +22,7 @@ export const doorsProject: ProjectDetail = {
   },
   sections: [
     {
+      title: "Type, Dimensions & Frame Division",
       paragraphs: [
         "In **Choose door**, the user picks a door type (**Single door**, **Double door**, or **Triple door**) and enters **Width** and **Height** in centimeters. The 2D preview draws a diagram with dimension lines so proportions and individual leaf widths are visible right away.",
         "The **3D / 2D** toggle in the corner of the preview lets you switch between the technical view and the spatial render at any time without losing the current configuration.",
