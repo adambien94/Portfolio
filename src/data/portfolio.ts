@@ -96,7 +96,14 @@ export const otherCommercialProjects: OtherCommercialProject[] = [
     name: "L'Oréal employee training platform",
     description:
       "Training app with quizzes, concept puzzles, and image annotation exercises.",
-    stack: ["Vue 3", "Nuxt.js", "TypeScript"],
+    stack: ["Vue 3", "Quasar", "TypeScript"],
+  },
+  {
+    id: "twojebdo-driver-app",
+    name: "Driver mobile app",
+    description:
+      "Mobile app for drivers extending twojeBDO service capabilities.",
+    stack: ["Vue 3", "TypeScript", "Quasar"],
   },
   {
     id: "spa-hotel-booking",
@@ -110,14 +117,7 @@ export const otherCommercialProjects: OtherCommercialProject[] = [
     name: "Furniture e-commerce store",
     description:
       "Online furniture shop with catalog, cart, and checkout flows.",
-    stack: ["Shopware", "Twig", "Docker"],
-  },
-  {
-    id: "twojebdo-driver-app",
-    name: "Driver mobile app",
-    description:
-      "Mobile app for drivers extending twojeBDO service capabilities.",
-    stack: ["Vue 3", "TypeScript", "FormKit"],
+    stack: ["Shopware", "Twig", "JS", "Docker"],
   },
   {
     id: "nokia-server-config",

@@ -89,7 +89,9 @@ function ProjectScreenshotRow({
                 image={image}
                 index={indexBySrc.get(image.src)!}
                 fill={isFullWidthRow}
-                frameClassName={isFullWidthRow ? "relative aspect-[16/10]" : undefined}
+                frameClassName={
+                  isFullWidthRow ? "relative aspect-[16/10]" : undefined
+                }
                 imageClassName={
                   isFullWidthRow ? "object-cover object-top" : "h-auto w-full"
                 }
@@ -262,7 +264,7 @@ export function ProjectDetailArticle({
             {project.stack.map((tech) => (
               <span
                 key={tech}
-                className="rounded-md bg-foreground/[0.04] px-2.5 py-1 text-xs text-muted-foreground"
+                className="rounded-md border bg-foreground/[0.04] px-2.5 py-1 text-xs text-muted-foreground"
               >
                 {tech}
               </span>

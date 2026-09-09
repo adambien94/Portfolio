@@ -77,7 +77,7 @@ export function Projects() {
                   {project.stack.map((tech) => (
                     <span
                       key={tech}
-                      className="rounded-md bg-foreground/[0.04] px-2 py-0.5 text-xs text-muted-foreground"
+                      className="rounded-md border bg-foreground/[0.04] px-2 py-0.5 text-xs text-muted-foreground"
                     >
                       {tech}
                     </span>

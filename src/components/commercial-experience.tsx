@@ -34,8 +34,8 @@ export function CommercialExperience() {
             Recent projects
           </span>
           <p className="mt-1.5 text-sm leading-relaxed text-foreground-subtle">
-            The final projects from my previous role most of which I built solo
-            from scratch through to deployment.
+            The final projects most of which I built solo from scratch through
+            to deployment.
           </p>
         </div>
 
@@ -67,11 +67,11 @@ export function CommercialExperience() {
           </div>
 
           <div className="mt-6 rounded-xl border border-dashed border-border bg-surface-elevated/60 p-1 sm:p-1.5">
-            <ul className="grid gap-px sm:grid-cols-2">
+            <ul className="grid gap-1 sm:grid-cols-2">
               {commercialExperience.otherProjects.map((project) => (
                 <li
                   key={project.id}
-                  className="cursor-default rounded-lg bg-background/70 px-4 py-4 sm:px-5 sm:py-4"
+                  className="cursor-default rounded-lg bg-background/90 px-4 py-4 sm:px-5 sm:py-4"
                 >
                   <div className="flex items-baseline justify-between gap-3">
                     <span className="text-sm font-medium leading-snug text-foreground-secondary">
@@ -91,7 +91,7 @@ export function CommercialExperience() {
                       {project.stack.map((tech) => (
                         <span
                           key={tech}
-                          className="rounded-md bg-foreground/[0.04] px-2 py-0.5 text-xs text-muted-foreground"
+                          className="rounded-md border bg-foreground/[0.04] px-2 py-0.5 text-xs text-muted-foreground"
                         >
                           {tech}
                         </span>
