@@ -126,7 +126,7 @@ function ProjectScreenshot({
   priority?: boolean;
 }) {
   return (
-    <figure className="my-10 sm:my-14">
+    <figure className="my-10 sm:my-14 sm:w-full mx-auto">
       <ProjectScreenshotTrigger
         image={image}
         index={index}

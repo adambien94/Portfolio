@@ -1,3 +1,5 @@
+import { Mail } from "lucide-react";
+import { GithubIcon, LinkedinIcon } from "@/components/icons";
 import { PortfolioImage } from "@/components/portfolio-image";
 import { RichText } from "@/components/rich-text";
 import { about, profile } from "@/data/portfolio";
@@ -37,22 +39,25 @@ export function About() {
             href={profile.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="ghost-button px-4 py-2 text-sm"
+            className="ghost-button inline-flex items-center gap-2 px-4 py-2 text-sm"
           >
+            <GithubIcon className="size-4 shrink-0" />
             GitHub
           </a>
           <a
             href={profile.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="ghost-button px-4 py-2 text-sm"
+            className="ghost-button inline-flex items-center gap-2 px-4 py-2 text-sm"
           >
+            <LinkedinIcon className="size-4 shrink-0" />
             LinkedIn
           </a>
           <a
             href={`mailto:${profile.email}`}
-            className="ghost-button px-4 py-2 text-sm"
+            className="ghost-button inline-flex items-center gap-2 px-4 py-2 text-sm"
           >
+            <Mail className="size-4 shrink-0" aria-hidden />
             {profile.email}
           </a>
         </div>
