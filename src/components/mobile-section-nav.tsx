@@ -124,7 +124,7 @@ export function MobileSectionNav() {
   return (
     <nav
       aria-label="Section navigation"
-      className="pointer-events-none fixed inset-x-0 bottom-0 z-50 sm:hidden"
+      className="pointer-events-none fixed w-9/10 mx-auto inset-x-0 bottom-0 z-50 sm:hidden"
       style={{
         paddingBottom: "max(1rem, env(safe-area-inset-bottom, 0px))",
       }}
@@ -136,7 +136,7 @@ export function MobileSectionNav() {
 
             <TabsList
               ref={listRef}
-              className="relative z-10 h-14 w-full rounded-full bg-transparent p-5 shadow-none"
+              className="relative z-10 h-14 w-full rounded-full p-2 bg-transparent shadow-none"
             >
               <span
                 aria-hidden
@@ -159,7 +159,7 @@ export function MobileSectionNav() {
                     }}
                     value={id}
                     className={cn(
-                      "relative z-10 h-full min-h-0 flex-1 rounded-full border-transparent px-3 py-1 text-sm font-base tracking-[-0.01em] shadow-none transition-colors duration-300",
+                      "relative z-10 h-full min-h-0 flex-1 rounded-full border-transparent px-3 text-sm font-base tracking-[-0.01em] shadow-none transition-colors duration-300",
                       "bg-transparent hover:bg-transparent dark:hover:bg-transparent",
                       "data-active:border-transparent data-active:bg-transparent data-active:shadow-none",
                       "dark:data-active:border-transparent dark:data-active:bg-transparent",
