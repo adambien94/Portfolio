@@ -5,6 +5,7 @@ export const imageBlurData: Record<string, string> = {
   "/projects/TvShow/TvShowApp-1.png": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAADQAQCdASoQAAoABUB8JYwAAl1r7/p02AD+SMPj95qpfDvBxCq5UnNF60ybHuqOJ0Gydobxguyqm3HOXuKwAAAA",
   "/projects/TvShow/TvShowApp-2.png": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAABQBACdASoQACkAPzmGvVQvKKajKqwB4CcJQBmDgsyZkIlL2CJvVjT/PoGAAP5BLlW44oU5uvRFSnVdkmnGtj8HuXcOpqY08pcRrNm+2KOreE6a11zOv54MKIzgtVB+jqnHUwwn28EFmrJac73Nit4GDCZvm60CH2m5lyT0jsq6KVs9LVQC1LUAOphLU7peqI3Hkyv6XGH0GziAAAA=",
   "/projects/TvShow/TvShowApp-3.png": "data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAACQBACdASoQACgAPyV4sVOuJySitUgBwCSJQBm4BZrMtAkUGqi5VvBvydwMTYAA/ujahGCaXkyfg0HGrAx5Q5sFpi/XQ84wZhfWOzDXCZyPZGCaxsfbgYklfnLjAJ6Lps2BjCZNUAxB90w8IxxHphIhK9HWxs2x0ku+u5CjtliTNhLpR1Z8bYie8TOtfODiD0R2sanXYsKF8AAA",
+  "/projects/clinic-platform/Clinic-1.png": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAQCdASoQAAoABUB8JZgCdACx5bAAAPrjY18iXMoP8TMQ853m9d7rEyrlQ0c5iAA=",
   "/projects/doors/Doors-1.png": "data:image/webp;base64,UklGRiYAAABXRUJQVlA4IBoAAAAwAQCdASoQAAMABUB8JaQAA3AA/vB80IqAAA==",
   "/projects/doors/Doors-2.png": "data:image/webp;base64,UklGRiYAAABXRUJQVlA4IBoAAAAwAQCdASoQAAMABUB8JaQAA3AA/vBkDjAAAA==",
   "/projects/doors/Doors-3.png": "data:image/webp;base64,UklGRiYAAABXRUJQVlA4IBoAAAAwAQCdASoQAAMABUB8JaQAA3AA/vBkDjAAAA==",
@@ -16,6 +17,9 @@ export const imageBlurData: Record<string, string> = {
   "/projects/lerni/Lerni-3.png": "data:image/webp;base64,UklGRigAAABXRUJQVlA4IBwAAAAwAQCdASoQAAoABUB8JaQAA3AA/u/iLHXBuQAA",
   "/projects/lerni/Lerni-4.png": "data:image/webp;base64,UklGRigAAABXRUJQVlA4IBwAAAAwAQCdASoQAAoABUB8JaQAA3AA/u/iK+qu5AAA",
   "/projects/lerni/Lerni-5.png": "data:image/webp;base64,UklGRigAAABXRUJQVlA4IBwAAAAwAQCdASoQAAoABUB8JaQAA3AA/u/lja2LAAAA",
+  "/projects/reporting-spa/Reporting-1.png": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAAAQAgCdASoQAAsABUB8JQBdj+ACsB/EKH0AAP7aem+FJEZECqHj9qhiX4yTfYbAfFbX7Dvn0fEgbexqAAA=",
+  "/projects/waste-portal-extension/Bdo-1.png": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAACwAQCdASoQAAoABUB8JQBOgCHf5SuwAP39KYxjpugg5qAUSGNISQdSJhvQdScKTjDtT6l7QAA=",
+  "/projects/waste-portal-extension/Bdo-2.png": "data:image/webp;base64,UklGRjAAAABXRUJQVlA4ICQAAAAwAQCdASoQAAoABUB8JZwAA3AA/u7bMk728rB6rFTV/ew0CAA=",
   "/projects/weseleo/weseleo-1.png": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAADQAQCdASoQAA0ABUB8JZwAAerLkACggAD3NQrxJuQrt2hZN3kNMO+QP/+IrQVusZFwNA04QAA=",
   "/projects/weseleo/weseleo-2.png": "data:image/webp;base64,UklGRigAAABXRUJQVlA4IBwAAAAwAQCdASoQAAoABUB8JaQAA3AA/vAzPfvOAAAA",
   "/projects/weseleo/weseleo-5.png": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABQAwCdASoQABoAPzmQvlWvKqajMAgB4CcJaVTAAIqjtn4mAAD+9IDWP35T2J/nyBtevqlwQFxzUZnCrl3LgjmJ1c+9i2D5PoAAAA==",
@@ -27,6 +31,7 @@ export const imageVersions: Record<string, string> = {
   "/projects/TvShow/TvShowApp-1.png": "9cae32a4",
   "/projects/TvShow/TvShowApp-2.png": "c294d8ec",
   "/projects/TvShow/TvShowApp-3.png": "d349e06d",
+  "/projects/clinic-platform/Clinic-1.png": "47b4bcc8",
   "/projects/doors/Doors-1.png": "1d0a7323",
   "/projects/doors/Doors-2.png": "bc6bc223",
   "/projects/doors/Doors-3.png": "f7080195",
@@ -38,6 +43,9 @@ export const imageVersions: Record<string, string> = {
   "/projects/lerni/Lerni-3.png": "b38ccc41",
   "/projects/lerni/Lerni-4.png": "2f9a26a6",
   "/projects/lerni/Lerni-5.png": "d4fd2492",
+  "/projects/reporting-spa/Reporting-1.png": "0b6684ef",
+  "/projects/waste-portal-extension/Bdo-1.png": "c68f35b3",
+  "/projects/waste-portal-extension/Bdo-2.png": "c18aa9e4",
   "/projects/weseleo/weseleo-1.png": "7778c3b9",
   "/projects/weseleo/weseleo-2.png": "cdbc751e",
   "/projects/weseleo/weseleo-5.png": "d4e6d91e",
@@ -60,6 +68,10 @@ export const imageDimensions: Record<string, { width: number; height: number }> 
   "/projects/TvShow/TvShowApp-3.png": {
     "width": 788,
     "height": 1988
+  },
+  "/projects/clinic-platform/Clinic-1.png": {
+    "width": 3420,
+    "height": 2164
   },
   "/projects/doors/Doors-1.png": {
     "width": 100,
@@ -104,6 +116,18 @@ export const imageDimensions: Record<string, { width: number; height: number }> 
   "/projects/lerni/Lerni-5.png": {
     "width": 3456,
     "height": 2170
+  },
+  "/projects/reporting-spa/Reporting-1.png": {
+    "width": 1522,
+    "height": 1033
+  },
+  "/projects/waste-portal-extension/Bdo-1.png": {
+    "width": 1280,
+    "height": 800
+  },
+  "/projects/waste-portal-extension/Bdo-2.png": {
+    "width": 1280,
+    "height": 800
   },
   "/projects/weseleo/weseleo-1.png": {
     "width": 2346,

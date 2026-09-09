@@ -24,6 +24,14 @@ export const wastePortalExtensionProject: ProjectDetail = {
   ],
   highlight:
     "Users have accelerated **4.8M+ processes** in the official system; waste record transfers grew **99% YoY** (2022→2023), saving an estimated **52,000+ hours** of manual work.",
+  screenshotIntro:
+    "What the extension adds to the live government BDO portal:",
+  heroImage: {
+    src: "/projects/waste-portal-extension/Bdo-1.png",
+    alt: "Chrome extension bulk card creation modal on the BDO waste portal with auto-fill, multi-row waste code table, and PDF confirmation download",
+    caption:
+      "Bulk card creation with auto-fill, multi-row entry, and optional PDF confirmation download.",
+  },
   sections: [
     {
       title: "DOM Injection on a Host Portal",
@@ -54,6 +62,11 @@ export const wastePortalExtensionProject: ProjectDetail = {
       paragraphs: [
         "In daily production use on the Chrome Web Store: **4.8M+ accelerated processes**, waste transfers up from **282K to 563K** year over year, and **52,000+ hours** of manual work eliminated by internal estimates.",
       ],
+      image: {
+        src: "/projects/waste-portal-extension/Bdo-2.png",
+        alt: "Map of TwojeBDO extension customers across Poland in 2024, with user concentration in major cities",
+        caption: "TwojeBDO customer distribution across Poland in 2024.",
+      },
     },
   ],
   closing: [

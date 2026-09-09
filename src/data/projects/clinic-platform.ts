@@ -22,6 +22,14 @@ export const clinicPlatformProject: ProjectDetail = {
   ],
   highlight:
     "Four locales have fully localized URL paths, including Cyrillic slugs, so switching language lands on the equivalent page, not the homepage.",
+  screenshotIntro:
+    "In production for three clinic brands across four languages:",
+  heroImage: {
+    src: "/projects/clinic-platform/Clinic-1.png",
+    alt: "Top Medical Clinic homepage with gradient hero, stethoscope graphic, Polish navigation, clinic selector, and glassmorphism action cards",
+    caption:
+      "Homepage for one of three clinic brands, with per-clinic theming and fully localized Polish routing.",
+  },
   sections: [
     {
       title: "Localized URL Routing",

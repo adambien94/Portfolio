@@ -198,7 +198,9 @@ export function ProjectDetailArticle({
           ))}
 
           {project.highlight ? (
-            <p className="!font-[550] !text-foreground">{project.highlight}</p>
+            <p className="!font-[550] !text-foreground">
+              <RichText text={project.highlight} />
+            </p>
           ) : null}
 
           {project.screenshotIntro ? <p>{project.screenshotIntro}</p> : null}

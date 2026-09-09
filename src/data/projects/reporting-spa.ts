@@ -22,6 +22,14 @@ export const reportingSpaProject: ProjectDetail = {
   ],
   highlight:
     "Tables and charts render from generic API DTOs. New report types need page-level wiring, not new implementations.",
+  screenshotIntro:
+    "Resident waste collection reporting with shared filters, charts, and tables:",
+  heroImage: {
+    src: "/projects/reporting-spa/Reporting-1.png",
+    alt: "Reporting SPA dashboard with filter sidebar, stacked bar chart, three doughnut charts, and paginated data table for BDO waste records",
+    caption:
+      "Resident collection report: filter drawer, stacked bar chart, doughnut breakdowns, and schema-driven table in one view.",
+  },
   sections: [
     {
       title: "Extension-Based Authentication",
