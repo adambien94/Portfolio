@@ -51,6 +51,17 @@
   --page-glow: #ffbe25;
   --card-shadow: 0 24px 80px -24px rgba(0, 0, 0, 0.12);
   --blob-highlight: rgba(255, 255, 255, 0.65);
+  --liquid-glass-bg: rgba(255, 255, 255, 0.58);
+  --liquid-glass-bg-fallback: rgba(245, 244, 241, 0.94);
+  --liquid-glass-border: rgba(255, 255, 255, 0.72);
+  --liquid-glass-border-outer: rgba(0, 0, 0, 0.06);
+  --liquid-glass-specular: rgba(255, 255, 255, 0.92);
+  --liquid-glass-shadow-inner: rgba(0, 0, 0, 0.05);
+  --liquid-glass-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(0, 0, 0, 0.05);
+  --liquid-glass-pill-bg: rgba(255, 255, 255, 0.72);
+  --liquid-glass-pill-specular: rgba(255, 255, 255, 0.95);
+  --liquid-glass-pill-shadow: rgba(0, 0, 0, 0.07);
   --radius: 0.5rem;
   --font-sans: var(--font-inter);
 }
@@ -69,6 +80,17 @@
   --foreground-subtle: #7a7872;
   --card-shadow: 0 24px 80px -24px rgba(0, 0, 0, 0.8);
   --blob-highlight: rgba(255, 255, 255, 0.04);
+  --liquid-glass-bg: rgba(44, 44, 42, 0.62);
+  --liquid-glass-bg-fallback: rgba(22, 22, 20, 0.94);
+  --liquid-glass-border: rgba(255, 255, 255, 0.16);
+  --liquid-glass-border-outer: rgba(255, 255, 255, 0.07);
+  --liquid-glass-specular: rgba(255, 255, 255, 0.14);
+  --liquid-glass-shadow-inner: rgba(0, 0, 0, 0.28);
+  --liquid-glass-shadow:
+    0 12px 48px rgba(0, 0, 0, 0.42), 0 2px 10px rgba(0, 0, 0, 0.28);
+  --liquid-glass-pill-bg: rgba(255, 255, 255, 0.14);
+  --liquid-glass-pill-specular: rgba(255, 255, 255, 0.22);
+  --liquid-glass-pill-shadow: rgba(0, 0, 0, 0.22);
 }
 
 @layer base {
@@ -153,56 +175,89 @@
     @apply text-muted-foreground transition-colors hover:text-foreground;
   }
 
-  .mobile-section-nav-scrim {
+  .liquid-glass-nav {
     position: relative;
     isolation: isolate;
-  }
-
-  .mobile-section-nav-scrim::before {
-    content: "";
-    position: absolute;
-    inset: -2.5rem 0 0;
-    background: linear-gradient(
-      180deg,
-      transparent 0%,
-      color-mix(in srgb, var(--background) 35%, transparent) 55%,
-      color-mix(in srgb, var(--background) 82%, transparent) 100%
-    );
-    pointer-events: none;
-  }
-
-  .mobile-section-nav-bar {
-    isolation: isolate;
-    border: 1px solid color-mix(in srgb, var(--border) 80%, transparent);
-    background: color-mix(in srgb, var(--surface) 72%, transparent);
+    border-radius: 9999px;
+    background-color: var(--liquid-glass-bg-fallback);
+    border: 0.5px solid var(--liquid-glass-border);
     box-shadow:
-      0 0 0 1px color-mix(in srgb, var(--foreground) 4%, transparent),
-      0 8px 32px -8px color-mix(in srgb, var(--foreground) 18%, transparent),
-      0 2px 8px -2px color-mix(in srgb, var(--foreground) 8%, transparent);
-    backdrop-filter: blur(20px) saturate(1.4);
-    -webkit-backdrop-filter: blur(20px) saturate(1.4);
+      0 0 0 0.5px var(--liquid-glass-border-outer),
+      inset 0 1px 0 var(--liquid-glass-specular),
+      inset 0 -0.5px 0 var(--liquid-glass-shadow-inner),
+      var(--liquid-glass-shadow);
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
   }
 
-  .mobile-section-nav-indicator {
-    background: color-mix(in srgb, var(--foreground) 8%, transparent);
-    box-shadow: inset 0 1px 0 color-mix(in srgb, var(--blob-highlight) 40%, transparent);
+  @supports (
+    (-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))
+  ) {
+    .liquid-glass-nav {
+      background-color: var(--liquid-glass-bg);
+      -webkit-backdrop-filter: blur(40px) saturate(190%) brightness(1.08);
+      backdrop-filter: blur(40px) saturate(190%) brightness(1.08);
+    }
   }
 
-  .mobile-section-nav-bar::before {
-    content: "";
+  .liquid-glass-nav__sheen {
+    pointer-events: none;
     position: absolute;
     inset: 0;
     border-radius: inherit;
-    background: linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--blob-highlight) 55%, transparent) 0%,
-      transparent 42%
-    );
-    pointer-events: none;
+    background:
+      radial-gradient(
+        120% 80% at 50% -20%,
+        rgba(255, 255, 255, 0.38) 0%,
+        transparent 55%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0.04) 28%,
+        transparent 52%
+      );
   }
 
-  .mobile-section-nav-tab:active {
-    background: color-mix(in srgb, var(--foreground) 6%, transparent);
+  .dark .liquid-glass-nav__sheen {
+    background:
+      radial-gradient(
+        120% 80% at 50% -20%,
+        rgba(255, 255, 255, 0.1) 0%,
+        transparent 55%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.08) 0%,
+        rgba(255, 255, 255, 0.02) 28%,
+        transparent 52%
+      );
+  }
+
+  .liquid-glass-nav__indicator {
+    pointer-events: none;
+    position: absolute;
+    top: 6px;
+    bottom: 6px;
+    left: 0;
+    border-radius: 9999px;
+    background-color: var(--liquid-glass-pill-bg);
+    box-shadow:
+      inset 0 1px 0 var(--liquid-glass-pill-specular),
+      0 1px 4px var(--liquid-glass-pill-shadow);
+    transition:
+      transform 0.48s cubic-bezier(0.32, 0.72, 0, 1),
+      width 0.48s cubic-bezier(0.32, 0.72, 0, 1);
+    will-change: transform, width;
+  }
+
+  @supports (
+    (-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))
+  ) {
+    .liquid-glass-nav__indicator {
+      -webkit-backdrop-filter: blur(16px) saturate(160%);
+      backdrop-filter: blur(16px) saturate(160%);
+    }
   }
 
   .site-header-scrim {

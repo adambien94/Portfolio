@@ -1,20 +1,30 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { navLinks } from "@/data/portfolio";
 import { cn } from "@/lib/utils";
 
+function sectionId(href: string) {
+  return href.startsWith("#") ? href.slice(1) : href;
+}
+
 export function MobileSectionNav() {
-  const [activeHref, setActiveHref] = useState(navLinks[0].href);
+  const [activeId, setActiveId] = useState(sectionId(navLinks[0].href));
   const [activeIndex, setActiveIndex] = useState(0);
   const ratiosRef = useRef<Map<string, number>>(new Map());
-  const tabRefs = useRef<(HTMLAnchorElement | null)[]>([]);
+  const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
+  const listRef = useRef<HTMLDivElement | null>(null);
+  const scrollLockRef = useRef<string | null>(null);
+  const scrollUnlockTimerRef = useRef<number | null>(null);
   const [indicator, setIndicator] = useState({ width: 0, left: 0 });
 
   useEffect(() => {
     const sections = navLinks
-      .map((link) => document.querySelector(link.href))
-      .filter((section): section is HTMLElement => section instanceof HTMLElement);
+      .map((link) => document.getElementById(sectionId(link.href)))
+      .filter(
+        (section): section is HTMLElement => section instanceof HTMLElement,
+      );
 
     if (!sections.length) return;
 
@@ -35,8 +45,20 @@ export function MobileSectionNav() {
           }
         }
 
-        const nextIndex = sections.findIndex((section) => section.id === bestId);
-        setActiveHref(`#${bestId}`);
+        const lockedTarget = scrollLockRef.current;
+        if (lockedTarget) {
+          if (bestId !== lockedTarget) return;
+          scrollLockRef.current = null;
+          if (scrollUnlockTimerRef.current !== null) {
+            window.clearTimeout(scrollUnlockTimerRef.current);
+            scrollUnlockTimerRef.current = null;
+          }
+        }
+
+        const nextIndex = sections.findIndex(
+          (section) => section.id === bestId,
+        );
+        setActiveId(bestId);
         setActiveIndex(nextIndex >= 0 ? nextIndex : 0);
       },
       {
@@ -53,17 +75,25 @@ export function MobileSectionNav() {
   }, []);
 
   useEffect(() => {
-    const tab = tabRefs.current[activeIndex];
-    const bar = tab?.closest(".mobile-section-nav-bar");
+    return () => {
+      if (scrollUnlockTimerRef.current !== null) {
+        window.clearTimeout(scrollUnlockTimerRef.current);
+      }
+    };
+  }, []);
 
-    if (!tab || !bar) return;
+  useEffect(() => {
+    const tab = tabRefs.current[activeIndex];
+    const list = listRef.current;
+
+    if (!tab || !list) return;
 
     const updateIndicator = () => {
-      const barRect = bar.getBoundingClientRect();
+      const listRect = list.getBoundingClientRect();
       const tabRect = tab.getBoundingClientRect();
       setIndicator({
         width: tabRect.width,
-        left: tabRect.left - barRect.left,
+        left: tabRect.left - listRect.left,
       });
     };
 
@@ -72,60 +102,80 @@ export function MobileSectionNav() {
     return () => window.removeEventListener("resize", updateIndicator);
   }, [activeIndex]);
 
+  const handleValueChange = (value: string) => {
+    const nextIndex = navLinks.findIndex(
+      (link) => sectionId(link.href) === value,
+    );
+
+    scrollLockRef.current = value;
+    if (scrollUnlockTimerRef.current !== null) {
+      window.clearTimeout(scrollUnlockTimerRef.current);
+    }
+    scrollUnlockTimerRef.current = window.setTimeout(() => {
+      scrollLockRef.current = null;
+      scrollUnlockTimerRef.current = null;
+    }, 1200);
+
+    setActiveId(value);
+    if (nextIndex >= 0) setActiveIndex(nextIndex);
+    document.getElementById(value)?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <nav
       aria-label="Section navigation"
-      className="mobile-section-nav pointer-events-none fixed inset-x-0 bottom-0 z-50 sm:hidden"
+      className="pointer-events-none fixed inset-x-0 bottom-0 z-50 sm:hidden"
+      style={{
+        paddingBottom: "max(1rem, env(safe-area-inset-bottom, 0px))",
+      }}
     >
-      <div className="mobile-section-nav-scrim pointer-events-auto mx-auto max-w-md px-4 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
-        <div className="mobile-section-nav-bar relative flex items-stretch justify-between gap-0.5 rounded-2xl p-1">
-          <span
-            aria-hidden
-            className="mobile-section-nav-indicator absolute top-1 bottom-1 rounded-xl transition-[transform,width] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]"
-            style={{
-              width: indicator.width || undefined,
-              transform: `translateX(${indicator.left}px)`,
-            }}
-          />
-          {navLinks.map((link, index) => {
-            const isActive = activeHref === link.href;
+      <div className="pointer-events-auto mx-auto max-w-sm px-5">
+        <Tabs value={activeId} onValueChange={handleValueChange}>
+          <div className="liquid-glass-nav">
+            <div aria-hidden className="liquid-glass-nav__sheen" />
 
-            return (
-              <a
-                key={link.href}
-                ref={(node) => {
-                  tabRefs.current[index] = node;
+            <TabsList
+              ref={listRef}
+              className="relative z-10 h-14 w-full rounded-full bg-transparent p-5 shadow-none"
+            >
+              <span
+                aria-hidden
+                className="liquid-glass-nav__indicator"
+                style={{
+                  width: indicator.width || undefined,
+                  transform: `translateX(${indicator.left}px)`,
                 }}
-                href={link.href}
-                aria-current={isActive ? "true" : undefined}
-                className={cn(
-                  "mobile-section-nav-tab relative z-10 flex flex-1 flex-col items-center justify-center rounded-xl px-2 py-2.5 text-center transition-colors duration-300",
-                  isActive
-                    ? "text-foreground"
-                    : "text-muted-foreground active:text-foreground",
-                )}
-              >
-                <span
-                  className={cn(
-                    "text-[11px] font-medium tracking-wide transition-all duration-300",
-                    isActive && "scale-[1.02]",
-                  )}
-                >
-                  {link.label}
-                </span>
-                <span
-                  aria-hidden
-                  className={cn(
-                    "mt-1 h-0.5 w-4 rounded-full bg-yellow transition-all duration-300",
-                    isActive
-                      ? "scale-100 opacity-100"
-                      : "scale-75 opacity-0",
-                  )}
-                />
-              </a>
-            );
-          })}
-        </div>
+              />
+
+              {navLinks.map((link, index) => {
+                const id = sectionId(link.href);
+                const isActive = activeId === id;
+
+                return (
+                  <TabsTrigger
+                    key={link.href}
+                    ref={(node) => {
+                      tabRefs.current[index] = node;
+                    }}
+                    value={id}
+                    className={cn(
+                      "relative z-10 h-full min-h-0 flex-1 rounded-full border-transparent px-3 py-1 text-sm font-base tracking-[-0.01em] shadow-none transition-colors duration-300",
+                      "bg-transparent hover:bg-transparent dark:hover:bg-transparent",
+                      "data-active:border-transparent data-active:bg-transparent data-active:shadow-none",
+                      "dark:data-active:border-transparent dark:data-active:bg-transparent",
+                      "after:hidden",
+                      isActive
+                        ? "text-foreground"
+                        : "text-muted-foreground/85 hover:text-foreground/80",
+                    )}
+                  >
+                    {link.label}
+                  </TabsTrigger>
+                );
+              })}
+            </TabsList>
+          </div>
+        </Tabs>
       </div>
     </nav>
   );

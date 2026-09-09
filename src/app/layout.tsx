@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Geist_Mono } from "next/font/google";
 import { PageGlow } from "@/components/page-glow";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -22,6 +22,12 @@ export const metadata: Metadata = {
   title: "Adam Bien - Frontend Developer",
   description:
     "Frontend portfolio. React, Next.js, Vue, and the kind of UI details I like to get right.",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
