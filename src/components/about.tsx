@@ -41,7 +41,7 @@ export function About() {
             rel="noopener noreferrer"
             className="ghost-button inline-flex items-center gap-2 px-4 py-2 text-sm"
           >
-            <GithubIcon className="size-4 shrink-0" />
+            {/* <GithubIcon className="size-4 shrink-0" /> */}
             GitHub
           </a>
           <a
@@ -50,14 +50,14 @@ export function About() {
             rel="noopener noreferrer"
             className="ghost-button inline-flex items-center gap-2 px-4 py-2 text-sm"
           >
-            <LinkedinIcon className="size-4 shrink-0" />
+            {/* <LinkedinIcon className="size-4 shrink-0" /> */}
             LinkedIn
           </a>
           <a
             href={`mailto:${profile.email}`}
             className="ghost-button inline-flex items-center gap-2 px-4 py-2 text-sm"
           >
-            <Mail className="size-4 shrink-0" aria-hidden />
+            {/* <Mail className="size-4 shrink-0" aria-hidden /> */}
             {profile.email}
           </a>
         </div>

@@ -71,7 +71,7 @@ export function CommercialExperience() {
               {commercialExperience.otherProjects.map((project) => (
                 <li
                   key={project.id}
-                  className="cursor-default rounded-lg bg-background/90 px-4 py-4 sm:px-5 sm:py-4"
+                  className="cursor-default rounded-lg bg-background px-4 py-4 sm:px-5 sm:py-4"
                 >
                   <div className="flex items-baseline justify-between gap-3">
                     <span className="text-sm font-medium leading-snug text-foreground-secondary">
