@@ -6,7 +6,10 @@ import { cn } from "@/lib/utils";
 
 export function MobileSectionNav() {
   const [activeHref, setActiveHref] = useState(navLinks[0].href);
+  const [activeIndex, setActiveIndex] = useState(0);
   const ratiosRef = useRef<Map<string, number>>(new Map());
+  const tabRefs = useRef<(HTMLAnchorElement | null)[]>([]);
+  const [indicator, setIndicator] = useState({ width: 0, left: 0 });
 
   useEffect(() => {
     const sections = navLinks
@@ -32,7 +35,9 @@ export function MobileSectionNav() {
           }
         }
 
+        const nextIndex = sections.findIndex((section) => section.id === bestId);
         setActiveHref(`#${bestId}`);
+        setActiveIndex(nextIndex >= 0 ? nextIndex : 0);
       },
       {
         rootMargin: "-12% 0px -42% 0px",
@@ -47,19 +52,50 @@ export function MobileSectionNav() {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    const tab = tabRefs.current[activeIndex];
+    const bar = tab?.closest(".mobile-section-nav-bar");
+
+    if (!tab || !bar) return;
+
+    const updateIndicator = () => {
+      const barRect = bar.getBoundingClientRect();
+      const tabRect = tab.getBoundingClientRect();
+      setIndicator({
+        width: tabRect.width,
+        left: tabRect.left - barRect.left,
+      });
+    };
+
+    updateIndicator();
+    window.addEventListener("resize", updateIndicator);
+    return () => window.removeEventListener("resize", updateIndicator);
+  }, [activeIndex]);
+
   return (
     <nav
       aria-label="Section navigation"
       className="mobile-section-nav pointer-events-none fixed inset-x-0 bottom-0 z-50 sm:hidden"
     >
-      <div className="pointer-events-auto mx-auto max-w-md px-4 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
+      <div className="mobile-section-nav-scrim pointer-events-auto mx-auto max-w-md px-4 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
         <div className="mobile-section-nav-bar relative flex items-stretch justify-between gap-0.5 rounded-2xl p-1">
-          {navLinks.map((link) => {
+          <span
+            aria-hidden
+            className="mobile-section-nav-indicator absolute top-1 bottom-1 rounded-xl transition-[transform,width] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]"
+            style={{
+              width: indicator.width || undefined,
+              transform: `translateX(${indicator.left}px)`,
+            }}
+          />
+          {navLinks.map((link, index) => {
             const isActive = activeHref === link.href;
 
             return (
               <a
                 key={link.href}
+                ref={(node) => {
+                  tabRefs.current[index] = node;
+                }}
                 href={link.href}
                 aria-current={isActive ? "true" : undefined}
                 className={cn(
