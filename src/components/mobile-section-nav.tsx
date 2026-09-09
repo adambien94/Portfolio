@@ -136,14 +136,17 @@ export function MobileSectionNav() {
 
             <TabsList
               ref={listRef}
-              className="relative z-10 min-h-10 w-full rounded-full p-2 bg-transparent shadow-none"
+              className="relative z-10 min-h-12 w-full rounded-full p-2 bg-transparent shadow-none"
             >
               <span
                 aria-hidden
-                className="liquid-glass-nav__indicator"
+                className={cn(
+                  "liquid-glass-nav__indicator",
+                  indicator.width === 0 && "opacity-0",
+                )}
                 style={{
                   width: indicator.width || undefined,
-                  transform: `translateX(${indicator.left}px)`,
+                  transform: `translate3d(${indicator.left}px, 0, 0)`,
                 }}
               />
 
@@ -159,11 +162,11 @@ export function MobileSectionNav() {
                     }}
                     value={id}
                     className={cn(
-                      "relative z-10 flex flex-1 items-center justify-center rounded-full border-transparent px-3 py-3 text-sm font-base tracking-[-0.01em] shadow-none transition-colors duration-300",
-                      "bg-transparent hover:bg-transparent dark:hover:bg-transparent",
-                      "data-active:border-transparent data-active:bg-transparent data-active:shadow-none",
-                      "dark:data-active:border-transparent dark:data-active:bg-transparent",
-                      "after:hidden",
+                      "relative z-10 flex flex-1 items-center justify-center rounded-full border-transparent px-3 py-3 text-sm font-base tracking-[-0.01em]",
+                      "bg-transparent shadow-none transition-[color] duration-300 hover:bg-transparent dark:hover:bg-transparent",
+                      "data-active:border-transparent! data-active:bg-transparent! data-active:shadow-none!",
+                      "dark:data-active:border-transparent! dark:data-active:bg-transparent! dark:data-active:shadow-none!",
+                      "after:hidden after:opacity-0",
                       isActive
                         ? "text-foreground"
                         : "text-muted-foreground/85 hover:text-foreground/80",
