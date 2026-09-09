@@ -1,3 +1,11 @@
+export type OtherCommercialProject = {
+  id: string;
+  name: string;
+  description: string;
+  period?: string;
+  stack: string[];
+};
+
 export const profile = {
   name: "Adam Bień",
   domain: "adambien",
@@ -82,6 +90,50 @@ export const projects = [
   // },
 ];
 
+export const otherCommercialProjects: OtherCommercialProject[] = [
+  {
+    id: "loreal-training",
+    name: "L'Oréal employee training platform",
+    description:
+      "Training app with quizzes, concept puzzles, and image annotation exercises.",
+    stack: ["Vue 3", "Nuxt.js", "TypeScript"],
+  },
+  {
+    id: "spa-hotel-booking",
+    name: "Internal hotel booking app",
+    description:
+      "Employee self-service for booking company hotel stays at SPA.",
+    stack: ["Vue 3", "Nuxt.js", "TypeScript", "FormKit"],
+  },
+  {
+    id: "furniture-ecommerce",
+    name: "Furniture e-commerce store",
+    description:
+      "Online furniture shop with catalog, cart, and checkout flows.",
+    stack: ["Shopware", "Twig", "Docker"],
+  },
+  {
+    id: "twojebdo-driver-app",
+    name: "Driver mobile app",
+    description:
+      "Mobile app for drivers extending twojeBDO service capabilities.",
+    stack: ["Vue 3", "TypeScript", "FormKit"],
+  },
+  {
+    id: "nokia-server-config",
+    name: "Nokia server configuration SPA",
+    description: "Developing complex app for configuring and managing servers.",
+    stack: ["Vue 2", "Nuxt.js", "TypeScript"],
+  },
+  {
+    id: "atos-workforce",
+    name: "Atos workforce management app",
+    description:
+      "Internal tool for employee data, work statistics, and leave management.",
+    stack: ["Vue 2", "TypeScript", "Jest"],
+  },
+];
+
 export const commercialExperience = {
   title: "Commercial experience",
   subtitle:
@@ -128,6 +180,7 @@ export const commercialExperience = {
       href: "/projects/clinic-platform",
     },
   ],
+  otherProjects: otherCommercialProjects,
   stack: [
     "JavaScript",
     "TypeScript",

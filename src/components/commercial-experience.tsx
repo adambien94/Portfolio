@@ -33,6 +33,10 @@ export function CommercialExperience() {
           <span className="text-base font-medium sm:text-lg">
             Recent projects
           </span>
+          <p className="mt-1.5 text-sm leading-relaxed text-foreground-subtle">
+            The final projects from my previous role most of which I built solo
+            from scratch through to deployment.
+          </p>
         </div>
 
         <ul className="mt-6 flex flex-col gap-3 sm:mt-8">
@@ -52,6 +56,53 @@ export function CommercialExperience() {
             </li>
           ))}
         </ul>
+
+        <div className="mt-14 sm:mt-16">
+          <div>
+            <span className="text-base font-medium sm:text-lg">Others</span>
+            <p className="mt-1.5 text-sm leading-relaxed text-foreground-subtle">
+              Earlier commercial work listed for context, without a dedicated
+              case study.
+            </p>
+          </div>
+
+          <div className="mt-6 rounded-xl border border-dashed border-border bg-surface-elevated/60 p-1 sm:p-1.5">
+            <ul className="grid gap-px sm:grid-cols-2">
+              {commercialExperience.otherProjects.map((project) => (
+                <li
+                  key={project.id}
+                  className="cursor-default rounded-lg bg-background/70 px-4 py-4 sm:px-5 sm:py-4"
+                >
+                  <div className="flex items-baseline justify-between gap-3">
+                    <span className="text-sm font-medium leading-snug text-foreground-secondary">
+                      {project.name}
+                    </span>
+                    {project.period ? (
+                      <span className="shrink-0 font-mono text-[11px] leading-none tracking-wide text-foreground-subtle uppercase">
+                        {project.period}
+                      </span>
+                    ) : null}
+                  </div>
+                  <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+                    {project.description}
+                  </p>
+                  {project.stack?.length ? (
+                    <div className="mt-3 flex flex-wrap gap-1.5">
+                      {project.stack.map((tech) => (
+                        <span
+                          key={tech}
+                          className="rounded-md bg-foreground/[0.04] px-2 py-0.5 text-xs text-muted-foreground"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  ) : null}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
   );

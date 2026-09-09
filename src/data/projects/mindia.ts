@@ -57,7 +57,7 @@ export const mindiaProject: ProjectDetail = {
     },
   ],
   closing: [
-    "**TypeScript** and **React** clinical media tool: **WebRTC** capture, on-device **VAD**, **Video.js** annotation workspace, **JWT**-secured streaming across every transport channel.",
+    "Clinical media tool: **WebRTC** capture, on-device **VAD**, **Video.js** annotation workspace, **JWT**-secured streaming across every transport channel.",
   ],
   backHref: "/#doswiadczenie",
   backLabel: "Commercial experience",

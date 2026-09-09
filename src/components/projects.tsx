@@ -81,6 +81,12 @@ export function Projects() {
                     >
                       {tech}
                     </span>
+                    // <span
+                    //   key={tech}
+                    //   className="rounded-md border border-border/70 bg-foreground/[0.02] px-1.5 py-0.5 font-mono text-xs text-foreground-subtle"
+                    // >
+                    //   {tech}
+                    // </span>
                   ))}
                 </div>
               </Link>

@@ -23,9 +23,8 @@ export const wastePortalExtensionProject: ProjectDetail = {
     "**100+ components** across **50+ page-specific content script bundles**: content scripts mount UI islands; an injected page script reads host state via **`postMessage`**.",
   ],
   highlight:
-    "Users have accelerated **4.8M+ processes** in the official system; waste record transfers grew **99% YoY** (2022→2023), saving an estimated **52,000+ hours** of manual work.",
-  screenshotIntro:
-    "What the extension adds to the live government BDO portal:",
+    "Users have accelerated **4.8M+ processes** in the official system; waste record transfers grew **99% year over year** (2022→2023), saving an estimated **52,000+ hours** of manual work.",
+  screenshotIntro: "What the extension adds to the live government BDO portal:",
   heroImage: {
     src: "/projects/waste-portal-extension/Bdo-1.png",
     alt: "Chrome extension bulk card creation modal on the BDO waste portal with auto-fill, multi-row waste code table, and PDF confirmation download",
