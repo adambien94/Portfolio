@@ -110,14 +110,14 @@ export const otherCommercialProjects: OtherCommercialProject[] = [
     name: "Internal hotel booking app",
     description:
       "Employee self-service for booking company hotel stays at SPA.",
-    stack: ["Vue 3", "Nuxt.js", "TypeScript", "FormKit"],
+    stack: ["Vue 3", "Nuxt.js", "TypeScript", "FormKit", "Stripe"],
   },
   {
     id: "furniture-ecommerce",
     name: "Furniture e-commerce store",
     description:
       "Online furniture shop with catalog, cart, and checkout flows.",
-    stack: ["Shopware", "Twig", "JS", "Docker"],
+    stack: ["Shopware", "Twig", "JS", "Sass", "Docker"],
   },
   {
     id: "nokia-server-config",

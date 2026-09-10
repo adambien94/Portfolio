@@ -66,12 +66,12 @@ export function CommercialExperience() {
             </p>
           </div>
 
-          <div className="mt-6 rounded-xl border border-dashed border-border bg-surface-elevated/60 p-1 sm:p-1.5">
-            <ul className="grid gap-1 sm:grid-cols-2">
+          <div className="mt-6">
+            <ul className="grid gap-2 sm:grid-cols-2">
               {commercialExperience.otherProjects.map((project) => (
                 <li
                   key={project.id}
-                  className="cursor-default rounded-lg bg-background px-4 py-4 sm:px-5 sm:py-4"
+                  className="cursor-default rounded-lg bg-background px-4 py-4 sm:px-5 sm:py-4 bg-surface border"
                 >
                   <div className="flex items-baseline justify-between gap-3">
                     <span className="text-sm font-medium leading-snug text-foreground-secondary">
