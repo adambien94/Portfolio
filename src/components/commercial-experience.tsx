@@ -11,7 +11,7 @@ export function CommercialExperience() {
     >
       <div className="mx-auto w-full max-w-[700px]">
         <div className="mb-8 sm:mb-10">
-          <h2 className="text-2xl leading-tight font-medium tracking-[-0.02em] text-foreground sm:text-3xl">
+          <h2 className="text-2xl leading-tight font-semibold tracking-[-0.02em] text-foreground sm:text-3xl">
             {commercialExperience.title}
           </h2>
           <p className="mt-3 text-base leading-7 text-foreground-secondary sm:text-lg">
@@ -30,7 +30,7 @@ export function CommercialExperience() {
         <StackMarquee items={commercialExperience.stack} />
 
         <div className="mt-10 sm:mt-12">
-          <span className="text-base font-medium sm:text-lg">
+          <span className="text-base font-semibold sm:text-lg">
             Recent projects
           </span>
           <p className="mt-1.5 text-sm leading-relaxed text-foreground-subtle">
@@ -46,7 +46,7 @@ export function CommercialExperience() {
                 href={project.href}
                 className="group -mx-2 block rounded-md px-2 py-2 transition-colors hover:bg-foreground/[0.04] sm:-mx-3 sm:px-3"
               >
-                <span className="block text-base font-base leading-snug text-foreground">
+                <span className="block text-base font-medium leading-snug text-foreground">
                   {project.name}
                 </span>
                 <span className="mt-0.5 block text-base leading-relaxed text-muted-foreground">
@@ -59,7 +59,7 @@ export function CommercialExperience() {
 
         <div className="mt-14 sm:mt-16">
           <div>
-            <span className="text-base font-medium sm:text-lg">Others</span>
+            <span className="text-base font-semibold sm:text-lg">Others</span>
             <p className="mt-1.5 text-sm leading-relaxed text-foreground-subtle">
               Earlier commercial work listed for context, without a dedicated
               case study.
@@ -74,7 +74,7 @@ export function CommercialExperience() {
                   className="cursor-default rounded-lg bg-background px-4 py-4 sm:px-5 sm:py-4 bg-surface border"
                 >
                   <div className="flex items-baseline justify-between gap-3">
-                    <span className="text-sm font-medium leading-snug text-foreground-secondary">
+                    <span className="text-sm font-semibold leading-snug text-foreground-secondary">
                       {project.name}
                     </span>
                     {project.period ? (

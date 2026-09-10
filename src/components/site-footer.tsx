@@ -5,7 +5,9 @@ export function SiteFooter() {
     <footer className="border-t border-border px-5 py-10 md:px-8">
       <div className="mx-auto flex w-full max-w-[1640px] flex-col items-start justify-between gap-4 md:px-8 sm:flex-row sm:items-center">
         <p className="text-sm text-muted-foreground">
-          <span className="font-medium text-foreground">{profile.domain}</span>
+          <span className="font-semibold text-foreground">
+            {profile.domain}
+          </span>
           .eu
           <span className="mx-2 text-foreground/20">·</span>
           built with Next.js

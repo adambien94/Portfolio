@@ -12,7 +12,7 @@ export function Projects() {
     >
       <div className="mx-auto w-full max-w-[900px]">
         <div className="mx-auto mb-10 max-w-[700px] sm:mb-14">
-          <h2 className="text-2xl leading-tight font-medium tracking-[-0.02em] text-foreground sm:text-3xl">
+          <h2 className="text-2xl leading-tight font-semibold tracking-[-0.02em] text-foreground sm:text-3xl">
             Side projects
           </h2>
           <p className="mt-3 max-w-[540px] text-base leading-7 text-foreground-secondary sm:text-lg">
@@ -65,7 +65,7 @@ export function Projects() {
                     aria-hidden
                   />
                   <p className="text-sm leading-5 text-muted-foreground">
-                    <span className="font-medium text-foreground">
+                    <span className="font-semibold text-foreground">
                       {project.name}
                     </span>
                     {", "}

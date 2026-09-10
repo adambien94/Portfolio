@@ -17,7 +17,7 @@ export function About() {
             className="size-18 shrink-0 rounded-full object-cover"
           />
           <div className="flex flex-col gap-1">
-            <h2 className="text-2xl leading-tight font-medium tracking-[-0.02em] text-foreground sm:text-3xl">
+            <h2 className="text-2xl leading-tight font-semibold tracking-[-0.02em] text-foreground sm:text-3xl">
               {about.title}
             </h2>
             <p className="text-sm text-muted-foreground">

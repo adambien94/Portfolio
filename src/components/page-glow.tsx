@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { getProjectDetail } from "@/data/projects";
 
-const DEFAULT_GLOW = "#ffbe25";
+const DEFAULT_GLOW = "#e5e5e5";
 
 export function PageGlow() {
   const pathname = usePathname();

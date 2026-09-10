@@ -187,7 +187,7 @@ export function ProjectDetailArticle({
             </p>
           </div>
 
-          <h1 className="text-balance text-3xl leading-[1.15] font-medium tracking-[-0.03em] text-foreground sm:text-4xl sm:leading-[1.12]">
+          <h1 className="text-balance text-3xl leading-[1.15] font-semibold tracking-[-0.03em] text-foreground sm:text-4xl sm:leading-[1.12]">
             {project.headline}
           </h1>
         </header>
