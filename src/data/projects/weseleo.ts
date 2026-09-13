@@ -64,7 +64,7 @@ export const weseleoProject: ProjectDetail = {
         "Changes update a live preview on the right, with desktop and mobile modes. The **Romantic** template in the screenshot shows ceremony and reception details, a day plan, and autosaved draft content.",
       ],
       image: {
-        src: "/projects/weseleo/weseleo-2.png",
+        src: "/projects/weseleo/weseleo-4.png",
         alt: "Invitation editor with Sections tab, schedule editor, and live mobile preview of a romantic wedding template",
         caption: "Invitation editor with section toggles and a live mobile preview.",
       },

@@ -21,7 +21,7 @@ export const imageBlurData: Record<string, string> = {
   "/projects/waste-portal-extension/Bdo-1.png": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAACwAQCdASoQAAoABUB8JQBOgCHf5SuwAP39KYxjpugg5qAUSGNISQdSJhvQdScKTjDtT6l7QAA=",
   "/projects/waste-portal-extension/Bdo-2.png": "data:image/webp;base64,UklGRjAAAABXRUJQVlA4ICQAAAAwAQCdASoQAAoABUB8JZwAA3AA/u7bMk728rB6rFTV/ew0CAA=",
   "/projects/weseleo/weseleo-1.png": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAADQAQCdASoQAA0ABUB8JZwAAerLkACggAD3NQrxJuQrt2hZN3kNMO+QP/+IrQVusZFwNA04QAA=",
-  "/projects/weseleo/weseleo-2.png": "data:image/webp;base64,UklGRigAAABXRUJQVlA4IBwAAAAwAQCdASoQAAoABUB8JaQAA3AA/vAzPfvOAAAA",
+  "/projects/weseleo/weseleo-4.png": "data:image/webp;base64,UklGRigAAABXRUJQVlA4IBwAAAAwAQCdASoQAAoABUB8JaQAA3AA/vAzKmmgAAAA",
   "/projects/weseleo/weseleo-5.png": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABQAwCdASoQABoAPzmQvlWvKqajMAgB4CcJaVTAAIqjtn4mAAD+9IDWP35T2J/nyBtevqlwQFxzUZnCrl3LgjmJ1c+9i2D5PoAAAA==",
   "/projects/weseleo/weseleo-6.png": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAAAwAwCdASoQABoAPzmQvlWvKqajMAgB4CcJaQAAelksd43gAP7uayORPRXwIH4sg9/iuRSy0hmvwRD5L7QAAA=="
 };
@@ -47,7 +47,7 @@ export const imageVersions: Record<string, string> = {
   "/projects/waste-portal-extension/Bdo-1.png": "c68f35b3",
   "/projects/waste-portal-extension/Bdo-2.png": "c18aa9e4",
   "/projects/weseleo/weseleo-1.png": "7778c3b9",
-  "/projects/weseleo/weseleo-2.png": "cdbc751e",
+  "/projects/weseleo/weseleo-4.png": "05844c96",
   "/projects/weseleo/weseleo-5.png": "d4e6d91e",
   "/projects/weseleo/weseleo-6.png": "f81a76f1"
 };
@@ -133,9 +133,9 @@ export const imageDimensions: Record<string, { width: number; height: number }> 
     "width": 2346,
     "height": 1962
   },
-  "/projects/weseleo/weseleo-2.png": {
+  "/projects/weseleo/weseleo-4.png": {
     "width": 3456,
-    "height": 2164
+    "height": 2146
   },
   "/projects/weseleo/weseleo-5.png": {
     "width": 1038,
