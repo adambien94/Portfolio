@@ -16,7 +16,7 @@ export const recruitmentPlatformProject: ProjectDetail = {
     "An internal SPA for recruitment data, search, and operational reporting.",
   intro: [
     "An internal **data management SPA** for an international recruitment agency, covering candidates, orders, contracts, transport, and reports in one system.",
-    "**~70 views**, **90+ forms**, and **70+ tables** across **Candidates**, **Orders**, **Search**, **Reports**, **Administration**, and **Dashboard**.",
+    "**~70 views**, **90+ forms**, and **70+ tables** across Candidates, Orders, Search, Reports, Administration, and Dashboard.",
   ],
   highlight:
     "Forms and filter panels are **config objects**, not hand-written templates, so validation and field types stay consistent app-wide.",

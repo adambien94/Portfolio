@@ -224,7 +224,7 @@ export function ProjectDetailArticle({
             }
           >
             {section.title ? (
-              <h2 className="mb-5 text-xl leading-tight font-medium tracking-[-0.02em] text-foreground sm:mb-6 sm:text-2xl">
+              <h2 className="mb-5 text-xl font-medium  text-foreground">
                 {section.title}
               </h2>
             ) : null}
