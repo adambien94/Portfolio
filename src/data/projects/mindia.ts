@@ -20,7 +20,7 @@ export const mindiaProject: ProjectDetail = {
     "A clinical platform for recording, anonymizing, and reviewing therapy sessions.",
   intro: [
     "A web app for psychologists to capture sessions, review anonymized media, tag symptoms, and correct AI-translated dialogue. The frontend is a full media pipeline (custom editor, speech gating, unified auth), not a data-entry screen.",
-    "An **Active** session opens recording; later statuses unlock the review workbench with **HLS** playback, editable captions, and behavioral annotations as structured data.",
+    "An **Active** session opens recording, later statuses unlock the review workbench with **HLS** playback, editable captions, and behavioral annotations as structured data.",
   ],
   highlight:
     "Recording starts only when both audio and video streams are ready, as a fail-safe against incomplete clinical capture.",
@@ -34,7 +34,7 @@ export const mindiaProject: ProjectDetail = {
     {
       title: "AI Translation & Transcript Editing",
       paragraphs: [
-        "**AI models** auto-translate session dialogue into synchronized captions. Clinicians correct mistranslations and timing in the same editor without losing sync; corrected text saves back as structured **WebVTT** data.",
+        "**AI models** auto-translate session dialogue into synchronized captions. Clinicians correct mistranslations and timing in the same editor without losing sync, corrected text saves back as structured **WebVTT** data.",
       ],
     },
     {

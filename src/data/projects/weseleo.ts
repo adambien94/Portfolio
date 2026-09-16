@@ -28,7 +28,8 @@ export const weseleoProject: ProjectDetail = {
   heroImage: {
     src: "/projects/weseleo/weseleo-1.png",
     alt: "Wedding invitations landing page with hero, phone mockup showing guest gallery, and a four-step onboarding flow",
-    caption: "Landing page with hero, phone mockup, and a four-step onboarding flow.",
+    caption:
+      "Landing page with hero, phone mockup, and a four-step onboarding flow.",
   },
   sections: [
     {
@@ -53,7 +54,8 @@ export const weseleoProject: ProjectDetail = {
         {
           src: "/projects/weseleo/weseleo-5.png",
           alt: "Registration form with available invitation address adam-monika.invite.pl and green availability confirmation",
-          caption: "Live availability check confirms the invitation address before account creation.",
+          caption:
+            "Live availability check confirms the invitation address before account creation.",
         },
       ],
     },
@@ -66,12 +68,13 @@ export const weseleoProject: ProjectDetail = {
       image: {
         src: "/projects/weseleo/weseleo-4.png",
         alt: "Invitation editor with Sections tab, schedule editor, and live mobile preview of a romantic wedding template",
-        caption: "Invitation editor with section toggles and a live mobile preview.",
+        caption:
+          "Invitation editor with section toggles and a live mobile preview.",
       },
     },
   ],
   closing: [
-    "Built with **Next.js**, **React**, **TypeScript**, and **Supabase** (Auth, PostgreSQL, RLS). Forms use **React Hook Form** and **Zod**; UI is **Tailwind** and **Shadcn**.",
+    "Built with **Next.js**, **React**, **TypeScript**, and **Supabase** (Auth, PostgreSQL, RLS). Forms use **React Hook Form** and **Zod**. UI is **Tailwind** and **Shadcn**.",
     "Still on the roadmap: a **guest list** for managing invitees, a full **RSVP** flow so guests can confirm attendance, and a **photo gallery** where guests can upload and browse shared wedding photos from the dashboard.",
   ],
 };

@@ -52,7 +52,7 @@ export const reportingSpaProject: ProjectDetail = {
     {
       title: "CSV Export & Chart Components",
       paragraphs: [
-        "**CSV** exports stream as binary responses without loading data into the DOM, enabling memory-safe exports beyond paginated limits. **Chart.js** wrappers add custom tooltips, HSL color scales, and scrollable legends; the heaviest page syncs six doughnut charts, a stacked bar, and dual tables through shared filter state.",
+        "**CSV** exports stream as binary responses without loading data into the DOM, enabling memory-safe exports beyond paginated limits. **Chart.js** wrappers add custom tooltips, HSL color scales, and scrollable legends, the heaviest page syncs six doughnut charts, a stacked bar, and dual tables through shared filter state.",
       ],
     },
     {

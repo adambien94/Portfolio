@@ -42,7 +42,7 @@ export const recruitmentPlatformProject: ProjectDetail = {
     {
       title: "Real-Time Updates & Permissions",
       paragraphs: [
-        "**SignalR** pushes order alerts, tasks, and job completions as toasts and badge counts, with no polling. UI in **five languages** with **permission-scoped** routes and actions from the auth token. PDF and Excel exports stream as **blobs**; new report types extend via **config objects**, not new page layouts.",
+        "**SignalR** pushes order alerts, tasks, and job completions as toasts and badge counts, with no polling. UI in **five languages** with **permission-scoped** routes and actions from the auth token. PDF and Excel exports stream as **blobs**, new report types extend via **config objects**, not new page layouts.",
       ],
     },
   ],

@@ -17,8 +17,8 @@ export const clinicPlatformProject: ProjectDetail = {
   headline:
     "A multilingual SSR platform for a dental clinic group with headless CMS content.",
   intro: [
-    "Sole front-end owner of a production **SSR** platform for **three clinic brands** and **four languages**, with content from **Directus** via typed **GraphQL**. Editors publish in the CMS; copy updates ship without redeploys.",
-    "One codebase renders three visual identities via **CSS custom properties** and route-based clinic context (`/[clinic]/…`). No global store; per-page async data caching instead.",
+    "Sole front-end owner of a production **SSR** platform for **three clinic brands** and **four languages**, with content from **Directus** via typed **GraphQL**. Editors publish in the CMS, copy updates ship without redeploys.",
+    "One codebase renders three visual identities via **CSS custom properties** and route-based clinic context (`/[clinic]/…`). No global store, per-page async data caching instead.",
   ],
   highlight:
     "Four locales have fully localized URL paths, including Cyrillic slugs, so switching language lands on the equivalent page, not the homepage.",
@@ -34,7 +34,7 @@ export const clinicPlatformProject: ProjectDetail = {
     {
       title: "Localized URL Routing",
       paragraphs: [
-        "Route templates per page type (`/offer/`, `/oferta/`, `/оферта/`) with language-specific CMS slugs. Detail pages fetch slug translations at **SSR** time; the language switcher navigates to the correct localized URL via route metadata.",
+        "Route templates per page type (`/offer/`, `/oferta/`, `/оферта/`) with language-specific CMS slugs. Detail pages fetch slug translations at **SSR** time, the language switcher navigates to the correct localized URL via route metadata.",
       ],
     },
     {
@@ -58,7 +58,7 @@ export const clinicPlatformProject: ProjectDetail = {
     {
       title: "CMS Integration & UI Components",
       paragraphs: [
-        "Colocated **`.gql`** files generate typed queries at compile time. An image atom applies **Directus** transforms (**WebP**, lazy load); **FormKit** themed with localized validation across all four languages; price lists and gallery lightbox with measured animations.",
+        "Colocated **`.gql`** files generate typed queries at compile time. An image atom applies **Directus** transforms (**WebP**, lazy load), **FormKit** themed with localized validation across all four languages, price lists and gallery lightbox with measured animations.",
       ],
     },
   ],

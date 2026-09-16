@@ -20,10 +20,10 @@ export const wastePortalExtensionProject: ProjectDetail = {
     "A Chrome extension with bulk actions and shortcuts for a government waste portal.",
   intro: [
     "Continued front-end development on a live **Chrome Web Store** extension: bulk actions, custom forms, and workflow shortcuts injected into a government **ASP.NET** / **jQuery** portal.",
-    "**100+ components** across **50+ page-specific content script bundles**: content scripts mount UI islands; an injected page script reads host state via **`postMessage`**.",
+    "**100+ components** across **50+ page-specific content script bundles**: content scripts mount UI islands, an injected page script reads host state via **`postMessage`**.",
   ],
   highlight:
-    "Users have accelerated **4.8M+ processes** in the official system; waste record transfers grew **99% year over year** (2022→2023), saving an estimated **52,000+ hours** of manual work.",
+    "Users have accelerated **4.8M+ processes** in the official system, waste record transfers grew **99% year over year** (2022→2023), saving an estimated **52,000+ hours** of manual work.",
   screenshotIntro: "What the extension adds to the live government BDO portal:",
   heroImage: {
     src: "/projects/waste-portal-extension/Bdo-1.png",
@@ -35,7 +35,7 @@ export const wastePortalExtensionProject: ProjectDetail = {
     {
       title: "DOM Injection on a Host Portal",
       paragraphs: [
-        "The portal wasn't built for extensions. **MutationObserver**-driven injection adds table columns, action buttons, and search panels without replacing host markup. Scripts load per URL and authorization so only relevant bundles run; styling matches the host **Bootstrap** layout.",
+        "The portal wasn't built for extensions. **MutationObserver**-driven injection adds table columns, action buttons, and search panels without replacing host markup. Scripts load per URL and authorization so only relevant bundles run, styling matches the host **Bootstrap** layout.",
       ],
     },
     {
