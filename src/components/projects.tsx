@@ -16,8 +16,8 @@ export function Projects() {
             Side projects
           </h2>
           <p className="mt-3 max-w-[540px] text-base leading-7 text-foreground-secondary sm:text-lg">
-            Selected work I've done. From AI-powered apps and real-time tools to
-            a media PWA and a 3D configurator.
+            Independent apps I design and ship myself: wedding invitation SaaS,
+            AI-assisted learning, realtime kanban, and a TV library PWA.
           </p>
         </div>
 
