@@ -29,7 +29,7 @@ export function CommercialExperience() {
 
         <StackMarquee items={commercialExperience.stack} />
 
-        <div className="mt-10 sm:mt-12 text-center sm:text-left">
+        <div className="mt-16 sm:mt-12 text-center sm:text-left">
           <span className="text-base font-semibold sm:text-lg">
             Recent projects
           </span>
@@ -57,8 +57,8 @@ export function CommercialExperience() {
           ))}
         </ul>
 
-        <div className="mt-14 sm:mt-16 text-center sm:text-left">
-          <div>
+        <div className="mt-14 sm:mt-16 text-left">
+          <div className="text-center sm:text-left">
             <span className="text-base font-semibold sm:text-lg">Others</span>
             <p className="mt-1.5 text-sm leading-relaxed text-foreground-subtle">
               Earlier commercial work listed for context, without a dedicated
