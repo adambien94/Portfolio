@@ -1,7 +1,7 @@
 import type { ProjectDetail } from "./types";
 
-export const weseleoProject: ProjectDetail = {
-  id: "weseleo",
+export const inviteProject: ProjectDetail = {
+  id: "invite",
   name: "Invite",
   stack: [
     "Next.js",
@@ -26,7 +26,7 @@ export const weseleoProject: ProjectDetail = {
   screenshotIntro:
     "What the product looks like so far, from the landing page to registration and the editor:",
   heroImage: {
-    src: "/projects/weseleo/weseleo-1.png",
+    src: "/projects/invite/invite-1.png",
     alt: "Wedding invitations landing page with hero, phone mockup showing guest gallery, and a four-step onboarding flow",
     caption:
       "Landing page with hero, phone mockup, and a four-step onboarding flow.",
@@ -47,12 +47,12 @@ export const weseleoProject: ProjectDetail = {
       ],
       images: [
         {
-          src: "/projects/weseleo/weseleo-6.png",
+          src: "/projects/invite/invite-6.png",
           alt: "Registration form showing subdomain validation error when the chosen address is already taken",
           caption: "Signup blocked when the chosen subdomain is already taken.",
         },
         {
-          src: "/projects/weseleo/weseleo-5.png",
+          src: "/projects/invite/invite-5.png",
           alt: "Registration form with available invitation address adam-monika.invite.pl and green availability confirmation",
           caption:
             "Live availability check confirms the invitation address before account creation.",
@@ -66,7 +66,7 @@ export const weseleoProject: ProjectDetail = {
         "Changes update a live preview on the right, with desktop and mobile modes. The Romantic template in the screenshot shows ceremony and reception details, a day plan, and autosaved draft content.",
       ],
       image: {
-        src: "/projects/weseleo/weseleo-4.png",
+        src: "/projects/invite/invite-4.png",
         alt: "Invitation editor with Sections tab, schedule editor, and live mobile preview of a romantic wedding template",
         caption:
           "Invitation editor with section toggles and a live mobile preview.",

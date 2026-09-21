@@ -12,6 +12,10 @@ export const imageBlurData: Record<string, string> = {
   "/projects/doors/Doors-4.png": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAACwAQCdASoQAAsABUB8JYwAAuQaZFgAAP7rMbVxWaIKc6zF4DLct5z52Op5m04D+TP40gTWM6zflEAA",
   "/projects/flowboard/Flowboard-1.png": "data:image/webp;base64,UklGRiwAAABXRUJQVlA4ICAAAABQAQCdASoQAAoABUB8JZwABAAAAP7v43+1NWuKjZAAAA==",
   "/projects/flowboard/Flowboard-2.png": "data:image/webp;base64,UklGRi4AAABXRUJQVlA4ICIAAAAwAQCdASoQAA8ABUB8JZwAA3AA/vA+ZMCRoCg3ONqAUAAA",
+  "/projects/invite/invite-1.png": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAADQAQCdASoQAA0ABUB8JZwAAerLkACggAD3NQrxJuQrt2hZN3kNMO+QP/+IrQVusZFwNA04QAA=",
+  "/projects/invite/invite-4.png": "data:image/webp;base64,UklGRigAAABXRUJQVlA4IBwAAAAwAQCdASoQAAoABUB8JaQAA3AA/vAzKmmgAAAA",
+  "/projects/invite/invite-5.png": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABQAwCdASoQABoAPzmQvlWvKqajMAgB4CcJaVTAAIqjtn4mAAD+9IDWP35T2J/nyBtevqlwQFxzUZnCrl3LgjmJ1c+9i2D5PoAAAA==",
+  "/projects/invite/invite-6.png": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAAAwAwCdASoQABoAPzmQvlWvKqajMAgB4CcJaQAAelksd43gAP7uayORPRXwIH4sg9/iuRSy0hmvwRD5L7QAAA==",
   "/projects/lerni/Lerni-1.png": "data:image/webp;base64,UklGRioAAABXRUJQVlA4IB4AAAAwAQCdASoQAAoABUB8JaQAA3AA/u/J+kJubweAAAA=",
   "/projects/lerni/Lerni-2.png": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAAAwAQCdASoQAAoABUB8JaQAA3AA/vA8ue2/IN24fLvnp/DMNva+QAAA",
   "/projects/lerni/Lerni-3.png": "data:image/webp;base64,UklGRigAAABXRUJQVlA4IBwAAAAwAQCdASoQAAoABUB8JaQAA3AA/u/iLHXBuQAA",
@@ -19,11 +23,7 @@ export const imageBlurData: Record<string, string> = {
   "/projects/lerni/Lerni-5.png": "data:image/webp;base64,UklGRigAAABXRUJQVlA4IBwAAAAwAQCdASoQAAoABUB8JaQAA3AA/u/lja2LAAAA",
   "/projects/reporting-spa/Reporting-1.png": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAAAQAgCdASoQAAsABUB8JQBdj+ACsB/EKH0AAP7aem+FJEZECqHj9qhiX4yTfYbAfFbX7Dvn0fEgbexqAAA=",
   "/projects/waste-portal-extension/Bdo-1.png": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAACwAQCdASoQAAoABUB8JQBOgCHf5SuwAP39KYxjpugg5qAUSGNISQdSJhvQdScKTjDtT6l7QAA=",
-  "/projects/waste-portal-extension/Bdo-2.png": "data:image/webp;base64,UklGRjAAAABXRUJQVlA4ICQAAAAwAQCdASoQAAoABUB8JZwAA3AA/u7bMk728rB6rFTV/ew0CAA=",
-  "/projects/weseleo/weseleo-1.png": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAADQAQCdASoQAA0ABUB8JZwAAerLkACggAD3NQrxJuQrt2hZN3kNMO+QP/+IrQVusZFwNA04QAA=",
-  "/projects/weseleo/weseleo-4.png": "data:image/webp;base64,UklGRigAAABXRUJQVlA4IBwAAAAwAQCdASoQAAoABUB8JaQAA3AA/vAzKmmgAAAA",
-  "/projects/weseleo/weseleo-5.png": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABQAwCdASoQABoAPzmQvlWvKqajMAgB4CcJaVTAAIqjtn4mAAD+9IDWP35T2J/nyBtevqlwQFxzUZnCrl3LgjmJ1c+9i2D5PoAAAA==",
-  "/projects/weseleo/weseleo-6.png": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAAAwAwCdASoQABoAPzmQvlWvKqajMAgB4CcJaQAAelksd43gAP7uayORPRXwIH4sg9/iuRSy0hmvwRD5L7QAAA=="
+  "/projects/waste-portal-extension/Bdo-2.png": "data:image/webp;base64,UklGRjAAAABXRUJQVlA4ICQAAAAwAQCdASoQAAoABUB8JZwAA3AA/u7bMk728rB6rFTV/ew0CAA="
 };
 
 export const imageVersions: Record<string, string> = {
@@ -38,6 +38,10 @@ export const imageVersions: Record<string, string> = {
   "/projects/doors/Doors-4.png": "28d296b4",
   "/projects/flowboard/Flowboard-1.png": "4742b443",
   "/projects/flowboard/Flowboard-2.png": "ea435f63",
+  "/projects/invite/invite-1.png": "7778c3b9",
+  "/projects/invite/invite-4.png": "05844c96",
+  "/projects/invite/invite-5.png": "d4e6d91e",
+  "/projects/invite/invite-6.png": "f81a76f1",
   "/projects/lerni/Lerni-1.png": "8f866f9a",
   "/projects/lerni/Lerni-2.png": "3ea263fd",
   "/projects/lerni/Lerni-3.png": "b38ccc41",
@@ -45,11 +49,7 @@ export const imageVersions: Record<string, string> = {
   "/projects/lerni/Lerni-5.png": "d4fd2492",
   "/projects/reporting-spa/Reporting-1.png": "0b6684ef",
   "/projects/waste-portal-extension/Bdo-1.png": "c68f35b3",
-  "/projects/waste-portal-extension/Bdo-2.png": "c18aa9e4",
-  "/projects/weseleo/weseleo-1.png": "7778c3b9",
-  "/projects/weseleo/weseleo-4.png": "05844c96",
-  "/projects/weseleo/weseleo-5.png": "d4e6d91e",
-  "/projects/weseleo/weseleo-6.png": "f81a76f1"
+  "/projects/waste-portal-extension/Bdo-2.png": "c18aa9e4"
 };
 
 export const imageDimensions: Record<string, { width: number; height: number }> = {
@@ -97,6 +97,22 @@ export const imageDimensions: Record<string, { width: number; height: number }> 
     "width": 2086,
     "height": 1928
   },
+  "/projects/invite/invite-1.png": {
+    "width": 2346,
+    "height": 1962
+  },
+  "/projects/invite/invite-4.png": {
+    "width": 3456,
+    "height": 2146
+  },
+  "/projects/invite/invite-5.png": {
+    "width": 1038,
+    "height": 1698
+  },
+  "/projects/invite/invite-6.png": {
+    "width": 1038,
+    "height": 1698
+  },
   "/projects/lerni/Lerni-1.png": {
     "width": 3456,
     "height": 2150
@@ -128,21 +144,5 @@ export const imageDimensions: Record<string, { width: number; height: number }> 
   "/projects/waste-portal-extension/Bdo-2.png": {
     "width": 1280,
     "height": 800
-  },
-  "/projects/weseleo/weseleo-1.png": {
-    "width": 2346,
-    "height": 1962
-  },
-  "/projects/weseleo/weseleo-4.png": {
-    "width": 3456,
-    "height": 2146
-  },
-  "/projects/weseleo/weseleo-5.png": {
-    "width": 1038,
-    "height": 1698
-  },
-  "/projects/weseleo/weseleo-6.png": {
-    "width": 1038,
-    "height": 1698
   }
 };

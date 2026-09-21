@@ -8,7 +8,7 @@ import { recruitmentPlatformProject } from "./recruitment-platform";
 import { reportingSpaProject } from "./reporting-spa";
 import { tvshowProject } from "./tvshow";
 import { wastePortalExtensionProject } from "./waste-portal-extension";
-import { weseleoProject } from "./weseleo";
+import { inviteProject } from "./invite";
 import type { ProjectDetail } from "./types";
 
 const projectDetails: Record<string, ProjectDetail> = {
@@ -21,7 +21,7 @@ const projectDetails: Record<string, ProjectDetail> = {
   "reporting-spa": reportingSpaProject,
   TvShow: tvshowProject,
   "waste-portal-extension": wastePortalExtensionProject,
-  weseleo: weseleoProject,
+  invite: inviteProject,
 };
 
 export type ProjectListItem = (typeof projects)[number];

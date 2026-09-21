@@ -31,7 +31,7 @@ export const about = {
 
 export const projects = [
   {
-    id: "weseleo",
+    id: "invite",
     name: "Invite",
     description: "SaaS platform for online wedding invitations.",
     inProgress: true,
@@ -45,7 +45,7 @@ export const projects = [
       "React Hook Form",
       "Zod",
     ],
-    href: "/projects/weseleo",
+    href: "/projects/invite",
     accent: "#d8a7ca",
   },
   {
