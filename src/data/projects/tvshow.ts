@@ -8,8 +8,8 @@ export const tvshowProject: ProjectDetail = {
   headline:
     "A TV series library with a genre dashboard, search, and detail view, built on a local-first architecture with offline support.",
   intro: [
-    "Tv shows is an app for browsing TV series, built with **Vue**, **TypeScript**, and **Tailwind CSS**. Data comes from the **TVMaze API**, but after the first fetch it lands in **IndexedDB**, so later visits load instantly without hammering the API.",
-    "The interface is **mobile-first**: on a phone you scroll genre lists horizontally, on desktop navigation arrows appear on hover. Search filters results live and shows them in a grid with ratings and cover art.",
+    "Tv shows is an app for browsing TV series, built with Vue, TypeScript, and Tailwind CSS. Data comes from the TVMaze API, but after the first fetch it lands in IndexedDB, so later visits load instantly without hammering the API.",
+    "The interface is mobile-first: on a phone you scroll genre lists horizontally, on desktop navigation arrows appear on hover. Search filters results live and shows them in a grid with ratings and cover art.",
   ],
   highlight:
     "The app works offline. The Service Worker caches assets, and IndexedDB keeps series data locally. When the connection drops, a banner tells you you're in offline mode.",
@@ -24,7 +24,7 @@ export const tvshowProject: ProjectDetail = {
     {
       title: "Genre Dashboard",
       paragraphs: [
-        "The homepage is a dashboard split by genre: **Drama**, **Mystery**, **Sci-Fi**, **Fantasy**, **Action**, **Comedy**, and more. Each section is a horizontal list of cards sorted by rating, with cover art, title, and score. On desktop, arrows appear on hover, on mobile a swipe is enough.",
+        "The homepage is a dashboard split by genre: Drama, Mystery, Sci-Fi, Fantasy, Action, Comedy, and more. Each section is a horizontal list of cards sorted by rating, with cover art, title, and score. On desktop, arrows appear on hover, on mobile a swipe is enough.",
       ],
     },
     {
@@ -55,6 +55,6 @@ export const tvshowProject: ProjectDetail = {
     },
   ],
   closing: [
-    "**Vue**, **TypeScript**, and **Tailwind** on the front end, **TVMaze API**, **IndexedDB**, and a **Service Worker** underneath. A responsive series library that responds quickly, respects API limits, and works without internet.",
+    "Vue, TypeScript, and Tailwind on the front end, TVMaze API, IndexedDB, and a Service Worker underneath. A responsive series library that responds quickly, respects API limits, and works without internet.",
   ],
 };

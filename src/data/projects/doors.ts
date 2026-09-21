@@ -8,8 +8,8 @@ export const doorsProject: ProjectDetail = {
   headline:
     "A three-step glass door configurator: type and dimensions, frame division, finish color, with 2D and 3D preview.",
   intro: [
-    "Door configurator is a web app for designing interior doors with frames and glazing. The user goes through three steps: **Choose door**, **Choose door division**, and **Choose color**. Every parameter change instantly updates the product preview.",
-    "The interface is a wizard with a progress bar at the top, a large preview on the left, and a configuration panel on the right. The **3D / 2D** toggle shows the same model as a technical diagram with dimensions or as a realistic scene in a room.",
+    "Door configurator is a web app for designing interior doors with frames and glazing. The user goes through three steps: Choose door, Choose door division, and Choose color. Every parameter change instantly updates the product preview.",
+    "The interface is a wizard with a progress bar at the top, a large preview on the left, and a configuration panel on the right. The 3D / 2D toggle shows the same model as a technical diagram with dimensions or as a realistic scene in a room.",
   ],
   highlight:
     "Dimensions, glass division, and frame color change live. No page reload, no guessing how the doors will look after installation.",
@@ -24,8 +24,8 @@ export const doorsProject: ProjectDetail = {
     {
       title: "Type, Dimensions & Frame Division",
       paragraphs: [
-        "In **Choose door**, the user picks a door type (**Single door**, **Double door**, or **Triple door**) and enters **Width** and **Height** in centimeters. The 2D preview draws a diagram with dimension lines so proportions and individual leaf widths are visible right away.",
-        "The **3D / 2D** toggle in the corner of the preview lets you switch between the technical view and the spatial render at any time without losing the current configuration.",
+        "In Choose door, the user picks a door type (Single door, Double door, or Triple door) and enters Width and Height in centimeters. The 2D preview draws a diagram with dimension lines so proportions and individual leaf widths are visible right away.",
+        "The 3D / 2D toggle in the corner of the preview lets you switch between the technical view and the spatial render at any time without losing the current configuration.",
       ],
       images: [
         {
@@ -47,6 +47,6 @@ export const doorsProject: ProjectDetail = {
     },
   ],
   closing: [
-    "Built with **Vue 2**, **Canvas** for 2D diagrams and dimensions, and **Three.js** for 3D rendering in a room. A client or sales rep can assemble custom doors step by step and see what they're ordering right away.",
+    "Built with Vue 2, Canvas for 2D diagrams and dimensions, and Three.js for 3D rendering in a room. A client or sales rep can assemble custom doors step by step and see what they're ordering right away.",
   ],
 };

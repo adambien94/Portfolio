@@ -139,9 +139,9 @@ export const commercialExperience = {
   subtitle:
     "Over five years as a frontend developer, from internal tools to full products.",
   paragraphs: [
-    "I've built and maintained modern web apps, from internal business tools to full **SPA** and **PWA** products. Most of my work has been in **Vue** (2 and 3, **Nuxt.js**, **Quasar**), with **React** and **Next.js** on recent projects. **TypeScript** is my default.",
-    "I've designed interfaces, wired up application logic, and integrated **APIs**. State management with **Pinia**, **Zustand**, and **Vuex**; routing and auth; performance, responsiveness, accessibility, and cross-browser quirks. Styling in **CSS**, **SCSS**, **Tailwind**, and **Bootstrap**, usually from **Figma** designs.",
-    "I've written unit tests (**Jest**), deployed applications to staging and production (**Docker**), and collaborated with product and backend teams. I've participated in technology choices and toolchain configuration (**Vite**, **Webpack**, **Git**).",
+    "I've built and maintained modern web apps, from internal business tools to full SPA and PWA products. Most of my work has been in Vue (2 and 3, Nuxt.js, Quasar), with React and Next.js on recent projects. TypeScript is my default.",
+    "I've designed interfaces, wired up application logic, and integrated APIs. State management with Pinia, Zustand, and Vuex; routing and auth; performance, responsiveness, accessibility, and cross-browser quirks. Styling in CSS, SCSS, Tailwind, and Bootstrap, usually from Figma designs.",
+    "I've written unit tests (Jest), deployed applications to staging and production (Docker), and collaborated with product and backend teams. I've participated in technology choices and toolchain configuration (Vite, Webpack, Git).",
   ],
   projects: [
     {

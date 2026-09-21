@@ -17,12 +17,12 @@ export const weseleoProject: ProjectDetail = {
   headline:
     "SaaS for online wedding invitations - from a personal subdomain to a published page guests can open.",
   intro: [
-    "This side project is for creating and hosting wedding invitation websites. A couple registers, picks a personal address like **john-monica.appdomain.pl**, edits content in a dashboard, chooses a template, and publishes a page their guests can open on any device.",
-    "The app is multi-tenant: one **Next.js** deployment serves the marketing site, dashboard, and every public invitation. **Middleware** reads the hostname and routes each subdomain to the right page without a separate deploy per couple.",
-    "The project is **still in progress**. The landing page, registration with slug reservation, and the invitation editor are working today.",
+    "This side project is for creating and hosting wedding invitation websites. A couple registers, picks a personal address like john-monica.appdomain.pl, edits content in a dashboard, chooses a template, and publishes a page their guests can open on any device.",
+    "The app is multi-tenant: one Next.js deployment serves the marketing site, dashboard, and every public invitation. Middleware reads the hostname and routes each subdomain to the right page without a separate deploy per couple.",
+    "The project is still in progress. The landing page, registration with slug reservation, and the invitation editor are working today.",
   ],
   highlight:
-    "Next up: a guest list, **RSVP**, and a shared **photo gallery** so couples can collect attendance confirmations and let guests browse uploaded photos in one place.",
+    "Next up: a guest list, RSVP, and a shared photo gallery so couples can collect attendance confirmations and let guests browse uploaded photos in one place.",
   screenshotIntro:
     "What the product looks like so far, from the landing page to registration and the editor:",
   heroImage: {
@@ -42,8 +42,8 @@ export const weseleoProject: ProjectDetail = {
     {
       title: "Subdomain Registration",
       paragraphs: [
-        "Registration reserves a subdomain right away. The user picks a slug like **adam-monika**, sees a live availability check, and gets a preview of the final URL before creating an account.",
-        "If the address is already taken, validation blocks signup with a clear message - the slug stays protected in **Supabase** from the first successful reservation.",
+        "Registration reserves a subdomain right away. The user picks a slug like adam-monika, sees a live availability check, and gets a preview of the final URL before creating an account.",
+        "If the address is already taken, validation blocks signup with a clear message - the slug stays protected in Supabase from the first successful reservation.",
       ],
       images: [
         {
@@ -62,8 +62,8 @@ export const weseleoProject: ProjectDetail = {
     {
       title: "Invitation Editor",
       paragraphs: [
-        "The dashboard editor has workspace tabs for **Overview**, **Theme**, **Sections**, and **Publication**. In **Sections**, each block of the invitation can be toggled and edited separately: couple, date, header, locations, schedule, FAQ, and RSVP.",
-        "Changes update a live preview on the right, with desktop and mobile modes. The **Romantic** template in the screenshot shows ceremony and reception details, a day plan, and autosaved draft content.",
+        "The dashboard editor has workspace tabs for Overview, Theme, Sections, and Publication. In Sections, each block of the invitation can be toggled and edited separately: couple, date, header, locations, schedule, FAQ, and RSVP.",
+        "Changes update a live preview on the right, with desktop and mobile modes. The Romantic template in the screenshot shows ceremony and reception details, a day plan, and autosaved draft content.",
       ],
       image: {
         src: "/projects/weseleo/weseleo-4.png",
@@ -74,7 +74,7 @@ export const weseleoProject: ProjectDetail = {
     },
   ],
   closing: [
-    "Built with **Next.js**, **React**, **TypeScript**, and **Supabase** (Auth, PostgreSQL, RLS). Forms use **React Hook Form** and **Zod**. UI is **Tailwind** and **Shadcn**.",
-    "Still on the roadmap: a **guest list** for managing invitees, a full **RSVP** flow so guests can confirm attendance, and a **photo gallery** where guests can upload and browse shared wedding photos from the dashboard.",
+    "Built with Next.js, React, TypeScript, and Supabase (Auth, PostgreSQL, RLS). Forms use React Hook Form and Zod. UI is Tailwind and Shadcn.",
+    "Still on the roadmap: a guest list for managing invitees, a full RSVP flow so guests can confirm attendance, and a photo gallery where guests can upload and browse shared wedding photos from the dashboard.",
   ],
 };

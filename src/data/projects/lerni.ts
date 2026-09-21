@@ -46,7 +46,7 @@ export const lerniProject: ProjectDetail = {
     {
       title: "Three-Column Workspace",
       paragraphs: [
-        "The workspace has three columns for three stages of learning: **sources** on the left, **summary and AI chat** in the center, **studio** on the right with flashcards and quizzes generated from what you've read.",
+        "The workspace has three columns for three stages of learning: sources on the left, summary and AI chat in the center, studio on the right with flashcards and quizzes generated from what you've read.",
       ],
     },
     {
@@ -73,6 +73,6 @@ export const lerniProject: ProjectDetail = {
     },
   ],
   closing: [
-    "Built with **React**, **TypeScript**, **Shadcn**, and **Supabase**, with the **Gemini API** handling the AI layer. The idea was simple: go from gathering materials to exam review without switching context.",
+    "Built with React, TypeScript, Shadcn, and Supabase, with the Gemini API handling the AI layer. The idea was simple: go from gathering materials to exam review without switching context.",
   ],
 };
