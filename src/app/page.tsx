@@ -17,7 +17,7 @@ export default function Home() {
         <CommercialExperience />
       </main>
       <SiteFooter />
-      <MobileSectionNav />
+      {/* <MobileSectionNav /> */}
     </div>
   );
 }
