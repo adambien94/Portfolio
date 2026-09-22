@@ -27,35 +27,35 @@ export const inviteProject: ProjectDetail = {
     "What the product looks like so far, from the landing page to registration and the editor:",
   heroImage: {
     src: "/projects/invite/invite-1.png",
-    alt: "Wedding invitations landing page with hero, phone mockup showing guest gallery, and a four-step onboarding flow",
+    alt: "Invite landing page hero with headline about a wedding site filled with guest memories and a collage of invitation templates",
     caption:
-      "Landing page with hero, phone mockup, and a four-step onboarding flow.",
+      "Landing hero with template collage and a clear path to create an account.",
   },
   sections: [
     {
       title: "Landing Page & Product Story",
       paragraphs: [
-        "The landing page presents the full idea: create an account, customize the page, pick a personal address, and share a QR code. A phone mockup shows how guests might browse a shared gallery and react to updates.",
-        "Below the hero, the page walks through the setup flow and highlights features like a guest photo gallery, day schedule, and personalized links.",
+        "The landing page presents the full idea: create an account, customize the page, pick a personal address, and share one link with guests. A collage of template previews shows the range of styles couples can choose from.",
+        "Below the hero, the page walks through the setup flow and highlights features like a shared photo gallery, day schedule, and personalized subdomain.",
       ],
     },
     {
       title: "Subdomain Registration",
       paragraphs: [
-        "Registration reserves a subdomain right away. The user picks a slug like adam-monika, sees a live availability check, and gets a preview of the final URL before creating an account.",
+        "Signup opens in a modal from the landing page. Couples can continue with Google or email, then pick a slug like monika-rafal, see a live availability check, and get a preview of the final URL before creating an account.",
         "If the address is already taken, validation blocks signup with a clear message - the slug stays protected in Supabase from the first successful reservation.",
       ],
       images: [
         {
-          src: "/projects/invite/invite-6.png",
-          alt: "Registration form showing subdomain validation error when the chosen address is already taken",
-          caption: "Signup blocked when the chosen subdomain is already taken.",
-        },
-        {
           src: "/projects/invite/invite-5.png",
-          alt: "Registration form with available invitation address adam-monika.invite.pl and green availability confirmation",
+          alt: "Registration form with available invitation address monika-rafal.invite.pl and green availability confirmation",
           caption:
             "Live availability check confirms the invitation address before account creation.",
+        },
+        {
+          src: "/projects/invite/invite-4.png",
+          alt: "Registration form showing subdomain validation error when ania-piotr.invite.pl is already taken",
+          caption: "Signup blocked when the chosen subdomain is already taken.",
         },
       ],
     },
@@ -63,11 +63,11 @@ export const inviteProject: ProjectDetail = {
       title: "Invitation Editor",
       paragraphs: [
         "The dashboard editor has workspace tabs for Overview, Theme, Sections, and Publication. In Sections, each block of the invitation can be toggled and edited separately: couple, date, header, locations, schedule, FAQ, and RSVP.",
-        "Changes update a live preview on the right, with desktop and mobile modes. The Romantic template in the screenshot shows ceremony and reception details, a day plan, and autosaved draft content.",
+        "Changes update a live preview on the right, with desktop and mobile modes. The green botanical template in the screenshot shows editable header copy synced to the mobile preview.",
       ],
       image: {
-        src: "/projects/invite/invite-4.png",
-        alt: "Invitation editor with Sections tab, schedule editor, and live mobile preview of a romantic wedding template",
+        src: "/projects/invite/invite-6.png",
+        alt: "Invitation editor with Sections tab, header fields, and live mobile preview of Joanna and Rafał wedding template",
         caption:
           "Invitation editor with section toggles and a live mobile preview.",
       },
