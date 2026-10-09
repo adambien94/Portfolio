@@ -44,6 +44,7 @@ export const projects = [
       "Shadcn",
       "React Hook Form",
       "Zod",
+      "Recraft.ai",
     ],
     href: "/projects/invite",
     accent: "#d8a7ca",

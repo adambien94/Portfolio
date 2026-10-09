@@ -12,6 +12,7 @@ export const inviteProject: ProjectDetail = {
     "Shadcn",
     "React Hook Form",
     "Zod",
+    "Recreaft.ai",
   ],
   accent: "#d8a7ca",
   headline:
@@ -19,12 +20,12 @@ export const inviteProject: ProjectDetail = {
   intro: [
     "This side project is for creating and hosting wedding invitation websites. A couple registers, picks a personal address like john-monica.appdomain.pl, edits content in a dashboard, chooses a template, and publishes a page their guests can open on any device.",
     "The app is multi-tenant: one Next.js deployment serves the marketing site, dashboard, and every public invitation. Middleware reads the hostname and routes each subdomain to the right page without a separate deploy per couple.",
-    "The project is still in progress. The landing page, registration with slug reservation, and the invitation editor are working today.",
+    "The project is still in progress. The landing page, registration with slug reservation, invitation theme editor, wedding overview dashboard, and guest list are working today.",
   ],
   highlight:
-    "Next up: a guest list, RSVP, and a shared photo gallery so couples can collect attendance confirmations and let guests browse uploaded photos in one place.",
+    "Next up: guest-facing RSVP on the public invitation, a shared photo gallery, and richer statistics so couples can see responses and activity in one place.",
   screenshotIntro:
-    "What the product looks like so far, from the landing page to registration and the editor:",
+    "What the product looks like so far, from the landing page through registration, the editor, dashboard, and guest list:",
   heroImage: {
     src: "/projects/invite/invite-1.png",
     alt: "Invite landing page hero with headline about a wedding site filled with guest memories and a collage of invitation templates",
@@ -60,21 +61,47 @@ export const inviteProject: ProjectDetail = {
       ],
     },
     {
-      title: "Invitation Editor",
+      title: "Invitation Theme & Preview",
       paragraphs: [
-        "The dashboard editor has workspace tabs for Overview, Theme, Sections, and Publication. In Sections, each block of the invitation can be toggled and edited separately: couple, date, header, locations, schedule, FAQ, and RSVP.",
-        "Changes update a live preview on the right, with desktop and mobile modes. The green botanical template in the screenshot shows editable header copy synced to the mobile preview.",
+        "The invitation creator separates look and content across Theme, Sections, and Details tabs. Couples pick a base template, tune paper texture and page background, and can enable an envelope animation before saving.",
+        "A live preview on the right switches between desktop and mobile so copy and layout stay readable on phones - the screenshot shows the botanical template with an FAQ block guests will see on the published page.",
       ],
       image: {
         src: "/projects/invite/invite-6.png",
-        alt: "Invitation editor with Sections tab, header fields, and live mobile preview of Joanna and Rafał wedding template",
+        alt: "Invitation creator Theme tab with template picker, paper texture toggles, envelope animation, and mobile preview of FAQ section",
         caption:
-          "Invitation editor with section toggles and a live mobile preview.",
+          "Theme controls with template selection and a live mobile preview.",
+      },
+    },
+    {
+      title: "Wedding Dashboard",
+      paragraphs: [
+        "After signup, the overview dashboard summarizes the wedding at a glance: invited guests, confirmed and declined RSVPs, and how many responses are still pending.",
+        "A short checklist tracks planning tasks, recent activity lists guest and RSVP changes, and a QR code links to the guest app couples can print or share offline.",
+      ],
+      image: {
+        src: "/projects/invite/invite-7.png",
+        alt: "Wedding overview dashboard with RSVP counts, planning checklist, activity feed, guest app QR code, and invitation preview",
+        caption:
+          "Overview with RSVP stats, next steps, activity, and a guest-app QR code.",
+      },
+    },
+    {
+      title: "Guest List",
+      paragraphs: [
+        "The guest list is where couples manage invitees before send-out. They can add a couple, family, or group in one form, attach contact details and private notes, and mark companions or children per person.",
+        "The table shows headcount per entry, dietary or other notes, and confirmation status at a glance - expandable rows list everyone in a group when hosts need to edit or remove someone.",
+      ],
+      image: {
+        src: "/projects/invite/invite-8.png",
+        alt: "Guest list with add-group form and table showing names, contact info, party size, notes, and RSVP confirmation status",
+        caption:
+          "Add groups from the sidebar form; track RSVPs and notes in the table.",
       },
     },
   ],
   closing: [
     "Built with Next.js, React, TypeScript, and Supabase (Auth, PostgreSQL, RLS). Forms use React Hook Form and Zod. UI is Tailwind and Shadcn.",
-    "Still on the roadmap: a guest list for managing invitees, a full RSVP flow so guests can confirm attendance, and a photo gallery where guests can upload and browse shared wedding photos from the dashboard.",
+    "Still on the roadmap: RSVP on the public invitation page, a photo gallery where guests upload and browse shared wedding photos, and deeper analytics tied to the guest app.",
   ],
 };
