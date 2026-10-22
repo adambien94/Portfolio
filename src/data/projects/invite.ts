@@ -20,12 +20,12 @@ export const inviteProject: ProjectDetail = {
   intro: [
     "This side project is for creating and hosting wedding invitation websites. A couple registers, picks a personal address like john-monica.appdomain.pl, edits content in a dashboard, chooses a template, and publishes a page their guests can open on any device.",
     "The app is multi-tenant: one Next.js deployment serves the marketing site, dashboard, and every public invitation. Middleware reads the hostname and routes each subdomain to the right page without a separate deploy per couple.",
-    "The project is still in progress. The landing page, registration with slug reservation, invitation theme editor, wedding overview dashboard, and guest list are working today.",
+    "The project is still in progress. The landing page, registration with slug reservation, invitation theme editor, wedding overview dashboard, guest list, and personalized RSVP on the published invitation are working today.",
   ],
   highlight:
-    "Next up: guest-facing RSVP on the public invitation, a shared photo gallery, and richer statistics so couples can see responses and activity in one place.",
+    "Next up: a shared photo gallery where guests upload and browse wedding photos, plus richer statistics so couples can see responses and activity in one place.",
   screenshotIntro:
-    "What the product looks like so far, from the landing page through registration, the editor, dashboard, and guest list:",
+    "What the product looks like so far, from the landing page through the editor, dashboard, guest list, and guest RSVP:",
   heroImage: {
     src: "/projects/invite/invite-1.png",
     alt: "Invite landing page hero with headline about a wedding site filled with guest memories and a collage of invitation templates",
@@ -45,19 +45,6 @@ export const inviteProject: ProjectDetail = {
       paragraphs: [
         "Signup opens in a modal from the landing page. Couples can continue with Google or email, then pick a slug like monika-rafal, see a live availability check, and get a preview of the final URL before creating an account.",
         "If the address is already taken, validation blocks signup with a clear message - the slug stays protected in Supabase from the first successful reservation.",
-      ],
-      images: [
-        {
-          src: "/projects/invite/invite-5.png",
-          alt: "Registration form with available invitation address monika-rafal.invite.pl and green availability confirmation",
-          caption:
-            "Live availability check confirms the invitation address before account creation.",
-        },
-        {
-          src: "/projects/invite/invite-4.png",
-          alt: "Registration form showing subdomain validation error when ania-piotr.invite.pl is already taken",
-          caption: "Signup blocked when the chosen subdomain is already taken.",
-        },
       ],
     },
     {
@@ -90,11 +77,11 @@ export const inviteProject: ProjectDetail = {
       title: "Guest List",
       paragraphs: [
         "The guest list is where couples manage invitees before send-out. They can add a couple, family, or group in one form, attach contact details and private notes, and mark companions or children per person.",
-        "The table shows headcount per entry, dietary or other notes, and confirmation status at a glance - expandable rows list everyone in a group when hosts need to edit or remove someone.",
+        "The table shows headcount per entry, dietary or other notes, and confirmation status at a glance - expandable rows list everyone in a group when hosts need to edit or remove someone. That data feeds the personalized RSVP guests see on the public page.",
       ],
       image: {
-        src: "/projects/invite/invite-8.png",
-        alt: "Guest list with add-group form and table showing names, contact info, party size, notes, and RSVP confirmation status",
+        src: "/projects/invite/invite-5.png",
+        alt: "Guest list with add-group sidebar form, summary counts for invited and confirmed guests, and a table with contact links, party size, notes, and RSVP status",
         caption:
           "Add groups from the sidebar form; track RSVPs and notes in the table.",
       },
@@ -121,6 +108,6 @@ export const inviteProject: ProjectDetail = {
   ],
   closing: [
     "Built with Next.js, React, TypeScript, and Supabase (Auth, PostgreSQL, RLS). Forms use React Hook Form and Zod. UI is Tailwind and Shadcn.",
-    "Still on the roadmap: RSVP on the public invitation page, a photo gallery where guests upload and browse shared wedding photos, and deeper analytics tied to the guest app.",
+    "Still on the roadmap: a guest photo gallery and deeper analytics tied to the guest app and invitation activity.",
   ],
 };
