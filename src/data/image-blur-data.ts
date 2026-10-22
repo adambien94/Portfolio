@@ -13,11 +13,13 @@ export const imageBlurData: Record<string, string> = {
   "/projects/flowboard/Flowboard-1.png": "data:image/webp;base64,UklGRiwAAABXRUJQVlA4ICAAAABQAQCdASoQAAoABUB8JZwABAAAAP7v43+1NWuKjZAAAA==",
   "/projects/flowboard/Flowboard-2.png": "data:image/webp;base64,UklGRi4AAABXRUJQVlA4ICIAAAAwAQCdASoQAA8ABUB8JZwAA3AA/vA+ZMCRoCg3ONqAUAAA",
   "/projects/invite/invite-1.png": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADwAQCdASoQAAoABUB8JZwAAtrpWlmmb8AA/u3V78RUuiMZFWa8pqKFfTjJAVs9CxzQev7euOVfjZnfgAA=",
+  "/projects/invite/invite-10.png": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAACwAwCdASoQACMAPyV6slOuJ6SitUgBwCSJaQAAeVz7ar4Rm5G8AAD+bqfyBYv64ubJ359Tu7XxpiZze3NS5h+DczgkugWNJrBQ3aihumXSPW8EFuu3IReTh2nPQbo+D0vFwAAA",
   "/projects/invite/invite-4.png": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAACwAwCdASoQABQAPzmEuVOvKKWisAgB4CcJZwAAW39HppoOMy4U+AD9+4/AQmgeqD8uyu8zg11tqCeEQU70fJ5O5TSBXjFpxqpyEhgA",
   "/projects/invite/invite-5.png": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADQAwCdASoQABQAPzmEuVOvKKWisAgB4CcJZwAAXgTvMYcUS60UzgAA/feRQx4H32x5lyDbNUSkaApOdmqSenLpsW09YF1gaDw9yQwAAAA=",
-  "/projects/invite/invite-6.png": "data:image/webp;base64,UklGRi4AAABXRUJQVlA4ICIAAAAwAQCdASoQAAoABUB8JZwAA3AA/u/0ivtZt6SLM/hu6hQA",
-  "/projects/invite/invite-7.png": "data:image/webp;base64,UklGRjIAAABXRUJQVlA4ICYAAACQAQCdASoQAAoABUB8JaQAAueE6cAA/u1NaT8y+lYVayudiQAAAA==",
+  "/projects/invite/invite-6.png": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADQAQCdASoQAAoABUB8JZwAArFaDJ8KAAD+5+wkcslxDyrWpwrfMFUKsK/yCRDRFfIpH4V43Pu7um4AAAA=",
+  "/projects/invite/invite-7.png": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAADQAQCdASoQAAoABUB8JaQAAueHXAcAAAD+7U6r1tWE+CYbkjWNl8MrhzTzy0ISAligAA==",
   "/projects/invite/invite-8.png": "data:image/webp;base64,UklGRioAAABXRUJQVlA4IB4AAAAwAQCdASoQAAoABUB8JZwAA3AA/vAVrsP7M81BwAA=",
+  "/projects/invite/invite-9.png": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAACwAwCdASoQACMAPyl4slOuJySitUgBwCUJZwDMWAz3lcNtdu8agADsiQ55b1lk4xuR2D0TRf3TGZUQV5V3jnW1Ql0chAhNDZZtOSnR6tw0O4AA",
   "/projects/lerni/Lerni-1.png": "data:image/webp;base64,UklGRioAAABXRUJQVlA4IB4AAAAwAQCdASoQAAoABUB8JaQAA3AA/u/J+kJubweAAAA=",
   "/projects/lerni/Lerni-2.png": "data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAAAwAQCdASoQAAoABUB8JaQAA3AA/vA8ue2/IN24fLvnp/DMNva+QAAA",
   "/projects/lerni/Lerni-3.png": "data:image/webp;base64,UklGRigAAABXRUJQVlA4IBwAAAAwAQCdASoQAAoABUB8JaQAA3AA/u/iLHXBuQAA",
@@ -41,11 +43,13 @@ export const imageVersions: Record<string, string> = {
   "/projects/flowboard/Flowboard-1.png": "4742b443",
   "/projects/flowboard/Flowboard-2.png": "ea435f63",
   "/projects/invite/invite-1.png": "e5f38a06",
+  "/projects/invite/invite-10.png": "a1aef145",
   "/projects/invite/invite-4.png": "71f44ee0",
   "/projects/invite/invite-5.png": "e22da0da",
-  "/projects/invite/invite-6.png": "b8e70ebc",
-  "/projects/invite/invite-7.png": "36161b7f",
+  "/projects/invite/invite-6.png": "9983ddd1",
+  "/projects/invite/invite-7.png": "db2a1982",
   "/projects/invite/invite-8.png": "a26e392c",
+  "/projects/invite/invite-9.png": "5f16a0a4",
   "/projects/lerni/Lerni-1.png": "8f866f9a",
   "/projects/lerni/Lerni-2.png": "3ea263fd",
   "/projects/lerni/Lerni-3.png": "b38ccc41",
@@ -105,6 +109,10 @@ export const imageDimensions: Record<string, { width: number; height: number }> 
     "width": 3456,
     "height": 2166
   },
+  "/projects/invite/invite-10.png": {
+    "width": 770,
+    "height": 1688
+  },
   "/projects/invite/invite-4.png": {
     "width": 1358,
     "height": 1710
@@ -124,6 +132,10 @@ export const imageDimensions: Record<string, { width: number; height: number }> 
   "/projects/invite/invite-8.png": {
     "width": 3456,
     "height": 2166
+  },
+  "/projects/invite/invite-9.png": {
+    "width": 770,
+    "height": 1688
   },
   "/projects/lerni/Lerni-1.png": {
     "width": 3456,

@@ -64,13 +64,13 @@ export const inviteProject: ProjectDetail = {
       title: "Invitation Theme & Preview",
       paragraphs: [
         "The invitation creator separates look and content across Theme, Sections, and Details tabs. Couples pick a base template, tune paper texture and page background, and can enable an envelope animation before saving.",
-        "A live preview on the right switches between desktop and mobile so copy and layout stay readable on phones - the screenshot shows the botanical template with an FAQ block guests will see on the published page.",
+        "A live preview on the right switches between desktop and mobile so copy and layout stay readable on phones - the screenshot shows a photo-led template with couple names and theme controls on the left.",
       ],
       image: {
         src: "/projects/invite/invite-6.png",
-        alt: "Invitation creator Theme tab with template picker, paper texture toggles, envelope animation, and mobile preview of FAQ section",
+        alt: "Invitation creator Theme tab with base template photo, color swatches, paper texture toggles, envelope animation, and mobile preview of Anna and Rafał invitation",
         caption:
-          "Theme controls with template selection and a live mobile preview.",
+          "Theme controls with template photo, colors, and a live mobile preview.",
       },
     },
     {
@@ -98,6 +98,25 @@ export const inviteProject: ProjectDetail = {
         caption:
           "Add groups from the sidebar form; track RSVPs and notes in the table.",
       },
+    },
+    {
+      title: "RSVP on the Published Invitation",
+      paragraphs: [
+        "Guests open the couple's subdomain and confirm attendance from a modal that greets them by name. They can say they are coming, decline, or note a plus-one before sending the response.",
+        "Copy explains they can change their mind and submit again until the deadline, so hosts get accurate counts without chasing people over text.",
+      ],
+      images: [
+        {
+          src: "/projects/invite/invite-9.png",
+          alt: "Mobile RSVP modal on the published invitation asking Edyta Testowa to confirm wedding attendance with attend, decline, and plus-one options",
+          caption: "Personalized RSVP on the live invitation page.",
+        },
+        {
+          src: "/projects/invite/invite-10.png",
+          alt: "Mobile RSVP modal on the published invitation with attendance choice selected and send response action",
+          caption: "Confirm choice and submit the response.",
+        },
+      ],
     },
   ],
   closing: [
