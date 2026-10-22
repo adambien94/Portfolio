@@ -12,7 +12,7 @@ export const imageBlurData: Record<string, string> = {
   "/projects/doors/Doors-4.png": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAACwAQCdASoQAAsABUB8JYwAAuQaZFgAAP7rMbVxWaIKc6zF4DLct5z52Op5m04D+TP40gTWM6zflEAA",
   "/projects/flowboard/Flowboard-1.png": "data:image/webp;base64,UklGRiwAAABXRUJQVlA4ICAAAABQAQCdASoQAAoABUB8JZwABAAAAP7v43+1NWuKjZAAAA==",
   "/projects/flowboard/Flowboard-2.png": "data:image/webp;base64,UklGRi4AAABXRUJQVlA4ICIAAAAwAQCdASoQAA8ABUB8JZwAA3AA/vA+ZMCRoCg3ONqAUAAA",
-  "/projects/invite/invite-1.png": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADQAQCdASoQAAoABUB8JZwAAtz1tR41cAD+7d/8yFeVcI5ZPci9FxC/A+ZKzp4A2um+BuNzPQzsO9CAAAA=",
+  "/projects/invite/invite-1.png": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAABwAQCdASoQAAoABUB8JZw3A4AcYAD+73CMZZrXX3ROxmm/lLvXE/ajXRpClflUhmnF7PBAHqPShupZnAgAAA==",
   "/projects/invite/invite-10.png": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAACwAwCdASoQACMAPyV6slOuJ6SitUgBwCSJaQAAeVz7ar4Rm5G8AAD+bqfyBYv64ubJ359Tu7XxpiZze3NS5h+DczgkugWNJrBQ3aihumXSPW8EFuu3IReTh2nPQbo+D0vFwAAA",
   "/projects/invite/invite-5.png": "data:image/webp;base64,UklGRioAAABXRUJQVlA4IB4AAAAwAQCdASoQAAoABUB8JZwAA3AA/vAygmP7M8AgAAA=",
   "/projects/invite/invite-6.png": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADQAQCdASoQAAoABUB8JZwAArFaDJ8KAAD+5+wkcslxDyrWpwrfMFUKsK/yCRDRFfIpH4V43Pu7um4AAAA=",
@@ -40,7 +40,7 @@ export const imageVersions: Record<string, string> = {
   "/projects/doors/Doors-4.png": "28d296b4",
   "/projects/flowboard/Flowboard-1.png": "4742b443",
   "/projects/flowboard/Flowboard-2.png": "ea435f63",
-  "/projects/invite/invite-1.png": "bd560655",
+  "/projects/invite/invite-1.png": "959a4b41",
   "/projects/invite/invite-10.png": "a1aef145",
   "/projects/invite/invite-5.png": "31fce98b",
   "/projects/invite/invite-6.png": "9983ddd1",
@@ -102,7 +102,7 @@ export const imageDimensions: Record<string, { width: number; height: number }> 
     "height": 1928
   },
   "/projects/invite/invite-1.png": {
-    "width": 3456,
+    "width": 3422,
     "height": 2164
   },
   "/projects/invite/invite-10.png": {
